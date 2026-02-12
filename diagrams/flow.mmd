@@ -1,0 +1,10 @@
+flowchart TD
+  A[Signal: friction / overload complaints] --> B[Capture 3 scalars: τ, ω, TI]
+  B --> C[Compute R = τ × ω × (1/TI)]
+  C --> D{Risk band}
+  D -->|LOW| E[Proceed; monitor cadence]
+  D -->|MED| F[Freeze non-essentials; improve transfer integrity]
+  D -->|HIGH| G[Stop-and-define: mandate boundary + tempo limits]
+  G --> H[Re-run model]
+  F --> H
+  E --> H
