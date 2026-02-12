@@ -20,7 +20,10 @@ A simple derived metric:
 R is not "burnout". It is an *overload indicator* for system conditions.
 
 ## Quickstart
+## LLM Adapter (optional)
+See `src/prsys/llm_adapter.py` for a safe skeleton that can map text → (τ, ω, TI) using an external LLM call.
 Requires Python 3.10+.
+
 
 ```bash
 pip install -e .
