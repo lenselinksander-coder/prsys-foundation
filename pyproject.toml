@@ -1,9 +1,12 @@
 [project]
 name = "prsys-foundations"
-version = "0.1.0"
-description = "Minimal pre-governance load-capacity model (hackathon prototype)."
+version = "0.2.0"
+description = "Pre-governance load-capacity model met TI-GATE (TransferGuard)."
 requires-python = ">=3.10"
 dependencies = []
+
+[project.optional-dependencies]
+yaml = ["pyyaml>=6.0"]
 
 [project.scripts]
 prsys = "prsys.cli:main"

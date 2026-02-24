@@ -1,0 +1,7 @@
+{
+  "tau": 0.9,
+  "sigma_ext": 0.2,
+  "sigma_int": 0.1,
+  "gradB": 0.4,
+  "ti": 0.95
+}
