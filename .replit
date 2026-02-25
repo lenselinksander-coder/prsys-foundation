@@ -1,4 +1,4 @@
-run = "python main.py"
+run = "pip install -e . -q && python main.py"
 entrypoint = "main.py"
 language = "python3"
 
