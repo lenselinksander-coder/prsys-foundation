@@ -1,7 +1,7 @@
 [project]
-name = "prsys-foundations"
+name = "ti-gate"
 version = "0.2.0"
-description = "Pre-governance load-capacity model met TI-GATE (TransferGuard)."
+description = "TI Gate – pre-governance load-capacity model met TI-GATE (TransferGuard)."
 requires-python = ">=3.10"
 dependencies = []
 
