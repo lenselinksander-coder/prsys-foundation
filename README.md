@@ -1,4 +1,4 @@
-# PRSYS Foundations (Hackathon build)
+# TI Gate
 
 PRSYS is a lightweight pre-governance modeling layer: it does not diagnose people and it does not prescribe culture.
 It quantifies *when* operational tempo outpaces mandate structure and produces mechanical overload risk.

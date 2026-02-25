@@ -89,7 +89,7 @@ def _transfer_cmd(args: argparse.Namespace) -> None:
 
 
 def main() -> None:
-    parser = argparse.ArgumentParser(prog="prsys", description="PRSYS Foundations CLI")
+    parser = argparse.ArgumentParser(prog="prsys", description="TI Gate CLI")
     sub = parser.add_subparsers(dest="cmd", required=True)
 
     # --- prsys run ---
