@@ -12,17 +12,26 @@ interface WorkbookContextValue {
 
 const WorkbookContext = createContext<WorkbookContextValue | undefined>(undefined);
 
-export const WorkbookProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
+interface WorkbookProviderProps {
+  children: React.ReactNode;
+  /** Optionele scope (werkboek-ID) voor geïsoleerde opslag per lesprogramma. */
+  scope?: string;
+}
+
+export const WorkbookProvider: React.FC<WorkbookProviderProps> = ({ children, scope }) => {
+  const storageKey = scope ? `orfheuss-workbook-${scope}` : 'orfheuss-workbook';
+  const ethicsStorageKey = scope ? `orfheuss-ethics-${scope}` : 'orfheuss-ethics';
+
   const [entries, setEntries] = useState<WorkbookEntry[]>(() => {
     try {
-      const stored = localStorage.getItem('orfheuss-workbook');
+      const stored = localStorage.getItem(storageKey);
       return stored ? JSON.parse(stored) : [];
     } catch { return []; }
   });
 
   const [ethicsEntries, setEthicsEntries] = useState<EthicsEntry[]>(() => {
     try {
-      const stored = localStorage.getItem('orfheuss-ethics');
+      const stored = localStorage.getItem(ethicsStorageKey);
       return stored ? JSON.parse(stored) : [];
     } catch { return []; }
   });
@@ -30,10 +39,10 @@ export const WorkbookProvider: React.FC<{ children: React.ReactNode }> = ({ chil
   const saveEntry = useCallback((entry: WorkbookEntry) => {
     setEntries(prev => {
       const updated = prev.filter(e => e.caseId !== entry.caseId).concat(entry);
-      localStorage.setItem('orfheuss-workbook', JSON.stringify(updated));
+      localStorage.setItem(storageKey, JSON.stringify(updated));
       return updated;
     });
-  }, []);
+  }, [storageKey]);
 
   const getEntry = useCallback(
     (caseId: string) => entries.find(e => e.caseId === caseId),
@@ -43,10 +52,10 @@ export const WorkbookProvider: React.FC<{ children: React.ReactNode }> = ({ chil
   const saveEthicsEntry = useCallback((entry: EthicsEntry) => {
     setEthicsEntries(prev => {
       const updated = prev.filter(e => e.lessonId !== entry.lessonId).concat(entry);
-      localStorage.setItem('orfheuss-ethics', JSON.stringify(updated));
+      localStorage.setItem(ethicsStorageKey, JSON.stringify(updated));
       return updated;
     });
-  }, []);
+  }, [ethicsStorageKey]);
 
   const getEthicsEntry = useCallback(
     (lessonId: string) => ethicsEntries.find(e => e.lessonId === lessonId),

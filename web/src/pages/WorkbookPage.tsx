@@ -1,66 +1,79 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { useNavigate } from 'react-router-dom';
-import { useWorkbook } from '../context/WorkbookContext';
-import { CASES } from '../data/cases';
-import { CaseDetail } from '../components/CaseDetail';
+import { WORKBOOKS } from '../data/workbooks';
+import { CASE_LESSONS } from '../data/lessons';
+import { useUser } from '../context/UserContext';
+import { DOMAIN_META } from '../components/DomainSection';
+import type { WorkbookEntry } from '../types';
+
+function readScopedEntries(workbookId: string): WorkbookEntry[] {
+  try {
+    const stored = localStorage.getItem(`orfheuss-workbook-${workbookId}`);
+    return stored ? JSON.parse(stored) : [];
+  } catch { return []; }
+}
 
 export const WorkbookPage: React.FC = () => {
-  const { entries } = useWorkbook();
+  const { role, level } = useUser();
   const navigate = useNavigate();
-  const [selectedCaseId, setSelectedCaseId] = useState<string | null>(null);
 
-  if (selectedCaseId) {
-    const cas = CASES.find(c => c.id === selectedCaseId);
-    if (cas) {
-      return (
-        <div className="page-container">
-          <CaseDetail cas={cas} onBack={() => setSelectedCaseId(null)} />
-        </div>
-      );
-    }
-  }
+  const visibleWorkbooks = WORKBOOKS.filter(
+    w => w.level === level && w.roles.includes(role)
+  );
 
   return (
     <div className="page-container">
       <div className="workbook-header">
-        <h1>Mijn Werkboek</h1>
+        <h1>Mijn voortgang</h1>
         <p className="workbook-subtitle">
-          {entries.length === 0
-            ? 'Nog geen cases ingevuld.'
-            : `${entries.length} case${entries.length !== 1 ? 's' : ''} ingevuld.`}
+          Voortgang per werkboek, gefilterd op jouw niveau en rol.
         </p>
       </div>
 
-      {entries.length === 0 ? (
+      {visibleWorkbooks.length === 0 ? (
         <div className="empty-state">
-          <p>Je hebt nog geen ORFHEUSS-cases ingevuld.</p>
+          <p>Geen werkboeken beschikbaar voor jouw huidige rol en niveau.</p>
           <button className="btn btn-primary" onClick={() => navigate('/')}>
             Ga naar leergangen
           </button>
         </div>
       ) : (
         <div className="case-list">
-          {entries.map(entry => {
-            const cas = CASES.find(c => c.id === entry.caseId);
-            if (!cas) return null;
-            const savedDate = new Date(entry.savedAt).toLocaleDateString('nl-NL');
+          {visibleWorkbooks.map(wb => {
+            const entries = readScopedEntries(wb.id);
+            const totalCases = CASE_LESSONS.filter(l => l.workbookId === wb.id).length;
+            const completedCases = entries.length;
+            const domainMeta = DOMAIN_META[wb.domain];
 
             return (
-              <article key={entry.caseId} className="case-card case-card--done">
+              <article key={wb.id} className={`case-card ${completedCases > 0 ? 'case-card--done' : ''}`}>
                 <div className="case-card-body">
                   <div className="case-card-top">
-                    <span className="badge badge-done">✓ Ingevuld</span>
-                    <span className="saved-date">Opgeslagen op {savedDate}</span>
+                    <span className="badge badge-level">{wb.level.toUpperCase()}</span>
+                    <span className="badge badge-domain">
+                      {domainMeta?.icon} {domainMeta?.label ?? wb.domain}
+                    </span>
+                    {completedCases > 0 && (
+                      <span className="badge badge-done">
+                        ✓ {completedCases}/{totalCases} cases
+                      </span>
+                    )}
                   </div>
-                  <h3 className="case-card-title">{cas.title}</h3>
-                  <p className="case-card-situation excerpt">{entry.reflection}</p>
+                  <h3 className="case-card-title">{wb.title}</h3>
+                  <p className="case-card-situation">
+                    {completedCases === 0
+                      ? 'Nog geen cases ingevuld.'
+                      : completedCases >= totalCases
+                        ? 'Alle cases afgerond!'
+                        : `Nog ${totalCases - completedCases} case${totalCases - completedCases !== 1 ? 's' : ''} te gaan.`}
+                  </p>
                 </div>
                 <div className="case-card-footer">
                   <button
-                    className="btn btn-ghost"
-                    onClick={() => setSelectedCaseId(entry.caseId)}
+                    className="btn btn-primary"
+                    onClick={() => navigate(`/werkboek/${wb.id}`)}
                   >
-                    Bekijk / bewerk
+                    {completedCases > 0 ? 'Verdergaan →' : 'Begin →'}
                   </button>
                 </div>
               </article>
