@@ -19,8 +19,7 @@ const NavBar: React.FC = () => {
   return (
     <nav className="navbar">
       <Link to="/" className="navbar-brand">
-        <OrfheussLogo variant="nav" className="navbar-logo" />
-        <span className="navbar-brand-text">ORFHEUSS Academy</span>
+        <span className="navbar-brand-text">PRSYS</span>
       </Link>
       <div className="navbar-links">
         <Link to="/" className={`nav-link ${isActive('/') ? 'nav-link--active' : ''}`}>
