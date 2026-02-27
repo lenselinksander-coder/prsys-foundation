@@ -68,7 +68,7 @@ export const OrfheussLogo: React.FC<OrfheussLogoProps> = ({
       <text
         x="100" y="94"
         textAnchor="middle"
-        fontFamily="Georgia, 'Times New Roman', serif"
+        fontFamily="'EB Garamond', Georgia, serif"
         fontSize="17"
         fontWeight="700"
         letterSpacing="5"
@@ -89,7 +89,7 @@ export const OrfheussLogo: React.FC<OrfheussLogoProps> = ({
       <text
         x="100" y="120"
         textAnchor="middle"
-        fontFamily="Georgia, 'Times New Roman', serif"
+        fontFamily="'EB Garamond', Georgia, serif"
         fontSize="9.5"
         letterSpacing="4.5"
         fill={subFill}
@@ -101,7 +101,7 @@ export const OrfheussLogo: React.FC<OrfheussLogoProps> = ({
       <text
         x="100" y="134"
         textAnchor="middle"
-        fontFamily="Georgia, 'Times New Roman', serif"
+        fontFamily="'EB Garamond', Georgia, serif"
         fontSize="7.5"
         letterSpacing="3.5"
         fill={subSubFill}
