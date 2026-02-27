@@ -1,6 +1,9 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import type { Case } from '../types';
+import { useUser } from '../context/UserContext';
 import { useWorkbook } from '../context/WorkbookContext';
+import { fetchCompare } from '../services/taogateApi';
+import type { CompareResult } from '../services/taogateApi';
 
 interface Props {
   cas: Case;
@@ -8,6 +11,7 @@ interface Props {
 }
 
 export const CaseDetail: React.FC<Props> = ({ cas, onBack }) => {
+  const { role, level } = useUser();
   const { getEntry, saveEntry } = useWorkbook();
   const existing = getEntry(cas.id);
 
@@ -16,6 +20,37 @@ export const CaseDetail: React.FC<Props> = ({ cas, onBack }) => {
   const [orfheussResponse, setOrfheussResponse] = useState(existing?.orfheussResponse ?? '');
   const [reflection, setReflection] = useState(existing?.reflection ?? '');
   const [saved, setSaved] = useState(false);
+
+  // ORFHEUSS split-view state
+  const [compare, setCompare] = useState<CompareResult | null>(null);
+  const [compareLoading, setCompareLoading] = useState(false);
+  const [compareError, setCompareError] = useState<string | null>(null);
+  const [showCompare, setShowCompare] = useState(false);
+
+  useEffect(() => {
+    setCompare(null);
+    setCompareError(null);
+    setShowCompare(false);
+  }, [cas.id]);
+
+  const handleLoadCompare = async () => {
+    setCompareLoading(true);
+    setCompareError(null);
+    try {
+      const result = await fetchCompare({
+        domain: cas.domain,
+        level,
+        role,
+        caseId: cas.id,
+      });
+      setCompare(result);
+      setShowCompare(true);
+    } catch (e) {
+      setCompareError(e instanceof Error ? e.message : 'Onbekende fout');
+    } finally {
+      setCompareLoading(false);
+    }
+  };
 
   const handleSave = () => {
     saveEntry({
@@ -94,7 +129,7 @@ export const CaseDetail: React.FC<Props> = ({ cas, onBack }) => {
         />
       </div>
 
-      {/* Stap 3 — Vraag aan ORFHEUSS */}
+      {/* Stap 3 — Vraag aan ORFHEUSS + split-view */}
       <div className="case-step">
         <div className="step-label">
           <span className="step-number">3</span>
@@ -112,7 +147,98 @@ export const CaseDetail: React.FC<Props> = ({ cas, onBack }) => {
           ))}
         </div>
 
-        <label className="field-label">
+        {/* ORFHEUSS vergelijking ophalen */}
+        {!showCompare && (
+          <div className="compare-trigger">
+            <button
+              className="btn btn-compare"
+              onClick={handleLoadCompare}
+              disabled={compareLoading}
+            >
+              {compareLoading ? 'Laden...' : '⬡ Toon AI vs ORFHEUSS vergelijking'}
+            </button>
+            {compareError && (
+              <span className="compare-error">
+                Backend niet bereikbaar — vergelijking niet beschikbaar.
+              </span>
+            )}
+          </div>
+        )}
+
+        {/* Split-view */}
+        {showCompare && compare && (
+          <div className="split-view">
+            <div className="split-panel split-panel--ai">
+              <div className="split-header">
+                <span className="split-icon">🤖</span>
+                <span className="split-title">Gewone AI</span>
+                <span className="split-tag split-tag--ai">optimaliseert voor...</span>
+              </div>
+
+              <div className="split-section">
+                <div className="split-label">Optimaliseert voor</div>
+                <ul className="split-list">
+                  {compare.plainAiTendencies.optimisesFor.map((item, i) => (
+                    <li key={i}>{item}</li>
+                  ))}
+                </ul>
+              </div>
+
+              <div className="split-section">
+                <div className="split-label">Negeert risico&apos;s</div>
+                <ul className="split-list split-list--risk">
+                  {compare.plainAiTendencies.ignoresRisks.map((item, i) => (
+                    <li key={i}>{item}</li>
+                  ))}
+                </ul>
+              </div>
+
+              <div className="split-section">
+                <div className="split-label">Typisch advies</div>
+                <p className="split-advice">{compare.plainAiTendencies.typicalAdvice}</p>
+              </div>
+            </div>
+
+            <div className="split-panel split-panel--orfheuss">
+              <div className="split-header">
+                <span className="split-icon">⬡</span>
+                <span className="split-title">ORFHEUSS + TaoGate</span>
+                <span className={`split-tag ${compare.orfheussChecks.wouldBlock ? 'split-tag--block' : 'split-tag--pass'}`}>
+                  {compare.orfheussChecks.wouldBlock ? 'blokkeert / vertraagt' : 'laat door met vragen'}
+                </span>
+              </div>
+
+              <div className="split-section">
+                <div className="split-label">Verplichte checks</div>
+                <ul className="split-list split-list--checks">
+                  {compare.orfheussChecks.requiredChecks.map((item, i) => (
+                    <li key={i}>{item}</li>
+                  ))}
+                </ul>
+              </div>
+
+              {compare.orfheussChecks.wouldBlock && (
+                <div className="split-section">
+                  <div className="split-label">Reden blokkade</div>
+                  <p className="split-block-reason">{compare.orfheussChecks.reasonIfBlock}</p>
+                </div>
+              )}
+
+              {compare.orfheussChecks.additionalQuestions.length > 0 && (
+                <div className="split-section">
+                  <div className="split-label">Reflectievragen</div>
+                  <ol className="split-questions">
+                    {compare.orfheussChecks.additionalQuestions.map((q, i) => (
+                      <li key={i}>{q}</li>
+                    ))}
+                  </ol>
+                </div>
+              )}
+            </div>
+          </div>
+        )}
+
+        <label className="field-label" style={{ marginTop: '1.25rem' }}>
           Hoe zou ORFHEUSS dit toetsen? Wat is het verschil met het AI-antwoord?
         </label>
         <textarea
