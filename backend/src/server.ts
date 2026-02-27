@@ -6,7 +6,7 @@ import taogateRouter from './routes/taogate.js';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const app = express();
-const PORT = process.env.PORT ? parseInt(process.env.PORT) : 3001;
+const PORT = process.env.PORT ? parseInt(process.env.PORT) : 5000;
 
 // In production on Replit: serve from same origin — no CORS needed.
 // In dev: allow Vite devserver.

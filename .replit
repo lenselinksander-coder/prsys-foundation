@@ -9,5 +9,9 @@ run = ["sh", "-c", "npm start"]
 build = ["sh", "-c", "npm run install:all && npm run build:web"]
 
 [[ports]]
-localPort = 3001
+localPort = 5000
 externalPort = 80
+
+[[ports]]
+localPort = 3001
+externalPort = 3001
