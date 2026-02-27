@@ -10,6 +10,7 @@ export type Domain =
   | 'zorg'
   | 'sociaal_domein';
 
+// ── Track (leergang-overzicht) ─────────────────────────────────────────────
 export interface Track {
   id: string;
   title: string;
@@ -18,8 +19,10 @@ export interface Track {
   domain: Domain;
   roles: Role[];
   moduleCount: number;
+  workbookId?: string;   // koppeling naar werkboek indien aanwezig
 }
 
+// ── Case (los, via TrackPage) ──────────────────────────────────────────────
 export interface Case {
   id: string;
   trackId: string;
@@ -27,17 +30,60 @@ export interface Case {
   situation: string;
   questionToAI: string;
   questionToOrfheuss: string;
-  orfheussFramework: string[];   // de toetsingscriteria die ORFHEUSS gebruikt
+  orfheussFramework: string[];
   level: Level;
   domain: Domain;
   roles: Role[];
 }
 
+// ── Werkboek-structuur ─────────────────────────────────────────────────────
+export interface Workbook {
+  id: string;
+  title: string;
+  level: Level;
+  domain: Domain;
+  roles: Role[];
+  introMd: string;
+}
+
+export interface Lesson {
+  id: string;
+  workbookId: string;
+  title: string;
+  order: number;
+  type: 'intro' | 'case' | 'ethics' | 'summary';
+}
+
+export interface CaseLesson extends Lesson {
+  type: 'case';
+  situation: string;
+  questionToAI: string;
+  questionToOrfheuss: string;
+  orfheussFramework?: string[];
+  domain: Domain;
+  level: Level;
+}
+
+export interface EthicsLesson extends Lesson {
+  type: 'ethics';
+  questions: {
+    prompt: string;
+    subQuestions: string[];
+  }[];
+}
+
+// ── Werkboek invulstate (localStorage) ────────────────────────────────────
 export interface WorkbookEntry {
   caseId: string;
   observation: string;
   aiResponse: string;
   orfheussResponse: string;
   reflection: string;
+  savedAt: string;
+}
+
+export interface EthicsEntry {
+  lessonId: string;
+  answers: Record<string, string>;   // key = subQuestion, value = antwoord
   savedAt: string;
 }

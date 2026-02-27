@@ -656,6 +656,76 @@ textarea::placeholder { color: var(--text-faint); }
   color: var(--text-muted);
 }
 
+/* ── Page container wide ─────────────────────────────────────────────────── */
+.page-container--wide { max-width: 920px; }
+
+/* ── Werkboek view ────────────────────────────────────────────────────────── */
+.workbook-view { max-width: 860px; }
+
+.workbook-intro {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 2rem 2.5rem;
+  margin-bottom: 2rem;
+}
+
+.workbook-badges { margin-bottom: 1rem; display: flex; gap: 0.4rem; }
+
+.markdown-body h1 { font-size: 1.6rem; font-weight: 800; margin-bottom: 0.5rem; }
+.markdown-body h2 { font-size: 1.1rem; font-weight: 700; margin: 1.25rem 0 0.4rem; }
+.markdown-body h3 { font-size: 0.95rem; font-weight: 700; margin: 1rem 0 0.3rem; }
+.markdown-body p  { color: var(--text-muted); font-size: 0.9rem; margin: 0.4rem 0; line-height: 1.6; }
+.markdown-body strong { color: var(--text); }
+.markdown-body .md-hr { border: none; border-top: 1px solid var(--border); margin: 1.5rem 0; }
+.markdown-body .md-spacer { height: 0.4rem; }
+.markdown-body .md-li { color: var(--text-muted); font-size: 0.9rem; margin-left: 1.5rem; line-height: 1.7; }
+
+.workbook-lessons { display: flex; flex-direction: column; gap: 1.5rem; }
+
+.lesson {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1.75rem 2rem;
+}
+
+.lesson-intro   { border-left: 3px solid var(--accent); }
+.lesson-ethics  { border-left: 3px solid #7a4a2a; }
+.lesson-summary { border-left: 3px solid var(--green); }
+
+.lesson-number {
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--text-faint);
+  margin-bottom: 0.4rem;
+}
+
+.lesson-title {
+  font-size: 1.15rem;
+  font-weight: 800;
+  margin-bottom: 1.5rem;
+  letter-spacing: -0.02em;
+}
+
+.lesson-step { margin-bottom: 1.5rem; }
+
+.intro-instruction { color: var(--text-muted); font-size: 0.9rem; }
+.intro-instruction ol { padding-left: 1.25rem; line-height: 2; }
+
+.ethics-block {
+  margin-bottom: 1.5rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid var(--border);
+}
+.ethics-block:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+.ethics-prompt { font-size: 0.95rem; margin-bottom: 1rem; color: var(--text); }
+.ethics-sub { margin-bottom: 1rem; }
+
+.compare-block { margin: 1rem 0; }
+
 /* ── Compare trigger ──────────────────────────────────────────────────────── */
 .compare-trigger {
   display: flex;
