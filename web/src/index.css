@@ -194,54 +194,327 @@ textarea::placeholder { color: var(--text-faint); }
 .chip-sm { font-size: 0.72rem; padding: 0.15rem 0.5rem; }
 .chip-more { color: var(--text-faint); }
 
-/* ── Hero ─────────────────────────────────────────────────────────────────── */
+/* ── Hero fullscreen ──────────────────────────────────────────────────────── */
 .hero {
   position: relative;
   overflow: hidden;
-  background: radial-gradient(ellipse 80% 60% at 70% 50%, #12162a 0%, #0f1117 55%, #100d18 100%);
-  padding: 4.5rem 2rem 3.5rem;
+  background: radial-gradient(ellipse 90% 70% at 60% 50%, #12162e 0%, #0f1117 50%, #0d0b16 100%);
   border-bottom: 1px solid var(--border);
 }
 
-/* ORFHEUSS SVG achtergrond */
+.hero--full {
+  min-height: calc(100vh - 56px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+/* ORFHEUSS SVG — transparant watermark, gecentreerd */
 .orfheuss-bg {
   position: absolute;
   top: 50%;
-  right: -2%;
-  transform: translateY(-50%);
-  width: min(580px, 90vw);
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: min(700px, 95vw);
   aspect-ratio: 1;
   pointer-events: none;
   user-select: none;
-  opacity: 0.9;
 }
 
-.orfheuss-svg {
-  width: 100%;
-  height: 100%;
-}
+.orfheuss-svg { width: 100%; height: 100%; }
 
-.hero-content {
+.hero-inner {
   position: relative;
   z-index: 1;
-  max-width: 560px;
+  padding: 4rem 2rem;
+  max-width: 720px;
 }
 
-.hero-title {
-  font-size: 2.5rem;
-  font-weight: 800;
+.hero-eyebrow {
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin: 0 0 0.75rem;
+}
+
+.hero-wordmark {
+  font-size: clamp(3.5rem, 10vw, 7rem);
+  font-weight: 900;
   letter-spacing: -0.04em;
-  margin-bottom: 0.5rem;
-  background: linear-gradient(135deg, #e8eaf0, #7a8af0);
+  line-height: 1;
+  margin: 0 0 1.5rem;
+  background: linear-gradient(160deg, #ffffff 20%, #8b96f5 60%, #c084fc 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
 
-.hero-subtitle {
+.hero-tagline {
+  font-size: clamp(1rem, 2.5vw, 1.2rem);
   color: var(--text-muted);
-  font-size: 1.05rem;
-  margin: 0 0 2rem;
+  max-width: 560px;
+  margin: 0 auto 0.6rem;
+  line-height: 1.65;
+  font-weight: 500;
+}
+.hero-tagline--sub {
+  font-size: clamp(0.9rem, 2vw, 1rem);
+  color: var(--text-faint);
+  font-weight: 400;
+}
+.hero-tagline--sub:last-of-type {
+  margin-bottom: 3rem;
+}
+
+.hero-scroll-hint {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--text-faint);
+  font-size: 0.85rem;
+  font-weight: 500;
+  text-decoration: none;
+  border: 1px solid var(--border);
+  padding: 0.6rem 1.25rem;
+  border-radius: 24px;
+  transition: color 0.2s, border-color 0.2s;
+}
+.hero-scroll-hint:hover { color: var(--text); border-color: var(--accent); }
+
+/* Backwards compat (unused now but keeps old refs safe) */
+.hero-title  { font-size: 2.5rem; font-weight: 800; }
+.hero-subtitle { color: var(--text-muted); font-size: 1.05rem; margin: 0 0 2rem; }
+.hero-content  { position: relative; z-index: 1; max-width: 560px; }
+
+/* ── Journey sections ─────────────────────────────────────────────────────── */
+.journey-section {
+  position: relative;
+  overflow: hidden;
+  padding: 6rem 2rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.journey-taogate {
+  background: linear-gradient(180deg, #0f1117 0%, #111624 100%);
+}
+
+.journey-orfheuss {
+  background: linear-gradient(180deg, #0e0c1a 0%, #0f1117 100%);
+}
+
+.journey-enter {
+  background: linear-gradient(180deg, #0f1117 0%, #0a0d0f 100%);
+}
+
+.journey-inner {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.journey-inner--centered {
+  text-align: center;
+}
+
+.journey-symbol {
+  font-size: 2rem;
+  color: var(--accent);
+  margin-bottom: 1rem;
+  opacity: 0.7;
+}
+
+.journey-symbol--light { color: rgba(255,255,255,0.3); }
+
+.journey-title {
+  font-size: clamp(1.6rem, 4vw, 2.4rem);
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  margin-bottom: 1.25rem;
+}
+
+.journey-lead {
+  font-size: 1.1rem;
+  color: var(--text-muted);
+  max-width: 620px;
+  line-height: 1.7;
+  margin: 0 0 2.5rem;
+}
+.journey-inner--centered .journey-lead { margin-left: auto; margin-right: auto; }
+
+.journey-body {
+  font-size: 0.95rem;
+  color: var(--text-muted);
+  max-width: 580px;
+  line-height: 1.75;
+  margin: 0 auto 2.5rem;
+}
+.journey-body strong { color: var(--text); }
+
+/* ── TaoGate cards ────────────────────────────────────────────────────────── */
+.journey-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.25rem;
+  margin-bottom: 2.5rem;
+}
+
+.journey-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1.5rem;
+  transition: border-color 0.2s;
+}
+.journey-card:hover { border-color: var(--accent); }
+
+.journey-card-icon {
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: var(--accent);
+  font-family: 'Georgia', serif;
+  font-style: italic;
+  margin-bottom: 0.75rem;
+  opacity: 0.9;
+}
+
+.journey-card h3 {
+  font-size: 0.95rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.journey-card p {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* ── Formula ──────────────────────────────────────────────────────────────── */
+.journey-formula {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.3rem;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-left: 3px solid var(--accent);
+  border-radius: var(--radius-sm);
+  padding: 1rem 1.5rem;
+}
+
+.formula-label {
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--text-faint);
+  font-weight: 600;
+}
+
+.formula-text {
+  font-size: 1.15rem;
+  font-family: 'Georgia', serif;
+  color: var(--text);
+  font-style: italic;
+}
+
+.formula-note {
+  font-size: 0.78rem;
+  color: var(--text-faint);
+}
+
+/* ── ORFHEUSS compare tabel ───────────────────────────────────────────────── */
+.orfheuss-compare {
+  display: flex;
+  align-items: stretch;
+  gap: 0;
+  max-width: 620px;
+  margin: 0 auto 2.5rem;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+
+.orfheuss-col {
+  flex: 1;
+  padding: 1.5rem;
+}
+
+.orfheuss-col--plain {
+  background: rgba(42,122,110,0.05);
+}
+
+.orfheuss-col--orfheuss {
+  background: rgba(122,74,42,0.08);
+}
+
+.orfheuss-col-header {
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-bottom: 1rem;
+  color: var(--text-faint);
+}
+
+.orfheuss-col ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.orfheuss-col li {
+  font-size: 0.875rem;
+  color: var(--text-muted);
+  padding: 0.35rem 0;
+  border-bottom: 1px solid rgba(255,255,255,0.04);
+  line-height: 1.5;
+}
+.orfheuss-col li:last-child { border-bottom: none; }
+
+.orfheuss-divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 0.75rem;
+  background: var(--bg-elevated);
+  border-left: 1px solid var(--border);
+  border-right: 1px solid var(--border);
+  font-size: 0.72rem;
+  color: var(--text-faint);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  writing-mode: vertical-rl;
+}
+
+.journey-quote {
+  font-size: 0.95rem;
+  font-style: italic;
+  color: var(--text-muted);
+  border-left: 3px solid var(--accent);
+  margin: 0 auto;
+  padding: 1rem 1.5rem;
+  max-width: 560px;
+  text-align: left;
+  background: var(--bg-card);
+  border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+}
+
+/* ── Instap-knoppen ───────────────────────────────────────────────────────── */
+.journey-enter-actions {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 2rem;
+}
+
+.btn-lg {
+  padding: 0.75rem 2rem;
+  font-size: 1rem;
 }
 
 /* ── Role Level Selector ─────────────────────────────────────────────────── */
