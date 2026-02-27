@@ -1,25 +1,29 @@
 /* ── Reset & Base ─────────────────────────────────────────────────────────── */
 *, *::before, *::after { box-sizing: border-box; }
 
+/* ══════════════════════════════════════════════════════════════════════════
+   OLYMPIA — nocturne (zwart / antraciet)   ← standaard / dark
+   ORFHEUSS — daylight  (wit / gebroken wit) ← [data-theme="light"]
+   ══════════════════════════════════════════════════════════════════════════ */
+
 :root {
-  --bg:          #0f1117;
-  --bg-card:     #1a1d27;
-  --bg-elevated: #21263a;
-  --bg-input:    #141720;
-  --border:      #2e3347;
-  --border-focus:#5b6af0;
-  --text:        #e8eaf0;
-  --text-muted:  #8891b0;
-  --text-faint:  #4e5570;
-  --accent:      #5b6af0;
-  --accent-hover:#7280f5;
-  --accent-ai:   #2a7a6e;
-  --accent-orf:  #7a4a2a;
-  --green:       #3a8a5e;
-  --red:         #c04040;
+  /* Olympia / nocturne */
+  --bg:          #0f0f0f;
+  --bg-card:     #1c1c1c;
+  --bg-elevated: #242424;
+  --bg-input:    #141414;
+  --border:      #2e2e2e;
+  --border-focus:#c8c4bc;
+  --text:        #f0ede8;
+  --text-muted:  #888880;
+  --text-faint:  #444440;
+  --accent:      #d4cfc9;
+  --accent-hover:#ffffff;
+  --green:       #4a7a5e;
+  --red:         #a04040;
   --radius:      10px;
   --radius-sm:   6px;
-  --shadow:      0 2px 12px rgba(0,0,0,0.35);
+  --shadow:      0 2px 12px rgba(0,0,0,0.50);
 
   /* ── Typografie: EB Garamond body / IBM Plex Mono code ── */
   --font-body: 'EB Garamond', Georgia, serif;
@@ -32,6 +36,43 @@
   color: var(--text);
   background: var(--bg);
   -webkit-font-smoothing: antialiased;
+}
+
+/* ORFHEUSS — daylight */
+[data-theme="light"] {
+  --bg:          #faf8f3;
+  --bg-card:     #ffffff;
+  --bg-elevated: #f3f0ea;
+  --bg-input:    #f7f5f0;
+  --border:      #dcd9d3;
+  --border-focus:#1a1a1a;
+  --text:        #1a1a1a;
+  --text-muted:  #555550;
+  --text-faint:  #999990;
+  --accent:      #1a1a1a;
+  --accent-hover:#000000;
+  --green:       #2a5a3e;
+  --red:         #8a2020;
+  --shadow:      0 2px 12px rgba(0,0,0,0.08);
+}
+
+@media (prefers-color-scheme: light) {
+  :root:not([data-theme="dark"]) {
+    --bg:          #faf8f3;
+    --bg-card:     #ffffff;
+    --bg-elevated: #f3f0ea;
+    --bg-input:    #f7f5f0;
+    --border:      #dcd9d3;
+    --border-focus:#1a1a1a;
+    --text:        #1a1a1a;
+    --text-muted:  #555550;
+    --text-faint:  #999990;
+    --accent:      #1a1a1a;
+    --accent-hover:#000000;
+    --green:       #2a5a3e;
+    --red:         #8a2020;
+    --shadow:      0 2px 12px rgba(0,0,0,0.08);
+  }
 }
 
 body {
@@ -223,11 +264,11 @@ textarea::placeholder { color: var(--text-faint); }
   text-transform: uppercase;
 }
 
-.badge-level   { background: #1e2a50; color: #7a9af0; }
-.badge-domain  { background: #1e3028; color: #6abf8a; }
-.badge-cases   { background: #2a1e3a; color: #b07af0; }
-.badge-modules { background: #1e2a2a; color: #7adada; }
-.badge-done    { background: #1e3028; color: #6abf8a; }
+.badge-level   { background: var(--bg-elevated); color: var(--text-muted); }
+.badge-domain  { background: var(--bg-elevated); color: var(--text-muted); }
+.badge-cases   { background: var(--bg-elevated); color: var(--text-muted); }
+.badge-modules { background: var(--bg-elevated); color: var(--text-muted); }
+.badge-done    { background: var(--bg-elevated); color: var(--accent); }
 
 .chip {
   display: inline-flex;
@@ -246,7 +287,7 @@ textarea::placeholder { color: var(--text-faint); }
 .hero {
   position: relative;
   overflow: hidden;
-  background: radial-gradient(ellipse 90% 70% at 60% 50%, #12162e 0%, #0f1117 50%, #0d0b16 100%);
+  background: var(--bg);
   border-bottom: 1px solid var(--border);
 }
 
@@ -294,7 +335,7 @@ textarea::placeholder { color: var(--text-faint); }
   letter-spacing: -0.04em;
   line-height: 1;
   margin: 0 0 1.5rem;
-  background: linear-gradient(160deg, #ffffff 20%, #8b96f5 60%, #c084fc 100%);
+  background: linear-gradient(160deg, #ffffff 0%, #d4d0ca 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -345,17 +386,9 @@ textarea::placeholder { color: var(--text-faint); }
   border-bottom: 1px solid var(--border);
 }
 
-.journey-taogate {
-  background: linear-gradient(180deg, #0f1117 0%, #111624 100%);
-}
-
-.journey-orfheuss {
-  background: linear-gradient(180deg, #0e0c1a 0%, #0f1117 100%);
-}
-
-.journey-enter {
-  background: linear-gradient(180deg, #0f1117 0%, #0a0d0f 100%);
-}
+.journey-taogate  { background: var(--bg-card); }
+.journey-orfheuss { background: var(--bg); }
+.journey-enter    { background: var(--bg-card); }
 
 .journey-inner {
   max-width: 900px;
@@ -902,13 +935,13 @@ textarea::placeholder { color: var(--text-faint); }
 }
 
 .case-question--ai {
-  background: rgba(42, 122, 110, 0.08);
-  border-left: 3px solid var(--accent-ai);
+  background: rgba(255,255,255,0.03);
+  border-left: 3px solid var(--text-faint);
 }
 
 .case-question--orfheuss {
-  background: rgba(122, 74, 42, 0.08);
-  border-left: 3px solid var(--accent-orf);
+  background: rgba(255,255,255,0.05);
+  border-left: 3px solid var(--text-muted);
 }
 
 .question-tag {
@@ -1033,7 +1066,7 @@ textarea::placeholder { color: var(--text-faint); }
 }
 
 .lesson-intro   { border-left: 3px solid var(--accent); }
-.lesson-ethics  { border-left: 3px solid #7a4a2a; }
+.lesson-ethics  { border-left: 3px solid var(--text-muted); }
 .lesson-summary { border-left: 3px solid var(--green); }
 
 .lesson-number {
