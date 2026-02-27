@@ -1,0 +1,606 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="PRSYS – Methodiek voor organisatorische veerkracht. Bushido-geïnspireerd model voor overbelastingsanalyse in het onderwijs en beroepspraktijk.">
+  <title>PRSYS · Methodiek voor Organisatorische Veerkracht</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600&family=Noto+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+  <!-- ══ NAVIGATIE ══════════════════════════════════════════════════════════ -->
+  <nav id="nav" role="navigation" aria-label="Hoofdnavigatie">
+    <div class="nav-inner">
+      <a href="#hero" class="nav-logo" aria-label="PRSYS – terug naar begin">
+        <svg class="nav-enso" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <path d="M 23,7 C 30,7 35,11 37,17 C 39,23 37,30 32,35 C 27,40 19,41 13,37 C 7,33 5,25 8,18 C 11,11 17,7 23,7"
+            stroke="currentColor" stroke-width="2.8" stroke-linecap="round"/>
+        </svg>
+        <span class="nav-logo-text">PRSYS</span>
+      </a>
+      <button class="nav-toggle" aria-label="Menu openen" aria-expanded="false" aria-controls="nav-menu">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links" id="nav-menu" role="list">
+        <li><a href="#methodiek">Methodiek</a></li>
+        <li><a href="#krachten">Drie Krachten</a></li>
+        <li><a href="#calculator">Calculator</a></li>
+        <li><a href="#werkboeken">Werkboeken</a></li>
+        <li><a href="#opleidingen">Opleidingen</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main>
+
+    <!-- ══ HERO — ENSŌ OPENING ════════════════════════════════════════════ -->
+    <section id="hero" class="hero" aria-labelledby="hero-title">
+      <div class="hero-inner">
+
+        <!-- Brush-drawn ensō circle -->
+        <div class="enso-container" aria-hidden="true">
+          <svg class="enso-svg" viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <filter id="brush-ink" x="-15%" y="-15%" width="130%" height="130%">
+                <feTurbulence type="fractalNoise" baseFrequency="0.80" numOctaves="4" seed="7" result="noise"/>
+                <feDisplacementMap in="SourceGraphic" in2="noise" scale="3.5"
+                  xChannelSelector="R" yChannelSelector="G" result="displaced"/>
+                <feGaussianBlur in="displaced" stdDeviation="0.4"/>
+              </filter>
+            </defs>
+
+            <!-- Outer subtle halo -->
+            <path class="enso-halo"
+              d="M 213,58 C 260,54 302,76 326,114 C 350,152 350,200 330,234 C 310,268 278,288 244,292 C 208,296 172,282 150,258 C 128,234 122,200 132,170 C 142,136 164,110 194,96 C 207,90 212,60 213,58"
+              fill="none" stroke="#C9A84C" stroke-width="28" stroke-linecap="round" opacity="0.06"/>
+
+            <!-- Main ensō — the brushstroke -->
+            <path class="enso-path" pathLength="1000"
+              d="M 213,58 C 260,54 302,76 326,114 C 350,152 350,200 330,234 C 310,268 278,288 244,292 C 208,296 172,282 150,258 C 128,234 122,200 132,170 C 142,136 164,110 194,96 C 207,90 212,60 213,58"
+              fill="none" stroke="#1C1C1C" stroke-width="17"
+              stroke-linecap="round" filter="url(#brush-ink)"/>
+
+            <!-- Inner lighter trace for depth -->
+            <path class="enso-inner" pathLength="1000"
+              d="M 213,58 C 260,54 302,76 326,114 C 350,152 350,200 330,234 C 310,268 278,288 244,292 C 208,296 172,282 150,258 C 128,234 122,200 132,170 C 142,136 164,110 194,96 C 207,90 212,60 213,58"
+              fill="none" stroke="#F7F3EC" stroke-width="5"
+              stroke-linecap="round" opacity="0.35"/>
+          </svg>
+        </div>
+
+        <!-- Hero typography -->
+        <div class="hero-text">
+          <p class="hero-kanji" aria-label="Kanji: poort — het beginpunt">門</p>
+          <h1 id="hero-title" class="hero-title">
+            <span class="hero-title-main">PRSYS</span>
+            <span class="hero-title-rule" aria-hidden="true"></span>
+            <span class="hero-title-sub">Methodiek voor<br>Organisatorische Veerkracht</span>
+          </h1>
+          <p class="hero-tagline">
+            Waar oosterse discipline ontmoet westerse analyse.<br>
+            Kwantificeer wanneer systemen hun draagkracht overschrijden.
+          </p>
+          <a href="#methodiek" class="hero-cta" aria-label="Ontdek de methodiek — scrolt naar uitleg">
+            Ontdek de methodiek
+          </a>
+        </div>
+
+        <div class="hero-scroll" aria-hidden="true">
+          <div class="scroll-line"></div>
+          <span>Verken</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══ I — METHODIEK ═══════════════════════════════════════════════════ -->
+    <section id="methodiek" class="section section-methodiek" aria-labelledby="methodiek-title">
+      <div class="container">
+
+        <header class="section-header">
+          <span class="section-number" aria-hidden="true">一</span>
+          <h2 id="methodiek-title">De Methodiek</h2>
+          <p class="section-subtitle">Twee wijsheden. Één instrument.</p>
+        </header>
+
+        <div class="intro-grid">
+          <div class="intro-east reveal">
+            <div class="pillar-label east-label" aria-hidden="true">武士道</div>
+            <h3>Bushido</h3>
+            <p>De weg van de strijder is niet de weg van de kracht, maar de weg van de <em>bewuste begrenzing</em>. Een systeem dat zijn eigen draagkracht kent, faalt niet — het ademt.</p>
+            <p>PRSYS is geïnspireerd op de zeven deugden van Bushido: rechtvaardigheid, moed, welwillendheid, respect, oprechtheid, eer en loyaliteit. Elk principe keert terug in de meting van systeemdruk.</p>
+          </div>
+
+          <div class="intro-axis reveal" aria-hidden="true">
+            <div class="axis-line"></div>
+            <svg class="axis-emblem" viewBox="0 0 64 64" fill="none">
+              <circle cx="32" cy="32" r="22" stroke="currentColor" stroke-width="1.2"/>
+              <circle cx="32" cy="32" r="4" fill="currentColor" opacity="0.5"/>
+              <line x1="32" y1="10" x2="32" y2="54" stroke="currentColor" stroke-width="1.2"/>
+              <line x1="10" y1="32" x2="54" y2="32" stroke="currentColor" stroke-width="1.2"/>
+            </svg>
+            <div class="axis-line"></div>
+          </div>
+
+          <div class="intro-west reveal">
+            <div class="pillar-label west-label" aria-hidden="true">Analyse</div>
+            <h3>Westerse Methodologie</h3>
+            <p>Wetenschapstraditie levert het raamwerk: meetbare variabelen, reproduceerbare resultaten, falsifieerbare hypothesen. Overbelasting is niet een gevoel — het is een <em>berekende drempel</em>.</p>
+            <p>PRSYS biedt drie meetbare factoren die samen een risiconiveau bepalen. Niet als oordeel over mensen, maar als signaal over systeemcondities.</p>
+          </div>
+        </div>
+
+        <blockquote class="core-quote reveal">
+          <div class="quote-ornament" aria-hidden="true">❝</div>
+          <p>PRSYS diagnosticeert geen mensen. Het kwantificeert wanneer operationeel tempo de mandaatstructuur overstijgt — en produceert een indicator voor mechanische overbelastingsdreiging.</p>
+        </blockquote>
+
+      </div>
+    </section>
+
+    <!-- ══ II — DE DRIE KRACHTEN ══════════════════════════════════════════ -->
+    <section id="krachten" class="section section-krachten" aria-labelledby="krachten-title">
+      <div class="container">
+
+        <header class="section-header section-header--light">
+          <span class="section-number" aria-hidden="true">二</span>
+          <h2 id="krachten-title">De Drie Krachten</h2>
+          <p class="section-subtitle">τ &ensp;·&ensp; ω &ensp;·&ensp; TI</p>
+        </header>
+
+        <div class="krachten-grid">
+
+          <!-- τ Torsie -->
+          <article class="kracht-card reveal" data-force="tau" aria-labelledby="tau-heading">
+            <div class="kracht-top">
+              <div class="kracht-symbol" aria-hidden="true">τ</div>
+              <span class="kracht-kanji" aria-hidden="true">力</span>
+            </div>
+            <h3 id="tau-heading" class="kracht-title">Torsie</h3>
+            <p class="kracht-subtitle">Beslissingstorque</p>
+            <p class="kracht-desc">De mate waarin beslissingen door weerstand worden gedwongen. Hoe harder een beslissing geforceerd moet worden door structurele beperkingen, hoe hoger de torsie — en hoe groter het risico.</p>
+            <div class="kracht-range" aria-label="Bereik nul tot twee punt nul">
+              <div class="range-track">
+                <div class="range-fill" style="--pct: 45%"></div>
+              </div>
+              <span class="range-bounds"><span>0</span><span>2.0</span></span>
+            </div>
+            <p class="kracht-metaphor">
+              <span aria-hidden="true">⚔&ensp;</span>
+              <em>Als een zwaard dat geen snede kan vinden — energie wordt druk.</em>
+            </p>
+          </article>
+
+          <!-- ω Tempo -->
+          <article class="kracht-card reveal" data-force="omega" aria-labelledby="omega-heading">
+            <div class="kracht-top">
+              <div class="kracht-symbol" aria-hidden="true">ω</div>
+              <span class="kracht-kanji" aria-hidden="true">動</span>
+            </div>
+            <h3 id="omega-heading" class="kracht-title">Tempo</h3>
+            <p class="kracht-subtitle">Cadans & veranderingssnelheid</p>
+            <p class="kracht-desc">Het ritme van het systeem: vergaderingen, overdrachten, onderbrekingen, schakelingen. Hoge cadans zonder structuur versnelt slijtage. Het gaat niet om snelheid — het gaat om ritme.</p>
+            <div class="kracht-range" aria-label="Bereik nul tot vijftig">
+              <div class="range-track">
+                <div class="range-fill" style="--pct: 36%"></div>
+              </div>
+              <span class="range-bounds"><span>0</span><span>50</span></span>
+            </div>
+            <p class="kracht-metaphor">
+              <span aria-hidden="true">鼓&ensp;</span>
+              <em>Een trommel zonder pauze is geen muziek — het is lawaai.</em>
+            </p>
+          </article>
+
+          <!-- TI Overdrachtsintegriteit -->
+          <article class="kracht-card reveal" data-force="ti" aria-labelledby="ti-heading">
+            <div class="kracht-top">
+              <div class="kracht-symbol kracht-symbol--ti" aria-hidden="true">TI</div>
+              <span class="kracht-kanji" aria-hidden="true">誠</span>
+            </div>
+            <h3 id="ti-heading" class="kracht-title">Overdrachtsintegriteit</h3>
+            <p class="kracht-subtitle">Transfer Integrity</p>
+            <p class="kracht-desc">Hoe zuiver context en verantwoordelijkheid overgaan tussen rollen. Lage integriteit: elke overdracht lekt. Kennis verdwijnt. Vertrouwen slijt. Systemen knarsen.</p>
+            <div class="kracht-range kracht-range--inverted" aria-label="Bereik nul komma nul vijf tot één punt nul, hoger is beter">
+              <div class="range-track">
+                <div class="range-fill" style="--pct: 42%"></div>
+              </div>
+              <span class="range-bounds"><span>0.05</span><span>1.0 ↑ beter</span></span>
+            </div>
+            <p class="kracht-metaphor">
+              <span aria-hidden="true">水&ensp;</span>
+              <em>Water dat helder stroomt van hand tot hand — niets gaat verloren.</em>
+            </p>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ══ III — DE FORMULE ════════════════════════════════════════════════ -->
+    <section id="formule" class="section section-formule" aria-labelledby="formule-title">
+      <div class="container">
+
+        <header class="section-header">
+          <span class="section-number" aria-hidden="true">三</span>
+          <h2 id="formule-title">De Formule</h2>
+          <p class="section-subtitle">Eenvoud achter complexiteit</p>
+        </header>
+
+        <div class="formule-display reveal" aria-label="Risico R is gelijk aan tau maal omega maal één gedeeld door TI">
+          <div class="eq-container">
+            <span class="eq-var eq-r">R</span>
+            <span class="eq-op">=</span>
+            <span class="eq-var eq-tau">τ</span>
+            <span class="eq-op">×</span>
+            <span class="eq-var eq-omega">ω</span>
+            <span class="eq-op">×</span>
+            <span class="eq-fraction">
+              <span class="eq-num">1</span>
+              <span class="eq-bar"></span>
+              <span class="eq-den">TI</span>
+            </span>
+          </div>
+          <p class="formule-gloss">R is geen burnout-index. R is een <em>systeemindicator</em>: een signaal over condities, niet over individuen.</p>
+        </div>
+
+        <div class="bands-grid">
+          <div class="band-card band-low reveal">
+            <div class="band-badge">LOW</div>
+            <h4>Laag Risico</h4>
+            <p class="band-range">R &lt; 15</p>
+            <p>Het systeem functioneert binnen draagkracht. Reguliere monitoring volstaat. Ruimte voor groei en leren.</p>
+          </div>
+          <div class="band-card band-med reveal">
+            <div class="band-badge">MED</div>
+            <h4>Middel Risico</h4>
+            <p class="band-range">15 ≤ R &lt; 35</p>
+            <p>Waarschuwingszone. Één of meer krachten overschrijden duurzame grenzen. Interventie vereist onderzoek naar de dominante factor.</p>
+          </div>
+          <div class="band-card band-high reveal">
+            <div class="band-badge">HIGH</div>
+            <h4>Hoog Risico</h4>
+            <p class="band-range">R ≥ 35</p>
+            <p>Kritisch. Mechanische overbelasting dreigt. Onmiddellijke actie vereist. Systeemfalen is een kwestie van <em>wanneer</em>, niet <em>of</em>.</p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ══ IV — CALCULATOR ════════════════════════════════════════════════ -->
+    <section id="calculator" class="section section-calculator" aria-labelledby="calc-title">
+      <div class="container">
+
+        <header class="section-header section-header--light">
+          <span class="section-number" aria-hidden="true">四</span>
+          <h2 id="calc-title">Calculator</h2>
+          <p class="section-subtitle">Meet het risiconiveau van uw systeem</p>
+        </header>
+
+        <div class="calc-wrapper">
+
+          <!-- Sliders -->
+          <div class="calc-inputs">
+
+            <div class="calc-group" data-var="tau">
+              <div class="calc-label-row">
+                <span class="calc-sym" aria-hidden="true">τ</span>
+                <label for="sl-tau">Torsie <span class="calc-label-sub">— beslissingstorque</span></label>
+                <output class="calc-val" id="val-tau" for="sl-tau">0.90</output>
+              </div>
+              <input type="range" id="sl-tau" class="calc-slider"
+                min="0" max="2.0" step="0.05" value="0.9"
+                aria-valuemin="0" aria-valuemax="2" aria-valuenow="0.9"
+                aria-describedby="tau-hint">
+              <div class="calc-bounds">
+                <span>0 — geen weerstand</span>
+                <span>2.0 — maximale torsie</span>
+              </div>
+              <p id="tau-hint" class="calc-hint">Hoe hard moeten beslissingen worden geforceerd door structurele beperkingen?</p>
+            </div>
+
+            <div class="calc-group" data-var="omega">
+              <div class="calc-label-row">
+                <span class="calc-sym" aria-hidden="true">ω</span>
+                <label for="sl-omega">Tempo <span class="calc-label-sub">— cadans & wisselingen</span></label>
+                <output class="calc-val" id="val-omega" for="sl-omega">18</output>
+              </div>
+              <input type="range" id="sl-omega" class="calc-slider"
+                min="0" max="50" step="1" value="18"
+                aria-valuemin="0" aria-valuemax="50" aria-valuenow="18"
+                aria-describedby="omega-hint">
+              <div class="calc-bounds">
+                <span>0 — statisch systeem</span>
+                <span>50 — maximale cadans</span>
+              </div>
+              <p id="omega-hint" class="calc-hint">Hoeveel overdrachten, vergaderingen en onderbrekingen per tijdseenheid?</p>
+            </div>
+
+            <div class="calc-group" data-var="ti">
+              <div class="calc-label-row">
+                <span class="calc-sym calc-sym--ti" aria-hidden="true">TI</span>
+                <label for="sl-ti">Overdrachtsintegriteit <span class="calc-label-sub">— transfer integrity</span></label>
+                <output class="calc-val" id="val-ti" for="sl-ti">0.42</output>
+              </div>
+              <input type="range" id="sl-ti" class="calc-slider calc-slider--inverted"
+                min="0.05" max="1.0" step="0.01" value="0.42"
+                aria-valuemin="0.05" aria-valuemax="1" aria-valuenow="0.42"
+                aria-describedby="ti-hint">
+              <div class="calc-bounds">
+                <span>0.05 — vrijwel geen integriteit</span>
+                <span>1.0 — perfecte overdracht</span>
+              </div>
+              <p id="ti-hint" class="calc-hint">Hoe zuiver gaan context en verantwoordelijkheid over van rol naar rol?</p>
+            </div>
+
+          </div>
+
+          <!-- Output -->
+          <div class="calc-output" aria-live="polite" aria-atomic="true">
+            <div class="output-panel">
+              <div class="output-r-label" aria-hidden="true">R</div>
+              <div class="output-r-value" id="out-r">38.6</div>
+              <div class="output-band" id="out-band" data-band="HIGH">HIGH</div>
+            </div>
+
+            <div class="output-dominant">
+              Dominante factor: <strong id="out-dominant">TI</strong>
+            </div>
+
+            <!-- Gauge -->
+            <div class="gauge-wrap" aria-hidden="true">
+              <svg class="gauge-svg" viewBox="0 0 220 130" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                  <linearGradient id="g-grad" x1="0%" y1="0%" x2="100%" y2="0%">
+                    <stop offset="0%" stop-color="#4A7C59"/>
+                    <stop offset="43%" stop-color="#C9A84C"/>
+                    <stop offset="100%" stop-color="#C0392B"/>
+                  </linearGradient>
+                </defs>
+                <!-- Track -->
+                <path d="M 25,115 A 85,85 0 0,1 195,115"
+                  fill="none" stroke="#E0D9D0" stroke-width="14" stroke-linecap="round"/>
+                <!-- Fill -->
+                <path class="gauge-arc" d="M 25,115 A 85,85 0 0,1 195,115"
+                  fill="none" stroke="url(#g-grad)" stroke-width="14" stroke-linecap="round"
+                  pathLength="1000" stroke-dasharray="1000" stroke-dashoffset="230"/>
+                <!-- Needle -->
+                <line class="gauge-needle" x1="110" y1="115" x2="110" y2="38"
+                  stroke="#1C1C1C" stroke-width="2.5" stroke-linecap="round"/>
+                <circle cx="110" cy="115" r="5" fill="#1C1C1C"/>
+                <!-- Labels -->
+                <text x="18" y="128" font-size="10" fill="#6B6B6B" font-family="sans-serif">LOW</text>
+                <text x="95" y="22" font-size="10" fill="#6B6B6B" font-family="sans-serif" text-anchor="middle">MED</text>
+                <text x="185" y="128" font-size="10" fill="#6B6B6B" font-family="sans-serif" text-anchor="end">HIGH</text>
+              </svg>
+            </div>
+
+            <p class="output-note">Risicoband geldt als systeemindicator — geen beoordeling van individuen.</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ══ V — WERKBOEKEN ═════════════════════════════════════════════════ -->
+    <section id="werkboeken" class="section section-werkboeken" aria-labelledby="wb-title">
+      <div class="container">
+
+        <header class="section-header">
+          <span class="section-number" aria-hidden="true">五</span>
+          <h2 id="wb-title">Werkboeken</h2>
+          <p class="section-subtitle">Leren door doen</p>
+        </header>
+
+        <div class="wb-grid">
+
+          <article class="wb-card reveal" aria-labelledby="wb-student">
+            <div class="wb-icon" aria-hidden="true">
+              <svg viewBox="0 0 60 60" fill="none">
+                <rect x="11" y="7" width="34" height="44" rx="3" stroke="currentColor" stroke-width="2"/>
+                <line x1="19" y1="19" x2="38" y2="19" stroke="currentColor" stroke-width="1.5"/>
+                <line x1="19" y1="27" x2="38" y2="27" stroke="currentColor" stroke-width="1.5"/>
+                <line x1="19" y1="35" x2="30" y2="35" stroke="currentColor" stroke-width="1.5"/>
+                <path d="M 8,14 L 8,53 C 8,55 10,57 12,57 L 46,57" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+              </svg>
+            </div>
+            <div class="wb-level-tag">MBO 4 &middot; HBO</div>
+            <h3 id="wb-student">Studentenwerkboek</h3>
+            <p>Gestructureerde opdrachten, casuïstiek en reflectieoefeningen. Van theorie naar praktijk in gefaseerde leerlijnen. Inclusief zelfevaluatie-instrumenten.</p>
+            <ul class="wb-list">
+              <li>Casuïstiek uit de beroepspraktijk</li>
+              <li>PRSYS-calculator opdrachten</li>
+              <li>Groepsopdrachten & individuele reflectie</li>
+              <li>Koppeling aan beroepscompetenties</li>
+            </ul>
+          </article>
+
+          <article class="wb-card reveal" aria-labelledby="wb-docent">
+            <div class="wb-icon" aria-hidden="true">
+              <svg viewBox="0 0 60 60" fill="none">
+                <circle cx="30" cy="21" r="10" stroke="currentColor" stroke-width="2"/>
+                <path d="M 12,52 C 12,41 20,34 30,34 C 40,34 48,41 48,52" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                <path d="M 39,15 L 44,10 M 44,10 L 52,18 M 44,10 L 44,20" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+            <div class="wb-level-tag">Docenten &middot; Opleiders</div>
+            <h3 id="wb-docent">Docentenhandleiding</h3>
+            <p>Volledige didactische ondersteuning: lesplannen, beoordelingsrubrieken, achtergrondliteratuur en differentiatiemogelijkheden voor gevorderde studenten.</p>
+            <ul class="wb-list">
+              <li>Lesplannen per module (90 min)</li>
+              <li>Beoordelingsrubrieken & criteria</li>
+              <li>Differentiatie: basis & verdieping</li>
+              <li>Theoretisch en methodologisch kader</li>
+            </ul>
+          </article>
+
+          <article class="wb-card reveal" aria-labelledby="wb-coach">
+            <div class="wb-icon" aria-hidden="true">
+              <svg viewBox="0 0 60 60" fill="none">
+                <path d="M 10,30 C 10,19 19,10 30,10 C 41,10 50,19 50,30" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                <circle cx="30" cy="40" r="12" stroke="currentColor" stroke-width="2"/>
+                <circle cx="30" cy="40" r="4" fill="currentColor" opacity="0.5"/>
+              </svg>
+            </div>
+            <div class="wb-level-tag">Coaches &middot; Begeleiders</div>
+            <h3 id="wb-coach">Begeleidersprotocol</h3>
+            <p>Methodische aanpak voor individuele en groepsbegeleiding. Interventiekaarten, gespreksleidraden en escalatieprotocollen bij hoog systeemrisico.</p>
+            <ul class="wb-list">
+              <li>Interventiekaarten per risicoband</li>
+              <li>Gespreksleidraden & protocollen</li>
+              <li>Escalatierichtlijnen (HIGH-band)</li>
+              <li>Coachingmodellen: circulair & lineair</li>
+            </ul>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ══ VI — OPLEIDINGEN ═══════════════════════════════════════════════ -->
+    <section id="opleidingen" class="section section-opleidingen" aria-labelledby="opl-title">
+      <div class="container">
+
+        <header class="section-header section-header--light">
+          <span class="section-number" aria-hidden="true">六</span>
+          <h2 id="opl-title">Opleidingsniveaus</h2>
+          <p class="section-subtitle">Één methodiek — meerdere diepten</p>
+        </header>
+
+        <div class="track-list">
+
+          <div class="track-item reveal" data-level="mbo">
+            <div class="track-badge">MBO 4</div>
+            <div class="track-body">
+              <h3>Praktijkgericht</h3>
+              <p>Directe herkenning in beroepssituaties. Concrete tools voor teamleiders, werkbegeleiders en uitvoerende professionals. Nadruk op herkennen en handelingsperspectief.</p>
+              <div class="track-tags">
+                <span>Casuïstiek</span>
+                <span>Reflectie</span>
+                <span>Praktijkopdrachten</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="track-sep" aria-hidden="true"></div>
+
+          <div class="track-item reveal" data-level="hbo">
+            <div class="track-badge">HBO</div>
+            <div class="track-body">
+              <h3>Analytisch-Professioneel</h3>
+              <p>Dieper modelbegrip, kritische reflectie en transfervermogen. Studenten leren het model toe te passen in complexe, meervoudige organisatiecontexten.</p>
+              <div class="track-tags">
+                <span>Modelanalyse</span>
+                <span>Scenariodenken</span>
+                <span>Onderzoeksopdrachten</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="track-sep" aria-hidden="true"></div>
+
+          <div class="track-item reveal" data-level="academisch">
+            <div class="track-badge">Academisch</div>
+            <div class="track-body">
+              <h3>Theoretisch-Kritisch</h3>
+              <p>Epistemologische en methodologische verdieping. PRSYS als onderzoeksobject: validiteit, betrouwbaarheid, ethische vraagstukken rondom kwantificering van organisatiegedrag.</p>
+              <div class="track-tags">
+                <span>Methodologiekritiek</span>
+                <span>Literatuuronderzoek</span>
+                <span>Empirische toetsing</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- De Zeven Deugden -->
+        <div class="deugden-section reveal">
+          <h3 class="deugden-title">De Zeven Deugden van Bushido in PRSYS</h3>
+          <div class="deugden-grid">
+            <div class="deugd">
+              <span class="deugd-kanji" aria-label="Gi: Rechtvaardigheid">義</span>
+              <span class="deugd-naam">Gi &middot; Rechtvaardigheid</span>
+              <span class="deugd-koppeling">→ TI: integer overdragen</span>
+            </div>
+            <div class="deugd">
+              <span class="deugd-kanji" aria-label="Yu: Moed">勇</span>
+              <span class="deugd-naam">Yū &middot; Moed</span>
+              <span class="deugd-koppeling">→ τ: het gewicht dragen</span>
+            </div>
+            <div class="deugd">
+              <span class="deugd-kanji" aria-label="Jin: Welwillendheid">仁</span>
+              <span class="deugd-naam">Jin &middot; Welwillendheid</span>
+              <span class="deugd-koppeling">→ zorgen voor het systeem</span>
+            </div>
+            <div class="deugd">
+              <span class="deugd-kanji" aria-label="Rei: Respect">礼</span>
+              <span class="deugd-naam">Rei &middot; Respect</span>
+              <span class="deugd-koppeling">→ grenzen erkennen</span>
+            </div>
+            <div class="deugd">
+              <span class="deugd-kanji" aria-label="Makoto: Oprechtheid">誠</span>
+              <span class="deugd-naam">Makoto &middot; Oprechtheid</span>
+              <span class="deugd-koppeling">→ eerlijke meting</span>
+            </div>
+            <div class="deugd">
+              <span class="deugd-kanji" aria-label="Meiyo: Eer">名誉</span>
+              <span class="deugd-naam">Meiyo &middot; Eer</span>
+              <span class="deugd-koppeling">→ ω: eervolle cadans</span>
+            </div>
+            <div class="deugd">
+              <span class="deugd-kanji" aria-label="Chugi: Loyaliteit">忠義</span>
+              <span class="deugd-naam">Chūgi &middot; Loyaliteit</span>
+              <span class="deugd-koppeling">→ systemische trouw</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ══ FOOTER ═════════════════════════════════════════════════════════════ -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-inner">
+
+        <div class="footer-brand">
+          <svg class="footer-enso" viewBox="0 0 80 80" fill="none" aria-hidden="true">
+            <path d="M 43,12 C 56,12 64,21 66,32 C 68,43 62,55 52,60 C 42,65 29,62 22,53 C 15,44 17,30 26,22 C 30,18 41,13 43,12"
+              stroke="currentColor" stroke-width="4.5" stroke-linecap="round"/>
+          </svg>
+          <div class="footer-brand-text">
+            <p class="footer-name">PRSYS</p>
+            <p class="footer-tagline-sm">Methodiek voor Organisatorische Veerkracht</p>
+          </div>
+        </div>
+
+        <nav class="footer-nav" aria-label="Sitenavigatie">
+          <ul>
+            <li><a href="#methodiek">Methodiek</a></li>
+            <li><a href="#krachten">Drie Krachten</a></li>
+            <li><a href="#formule">De Formule</a></li>
+            <li><a href="#calculator">Calculator</a></li>
+            <li><a href="#werkboeken">Werkboeken</a></li>
+            <li><a href="#opleidingen">Opleidingen</a></li>
+          </ul>
+        </nav>
+
+        <div class="footer-meta">
+          <p class="footer-disclaimer">PRSYS is een pre-governance model. Het diagnosticeert geen mensen en schrijft geen cultuur voor. Het kwantificeert systeemcondities.</p>
+          <p class="footer-copy">&copy; 2025 PRSYS Foundation &middot; Open Methodiek</p>
+        </div>
+
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
