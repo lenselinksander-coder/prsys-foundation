@@ -1,6 +1,7 @@
 import React from 'react';
 import { RoleLevelSelector } from '../components/RoleLevelSelector';
 import { DomainSection } from '../components/DomainSection';
+import { OrfheussBackground } from '../components/OrfheussBackground';
 import type { Domain } from '../types';
 import { useUser } from '../context/UserContext';
 import { TRACKS } from '../data/tracks';
@@ -23,6 +24,7 @@ export const HomePage: React.FC = () => {
   return (
     <div className="home-page">
       <section className="hero">
+        <OrfheussBackground />
         <div className="hero-content">
           <h1 className="hero-title">ORFHEUSS Academy</h1>
           <p className="hero-subtitle">
