@@ -6,6 +6,7 @@ import { HomePage } from './pages/HomePage';
 import { TrackPage } from './pages/TrackPage';
 import { WorkbookPage } from './pages/WorkbookPage';
 import { WorkbookViewPage } from './pages/WorkbookViewPage';
+import { OrfheussLogo } from './components/OrfheussLogo';
 import './index.css';
 
 const NavBar: React.FC = () => {
@@ -18,8 +19,8 @@ const NavBar: React.FC = () => {
   return (
     <nav className="navbar">
       <Link to="/" className="navbar-brand">
-        <span className="brand-icon">⬡</span>
-        ORFHEUSS Academy
+        <OrfheussLogo variant="nav" className="navbar-logo" />
+        <span className="navbar-brand-text">ORFHEUSS Academy</span>
       </Link>
       <div className="navbar-links">
         <Link to="/" className={`nav-link ${isActive('/') ? 'nav-link--active' : ''}`}>

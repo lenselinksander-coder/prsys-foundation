@@ -98,6 +98,16 @@ textarea::placeholder { color: var(--text-faint); }
   color: var(--accent);
 }
 
+.navbar-logo {
+  width: 30px;
+  height: 30px;
+  flex-shrink: 0;
+}
+
+.navbar-brand-text {
+  letter-spacing: -0.02em;
+}
+
 .navbar-links {
   display: flex;
   gap: 1.5rem;
