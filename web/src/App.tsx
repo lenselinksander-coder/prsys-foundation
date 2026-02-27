@@ -7,6 +7,7 @@ import { TrackPage } from './pages/TrackPage';
 import { WorkbookPage } from './pages/WorkbookPage';
 import { WorkbookViewPage } from './pages/WorkbookViewPage';
 import { OrfheussLogo } from './components/OrfheussLogo';
+import { ThemeToggle } from './components/ThemeToggle';
 import './index.css';
 
 const NavBar: React.FC = () => {
@@ -31,6 +32,7 @@ const NavBar: React.FC = () => {
         <Link to="/werkboek" className={`nav-link ${isActive('/werkboek') && !isActive('/werkboeken') ? 'nav-link--active' : ''}`}>
           Mijn voortgang
         </Link>
+        <ThemeToggle />
       </div>
     </nav>
   );
