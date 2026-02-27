@@ -1,31 +1,76 @@
-# TI Gate
+# Taogate Lesprogramma
 
-PRSYS is a lightweight pre-governance modeling layer: it does not diagnose people and it does not prescribe culture.
-It quantifies *when* operational tempo outpaces mandate structure and produces mechanical overload risk.
+**AI, ethiek en grondhouding** — voor MBO4, HBO, universiteit en docenten.
 
-This repo contains a minimal, reproducible prototype:
-- a small load-capacity model
-- a CLI that turns a few inputs into a "risk envelope"
-- a reference flow diagram (Mermaid)
+Taogate onderzoekt de verhouding tussen mens en AI: wanneer vertraag je bewust, wie bewaakt de gate, en hoe hou je je grondhouding overeind in een versnelde wereld?
 
-## Concept (minimal)
-We model overload risk as a function of:
-- **τ (torsion / decision torque)**: how hard decisions must be forced through constraints
-- **ω (tempo / cadence)**: rate of change, meetings, handovers, interrupts
-- **TI (transfer integrity)**: how cleanly context and responsibility transfer across roles
+---
 
-A simple derived metric:
-`R = τ × ω × (1 / TI)`
+## Structuur
 
-R is not "burnout". It is an *overload indicator* for system conditions.
+```
+lessons/
+├── mbo4/        # Praktisch, concreet, beroepsgericht
+├── hbo/         # Analytisch, methodisch, toepassingsgericht
+├── uni/         # Theoretisch, kritisch-wetenschappelijk
+└── docenten/    # Didactisch, reflectief, overdrachtsgerichte handleidingen
 
-## Quickstart
-## LLM Adapter (optional)
-See `src/prsys/llm_adapter.py` for a safe skeleton that can map text → (τ, ω, TI) using an external LLM call.
-Requires Python 3.10+.
+codex/           # Mandaatbroncode — NIET voor studenten, .gitignored
+workspace/       # Lokale werkruimte studenten
+```
 
+### Modules (alle niveaus)
+
+| # | Module | Titel |
+|---|--------|-------|
+| 01 | `01_taogate` | Wat is Taogate? |
+| 02 | `02_orfheus_ai` | AI met en zonder Orfheus |
+| 03 | `03_versnelling` | De Versnelling |
+| 04 | `04_ethiek` | Ethiek in een versnelde wereld |
+| 05 | `05_grondhouding` | Grondhouding |
+
+---
+
+## Installatie
 
 ```bash
 pip install -e .
-prsys --help
-prsys run --input examples/sample_input.json
+```
+
+## Gebruik
+
+```bash
+# Overzicht modules voor een niveau
+taogate overzicht --niveau mbo4
+
+# Een les lezen
+taogate les --niveau hbo --module 02_orfheus_ai
+
+# Domeinen per niveau
+taogate domeinen --niveau uni
+```
+
+Of zonder vlaggen — de CLI vraagt dan om een keuze:
+
+```bash
+taogate overzicht
+```
+
+---
+
+## Codex
+
+De codex (mandaatbroncode) bevat de theoretische fundering van het Taogate-kader.
+Studenten hebben deze **niet nodig** om het programma te doorlopen.
+
+Docenten kunnen toegang aanvragen bij de programmacoördinator.
+De `codex/` directory is uitdrukkelijk in `.gitignore` opgenomen en wordt nooit gepusht.
+
+---
+
+## Bijdragen / aanpassen
+
+Lesinhoud zit in `lessons/<niveau>/modules/<module>/les.md`.
+Structuur en domeinen in `src/taogate/config.py`.
+
+Niveaus toevoegen: voeg een `Niveau` toe in `config.py` en maak de corresponderende directory aan.

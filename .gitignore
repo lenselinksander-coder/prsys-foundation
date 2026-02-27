@@ -1,10 +1,12 @@
+# Codex — mandaatbroncode: NOOIT committen, NOOIT pushen
+codex/
+codex/**
+
 # Python
 __pycache__/
 *.py[cod]
 *.pyo
 *.pyd
-
-# Distribution / packaging
 *.egg-info/
 dist/
 build/
@@ -15,5 +17,16 @@ build/
 venv/
 env/
 
-# Audit logs (lokaal gegenereerd)
-prsys_audit.jsonl
+# Werkruimte studenten (lokaal)
+workspace/local/
+
+# Editor / OS
+.DS_Store
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Env
+.env
+.env.*

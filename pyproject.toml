@@ -1,15 +1,19 @@
-[project]
-name = "ti-gate"
-version = "0.2.0"
-description = "TI Gate – pre-governance load-capacity model met TI-GATE (TransferGuard)."
-requires-python = ">=3.10"
-dependencies = []
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.backends.legacy:build"
 
-[project.optional-dependencies]
-yaml = ["pyyaml>=6.0"]
+[project]
+name = "taogate"
+version = "0.1.0"
+requires-python = ">=3.10"
+description = "Taogate lesprogramma — AI, ethiek en grondhouding"
+dependencies = [
+    "click>=8.0",
+    "rich>=13.0",
+]
 
 [project.scripts]
-prsys = "prsys.cli:main"
+taogate = "taogate.cli:main"
 
 [tool.setuptools.packages.find]
 where = ["src"]

@@ -1,6 +1,0 @@
-{
-  "r": 38.571,
-  "band": "HIGH",
-  "dominant": "omega",
-  "notes": "Tempo dominates: cadence and change-rate drive overload risk."
-}
