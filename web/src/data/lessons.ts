@@ -37,6 +37,27 @@ export const LESSONS: Lesson[] = [
     order: 1,
     type: 'intro',
   },
+  {
+    id: 'ls-docenten-sociaal-intro',
+    workbookId: 'wb-docenten-sociaal',
+    title: 'Didactisch kader: ORFHEUSS in het sociaal domein',
+    order: 1,
+    type: 'intro',
+  },
+  {
+    id: 'ls-docenten-finance-intro',
+    workbookId: 'wb-docenten-finance',
+    title: 'Didactisch kader: ORFHEUSS in finance-onderwijs',
+    order: 1,
+    type: 'intro',
+  },
+  {
+    id: 'ls-docenten-digital-intro',
+    workbookId: 'wb-docenten-digital',
+    title: 'Didactisch kader: ORFHEUSS in digital & UX-onderwijs',
+    order: 1,
+    type: 'intro',
+  },
 ];
 
 // ── Case-lessen ───────────────────────────────────────────────────────────
@@ -395,6 +416,44 @@ export const ETHICS_LESSONS: EthicsLesson[] = [
     ],
   },
 
+  // ── FINANCE SUMMARY ──────────────────────────────────────────────────────
+  {
+    id: 'eth-hbo-finance-summary',
+    workbookId: 'wb-hbo-finance',
+    title: 'Samenvatting · Jouw kompas als financieel professional',
+    order: 20,
+    type: 'summary',
+    questions: [
+      {
+        prompt: 'Schrijf jouw professionele kompas voor algoritmische besluitvorming',
+        subQuestions: [
+          'Noem drie situaties waarin jij als financieel professional STOP zou zeggen.',
+          'Welke waarden zijn voor jou niet onderhandelbaar, ook onder commerciële druk?',
+          'Hoe leg je de ORFHEUSS-toets uit aan een klant of opdrachtgever?',
+        ],
+      },
+    ],
+  } as unknown as EthicsLesson,
+
+  // ── DIGITAL SUMMARY ──────────────────────────────────────────────────────
+  {
+    id: 'eth-hbo-digital-summary',
+    workbookId: 'wb-hbo-digital',
+    title: 'Samenvatting · Jouw ontwerpers-grondhouding',
+    order: 20,
+    type: 'summary',
+    questions: [
+      {
+        prompt: 'Schrijf jouw grondhouding als digitaal ontwerper',
+        subQuestions: [
+          'Noem drie ontwerpkeuzes waarbij jij als gate zou optreden.',
+          'Wanneer is nudging voor jou legitiem — en wanneer niet?',
+          'Hoe verdedig je een ORFHEUSS-proof ontwerp tegenover een opdrachtgever die meer conversie wil?',
+        ],
+      },
+    ],
+  } as unknown as EthicsLesson,
+
   // ── DOCENTEN MARKETING ───────────────────────────────────────────────────
   {
     id: 'eth-docenten-marketing-1',
@@ -413,4 +472,197 @@ export const ETHICS_LESSONS: EthicsLesson[] = [
       },
     ],
   },
+  {
+    id: 'eth-docenten-marketing-2',
+    workbookId: 'wb-docenten-marketing',
+    title: 'Didactische reflectie · Jouw grondhouding als docent',
+    order: 11,
+    type: 'ethics',
+    questions: [
+      {
+        prompt: 'Hoe breng je jouw eigen grondhouding in als docent?',
+        subQuestions: [
+          'Welke gate-momenten bewaar jij zelf in je onderwijs?',
+          'Hoe modelleer je bewust redeneren voor studenten — niet in woorden, maar in gedrag?',
+          'Wat verandert er in jouw lespraktijk als je ethiek als lens door het hele vak heen behandelt?',
+        ],
+      },
+    ],
+  },
+  {
+    id: 'eth-docenten-marketing-summary',
+    workbookId: 'wb-docenten-marketing',
+    title: 'Afsluiting · Jouw didactisch kompas',
+    order: 20,
+    type: 'summary',
+    questions: [
+      {
+        prompt: 'Schrijf je eigen didactisch kompas voor ORFHEUSS-onderwijs',
+        subQuestions: [
+          'Wat zijn jouw drie vaste aanknopingspunten bij het begeleiden van ethische reflectie?',
+          'Hoe differentieert jouw aanpak tussen MBO4, HBO en universitaire studenten?',
+          'Wat neem jij als docent mee uit dit programma?',
+        ],
+      },
+    ],
+  } as unknown as EthicsLesson,
+
+  // ── DOCENTEN SOCIAAL DOMEIN ───────────────────────────────────────────────
+  {
+    id: 'eth-docenten-sociaal-1',
+    workbookId: 'wb-docenten-sociaal',
+    title: 'Didactische reflectie · Systeemdruk bespreken in de klas',
+    order: 10,
+    type: 'ethics',
+    questions: [
+      {
+        prompt: 'Hoe bespreek je systeemdruk en morele moed zonder cynisme te kweken?',
+        subQuestions: [
+          'Welke openingsvraag gebruik je om studenten het verschil te laten voelen tussen "het systeem volgen" en "het systeem bewaken"?',
+          'Hoe ga je om met studenten die zeggen: "Ik kan toch niets veranderen"?',
+          'Op welke momenten laat je TaoGate als begrip landen — niet als theorie, maar als herkenning?',
+        ],
+      },
+    ],
+  },
+  {
+    id: 'eth-docenten-sociaal-2',
+    workbookId: 'wb-docenten-sociaal',
+    title: 'Didactische reflectie · Grondhouding en beroepsmoed',
+    order: 11,
+    type: 'ethics',
+    questions: [
+      {
+        prompt: 'Hoe begeleid je studenten bij het ontwikkelen van professionele moed?',
+        subQuestions: [
+          'Welke casuïstiek uit jouw eigen praktijk gebruik je om beroepsmoed concreet te maken?',
+          'Hoe creëer je psychologische veiligheid voor studenten om hun twijfels te benoemen?',
+          'Wat is jouw eigen grondhouding ten opzichte van AI in het sociaal domein — en hoe deel je die?',
+        ],
+      },
+    ],
+  },
+  {
+    id: 'eth-docenten-sociaal-summary',
+    workbookId: 'wb-docenten-sociaal',
+    title: 'Afsluiting · Jouw didactisch kompas voor het sociaal domein',
+    order: 20,
+    type: 'summary',
+    questions: [
+      {
+        prompt: 'Schrijf je didactisch kompas voor ORFHEUSS in het sociaal domein',
+        subQuestions: [
+          'Welke drie momenten in dit programma zijn voor jouw studenten het meest vormend?',
+          'Hoe verbind je ORFHEUSS aan de beroepscode van jouw opleiding?',
+          'Wat wil jij dat studenten over tien jaar nog weten van wat ze hier geleerd hebben?',
+        ],
+      },
+    ],
+  } as unknown as EthicsLesson,
+
+  // ── DOCENTEN FINANCE ─────────────────────────────────────────────────────
+  {
+    id: 'eth-docenten-finance-1',
+    workbookId: 'wb-docenten-finance',
+    title: 'Didactische reflectie · Algoritmische besluitvorming bespreken',
+    order: 10,
+    type: 'ethics',
+    questions: [
+      {
+        prompt: 'Hoe leer je studenten nadenken over verantwoordelijkheid bij algoritmische besluiten?',
+        subQuestions: [
+          'Welke opening gebruik je om studenten het verantwoordingsgat bij AI-beslissingen te laten voelen?',
+          'Hoe ga je om met het argument "het algoritme is objectiever dan een mens"?',
+          'Op welk moment laat je het onderscheid landen tussen wettelijke compliance en ethische verantwoordelijkheid?',
+        ],
+      },
+    ],
+  },
+  {
+    id: 'eth-docenten-finance-2',
+    workbookId: 'wb-docenten-finance',
+    title: 'Didactische reflectie · Zorgplicht en maatschappelijke rol',
+    order: 11,
+    type: 'ethics',
+    questions: [
+      {
+        prompt: 'Hoe begeleid je studenten bij het verkennen van hun maatschappelijke verantwoordelijkheid als financieel professional?',
+        subQuestions: [
+          'Hoe maak je "zorgplicht" tastbaar voor studenten die gewend zijn aan kwantificeerbare uitkomsten?',
+          'Welke casuïstiek gebruikt jijzelf om sociale rechtvaardigheid in finance bespreekbaar te maken?',
+          'Hoe differentieert jouw aanpak per niveau (MBO4: concreet, HBO: systematisch, Uni: theoretisch)?',
+        ],
+      },
+    ],
+  },
+  {
+    id: 'eth-docenten-finance-summary',
+    workbookId: 'wb-docenten-finance',
+    title: 'Afsluiting · Jouw didactisch kompas voor finance',
+    order: 20,
+    type: 'summary',
+    questions: [
+      {
+        prompt: 'Schrijf je didactisch kompas voor ORFHEUSS in finance-onderwijs',
+        subQuestions: [
+          'Welke drie kernvragen gebruik jij om redenering te toetsen in plaats van uitkomst?',
+          'Hoe integreer je ORFHEUSS in bestaande vakken zonder extra belasting?',
+          'Wat neemt jij als docent mee uit dit programma in jouw eigen professionele praktijk?',
+        ],
+      },
+    ],
+  } as unknown as EthicsLesson,
+
+  // ── DOCENTEN DIGITAL ─────────────────────────────────────────────────────
+  {
+    id: 'eth-docenten-digital-1',
+    workbookId: 'wb-docenten-digital',
+    title: 'Didactische reflectie · De ontwerper als gate bespreken',
+    order: 10,
+    type: 'ethics',
+    questions: [
+      {
+        prompt: 'Hoe help je studenten inzien dat elke ontwerpkeuze een ethische keuze is?',
+        subQuestions: [
+          'Welke interface of app gebruik jij als voorbeeld om de grens tussen nudging en manipulatie zichtbaar te maken?',
+          'Hoe ga je om met studenten die zeggen: "Ik doe alleen wat de opdrachtgever vraagt"?',
+          'Op welk moment in het ontwerpproces laat je ORFHEUSS als gate landen?',
+        ],
+      },
+    ],
+  },
+  {
+    id: 'eth-docenten-digital-2',
+    workbookId: 'wb-docenten-digital',
+    title: 'Didactische reflectie · Ontwerpen onder commerciële druk',
+    order: 11,
+    type: 'ethics',
+    questions: [
+      {
+        prompt: 'Hoe begeleid je studenten bij het handhaven van hun grondhouding tegenover commerciële opdrachtgevers?',
+        subQuestions: [
+          'Welke situatie gebruik je om de spanning tussen conversie-optimalisatie en gebruikersbelang tastbaar te maken?',
+          'Hoe leer je studenten nee zeggen — professioneel en effectief?',
+          'Hoe beoordeel jij ontwerpkritiek: op esthetiek, op functionaliteit, of ook op ethische impact?',
+        ],
+      },
+    ],
+  },
+  {
+    id: 'eth-docenten-digital-summary',
+    workbookId: 'wb-docenten-digital',
+    title: 'Afsluiting · Jouw didactisch kompas voor digital & UX',
+    order: 20,
+    type: 'summary',
+    questions: [
+      {
+        prompt: 'Schrijf je didactisch kompas voor ORFHEUSS in digital & UX-onderwijs',
+        subQuestions: [
+          'Welke drie ontwerpprincipes zijn voor jou altijd het uitgangspunt — ook onder druk?',
+          'Hoe integreer je ORFHEUSS in bestaande design-critiques of projectbeoordelingen?',
+          'Wat wil jij dat jouw studenten anders doen als ontwerper na dit programma?',
+        ],
+      },
+    ],
+  } as unknown as EthicsLesson,
 ];
