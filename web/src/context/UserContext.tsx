@@ -1,14 +1,13 @@
 import React, { createContext, useContext, useState } from 'react';
 import type { Role, Level } from '../types';
+import { ROLE_VALUES, LEVEL_VALUES } from '../types';
 
-const ROLES: Role[] = ['student', 'docent', 'begeleider'];
-const LEVELS: Level[] = ['mbo4', 'hbo', 'universiteit'];
-
-function loadStored<T>(key: string, fallback: T, valid: T[]): T {
+function loadStored<T extends string>(key: string, fallback: T, valid: readonly T[]): T {
   try {
-    const v = localStorage.getItem(key) as T;
-    return valid.includes(v) ? v : fallback;
-  } catch { return fallback; }
+    const v = localStorage.getItem(key);
+    if (v !== null && (valid as readonly string[]).includes(v)) return v as T;
+  } catch { /* ignore */ }
+  return fallback;
 }
 
 function persist(key: string, value: string) {
@@ -25,8 +24,8 @@ interface UserContextValue {
 const UserContext = createContext<UserContextValue | undefined>(undefined);
 
 export const UserProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
-  const [role, setRoleState] = useState<Role>(() => loadStored('orfheuss-role', 'student', ROLES));
-  const [level, setLevelState] = useState<Level>(() => loadStored('orfheuss-level', 'hbo', LEVELS));
+  const [role, setRoleState] = useState<Role>(() => loadStored('orfheuss-role', 'student', ROLE_VALUES));
+  const [level, setLevelState] = useState<Level>(() => loadStored('orfheuss-level', 'hbo', LEVEL_VALUES));
 
   const setRole = (r: Role) => { setRoleState(r); persist('orfheuss-role', r); };
   const setLevel = (l: Level) => { setLevelState(l); persist('orfheuss-level', l); };

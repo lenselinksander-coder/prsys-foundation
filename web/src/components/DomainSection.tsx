@@ -76,9 +76,6 @@ export const DomainSection: React.FC<{ domain: Domain }> = ({ domain }) => {
                     <span className="badge badge-cases">{caseCount} case{caseCount !== 1 ? 's' : ''}</span>
                   )}
                   <span className="badge badge-modules">{track.moduleCount} modules</span>
-                  {track.roles.map(r => (
-                    <span key={r} className="badge badge-role">{r}</span>
-                  ))}
                 </div>
               </div>
               <div className="track-card-footer">
