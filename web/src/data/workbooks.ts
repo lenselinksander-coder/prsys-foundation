@@ -206,6 +206,43 @@ Jouw rol: maak de keuzes die studenten maken in ontwerp expliciet en besprekbaar
 **De ontwerper die niet nadenkt over macht, draagt die macht ongemerkt over aan het systeem.**`,
   },
 
+  // ── MBO4 Social Media & Ethiek ──────────────────────────────────────────
+  {
+    id: 'wb-mbo4-social',
+    title: 'ORFHEUSS · Werkboek Social Media & Ethiek · MBO4 · 2026',
+    level: 'mbo4',
+    domain: 'social',
+    roles: ['student', 'docent', 'begeleider'],
+    introMd: `# ORFHEUSS
+
+**Werkboek Social Media & Ethiek — MBO4 · 2026**
+
+Elke dag gebruik je social media: liken, posten, scrollen, volgen. Maar steeds vaker zijn er situaties die niet helemaal goed voelen — likes kopen, nep-reviews, ghosten, of je telefoon die je eigenlijk niet meer loslaat.
+
+Dit werkboek helpt je om dat gevoel te onderzoeken. Niet om een goed antwoord te geven, maar om taal te vinden voor wat je al voelt.
+
+ORFHEUSS vraagt bij elke situatie: *wie draagt hier de druk, en mag dit eigenlijk?*
+
+Drie sleutelbegrippen:
+
+1. **Grens** — waar moet er gestopt worden?
+2. **Mandaat** — heeft iemand jouw ja gekregen voor dit?
+3. **Herstel** — wat is er nodig als het toch fout is gegaan?
+
+---
+
+## Hoe gebruik je dit werkboek?
+
+Elke les volg je dezelfde vier stappen:
+
+1. **Situatie lezen (Daylight)** — je beschrijft in eigen woorden wat er gebeurt. Geen oordeel, alleen: wie, wat, waar, wanneer.
+2. **Vraag aan gewone AI (Daylight)** — je noteert het advies dat een gewone AI zou geven (snel, handig, meer bereik).
+3. **Vraag via ORFHEUSS (Nocturne)** — je onderzoekt druk, grenzen en gevolgen. Je vraagt: 'Wie voelt druk, en waarvan?' en 'Waar zou iemand "stop" moeten zeggen?'
+4. **Jouw reflectie (Nocturne)** — je schrijft kort wat jij vindt, wat je voelt in je lichaam, en welke grens jij trekt.
+
+**Belangrijk:** dit werkboek zoekt niet 'het goede antwoord'. Het helpt je om druk, grenzen en stille schade (Quiet Violence) te leren herkennen.`,
+  },
+
   // ── Docenten Marketing ───────────────────────────────────────────────────
   {
     id: 'wb-docenten-marketing',

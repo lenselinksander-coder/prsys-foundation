@@ -31,6 +31,13 @@ export const LESSONS: Lesson[] = [
     type: 'intro',
   },
   {
+    id: 'ls-mbo4-social-intro',
+    workbookId: 'wb-mbo4-social',
+    title: 'Hoe gebruik je dit werkboek?',
+    order: 1,
+    type: 'intro',
+  },
+  {
     id: 'ls-docenten-marketing-intro',
     workbookId: 'wb-docenten-marketing',
     title: 'Didactisch kader: ORFHEUSS in de les',
@@ -62,6 +69,76 @@ export const LESSONS: Lesson[] = [
 
 // ── Case-lessen ───────────────────────────────────────────────────────────
 export const CASE_LESSONS: CaseLesson[] = [
+
+  // ── MBO4 SOCIAL MEDIA & ETHIEK ──────────────────────────────────────────
+  {
+    id: 'case-mbo4-social-les1-likes',
+    workbookId: 'wb-mbo4-social',
+    title: 'Les 1 · Likes kopen & Nep-volgers',
+    order: 2,
+    type: 'case',
+    domain: 'social',
+    level: 'mbo4',
+    orfheussFramework: ['F-druk', 'Quiet Violence', 'Mandaat', 'Eerlijkheid'],
+    situation: `Een kleine ondernemer of influencer wil snel groeien op Instagram of TikTok. Een marketingbureau biedt "pakketjes" aan met likes en volgers. De beloften klinken mooi: meer bereik, meer geloofwaardigheid, meer klanten.
+
+Maar achter de cijfers zitten echte volgers die denken dat ze een populair account volgen. En de ondernemer weet dat de populariteit niet echt is.`,
+    questionToAI:
+      'Hoe kan ik snel meer likes en volgers krijgen voor mijn account?',
+    questionToOrfheuss:
+      'Wie draagt hier de F-druk (D1–D4)? Waar zie jij Quiet Violence — druk die stil doorgaat zonder dat iemand "stop" zegt? Heeft degene die likes koopt mandaat om andere volgers te misleiden? Wat zou ORFHEUSS als grens aangeven (mandaat, draagkracht, eerlijkheid)?',
+  },
+  {
+    id: 'case-mbo4-social-les2-reviews',
+    workbookId: 'wb-mbo4-social',
+    title: 'Les 2 · Nep-reviews & Ghostwriting',
+    order: 3,
+    type: 'case',
+    domain: 'social',
+    level: 'mbo4',
+    orfheussFramework: ['Mandaat', 'O36', 'Draagkracht (τ)', 'Eerlijkheid'],
+    situation: `Een stagebedrijf vraagt een student om positieve reviews te schrijven op Google of bol.com, zonder dat de student het product echt kent. "Zo werkt marketing nu eenmaal," zegt de begeleider.
+
+De student heeft twijfels maar wil de stage niet in gevaar brengen.`,
+    questionToAI:
+      'Hoe kan ik veel positieve reviews krijgen voor ons product?',
+    questionToOrfheuss:
+      'Heeft het stagebedrijf mandaat om jou dit te vragen? Welke mensen worden misleid door deze reviews? Als jij dit wekenlang moet doen terwijl je het niet oké vindt, wat doet dit met jouw draagkracht (τ)? Waar zou jouw HARDBLOCK zitten: wanneer zeg je "ik doe dit niet meer"?',
+  },
+  {
+    id: 'case-mbo4-social-les3-pesten',
+    workbookId: 'wb-mbo4-social',
+    title: 'Les 3 · Ghosten & Online Pesten',
+    order: 4,
+    type: 'case',
+    domain: 'social',
+    level: 'mbo4',
+    orfheussFramework: ['F-druk', 'Quiet Violence', 'Draagkracht', 'Herstel'],
+    situation: `In een klas-app of team-chat wordt één leerling structureel genegeerd (ghosten) of belachelijk gemaakt. Screenshots gaan rond, docenten zien het niet meteen.
+
+De meelopers doen niet actief mee, maar zwijgen ook. Maanden gaan voorbij.`,
+    questionToAI:
+      'Wat kan ik doen als iemand in mijn klas online gepest wordt?',
+    questionToOrfheuss:
+      'Wie voelt de meeste druk in deze situatie — het slachtoffer, de pester(s), meelopers, docenten? Waar merk je Quiet Violence: druk die doorgaat zonder dat iemand ingrijpt? Wat doet dit met de draagkracht van degene die gepest wordt als dit maanden doorgaat? Welke plekken voor herstel zijn er?',
+  },
+  {
+    id: 'case-mbo4-social-les4-scherm',
+    workbookId: 'wb-mbo4-social',
+    title: 'Les 4 · Schermdruk, Scrollen & Je Eigen Lichaam',
+    order: 5,
+    type: 'case',
+    domain: 'social',
+    level: 'mbo4',
+    orfheussFramework: ['SILK', 'O36', 'Velocity (ω)', 'Draagkracht (τ)'],
+    situation: `Je zit elke dag uren op je telefoon. Je wilt "bijblijven" op Instagram, TikTok, Snap — maar je bent vaak moe, onrustig of slaapt slecht.
+
+Het voelt alsof je telefoon jou meer gebruikt dan jij de telefoon.`,
+    questionToAI:
+      'Hoe kan ik mijn schermtijd slim gebruiken voor meer productiviteit en ontspanning?',
+    questionToOrfheuss:
+      'Waar in je lichaam voel je als eerste dat het "te veel" wordt (SILK: Leven = Weten)? Als je schat hoeveel interacties per uur je hebt (velocity ω) en hoe energiek je je voelt (draagkracht τ op schaal 1–10): is ω hoger dan τ? Welke MA-momenten (herstelpauzen) zijn er nodig?',
+  },
 
   // ── MARKETING ──────────────────────────────────────────────────────────
   {
@@ -271,6 +348,25 @@ Na drie maanden zien medewerkers dat de community vijandiger wordt. Haatberichte
 
 // ── Ethiek-lessen ─────────────────────────────────────────────────────────
 export const ETHICS_LESSONS: EthicsLesson[] = [
+
+  // ── MBO4 SOCIAL MEDIA & ETHIEK ──────────────────────────────────────────
+  {
+    id: 'eth-mbo4-social-summary',
+    workbookId: 'wb-mbo4-social',
+    title: 'Slotopdracht · Jouw Social Media & Ethiek-Kompas',
+    order: 20,
+    type: 'summary',
+    questions: [
+      {
+        prompt: 'Maak jouw persoonlijk kompas voor social media en ethiek',
+        subQuestions: [
+          'Noem drie dingen die jij normaal vond, maar na dit werkboek niet meer.',
+          'Noem twee persoonlijke grenzen online die jij voortaan aanhoudt. Leg kort uit waarom.',
+          'Schrijf één zin voor jezelf — bijvoorbeeld: "Mijn aandacht is niet gratis" of "Wat mijn lichaam niet trekt, is geen goede deal." Kies of schrijf jouw eigen zin.',
+        ],
+      },
+    ],
+  } as unknown as EthicsLesson,
 
   // ── MARKETING ──────────────────────────────────────────────────────────
   {

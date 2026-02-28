@@ -78,6 +78,7 @@ Focus op denkkaders en conceptuele precisie, niet op politieke voorkeuren of pra
     domain: 'social',
     roles: ['student', 'docent', 'begeleider'],
     moduleCount: 4,
+    workbookId: 'wb-mbo4-social',
     replitPrompt: "Gebruik leergang 'Social Media & Ethiek (MBO4)', start in Daylight met vraag: 'Is dit een Quiet Violence- of F-druk-situatie?' en gebruik het eenvoudige PRSYS-mandaatschema.",
     replitSystemPrompt: `Je ondersteunt nu MBO4-studenten Social & Communicatie in de module Social Media & Ethiek.
 

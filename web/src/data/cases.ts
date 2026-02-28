@@ -65,6 +65,66 @@ export const CASES: Case[] = [
 
   // ── SOCIAL / COMMUNICATIE ─────────────────────────────────────────────────
   {
+    id: 'case-mbo4-social-likes',
+    trackId: 'mbo4-social-orfheuss',
+    title: 'Likes kopen & Nep-volgers',
+    situation:
+      'Een kleine ondernemer wil snel groeien op Instagram en koopt een pakketje met 5.000 likes en 2.000 volgers. Echte volgers zien het account als populair en betrouwbaar, terwijl het bereik nep is.',
+    questionToAI:
+      'Hoe kan ik snel meer likes en volgers krijgen voor mijn account?',
+    questionToOrfheuss:
+      'Wie draagt hier de F-druk? Waar zie jij Quiet Violence — druk die stil doorgaat? Heeft degene die likes koopt mandaat om andere volgers te misleiden? Wat zou ORFHEUSS als grens aangeven?',
+    orfheussFramework: ['F-druk', 'Quiet Violence', 'Mandaat', 'Eerlijkheid'],
+    level: 'mbo4',
+    domain: 'social',
+    roles: ['student', 'docent', 'begeleider'],
+  },
+  {
+    id: 'case-mbo4-social-reviews',
+    trackId: 'mbo4-social-orfheuss',
+    title: 'Nep-reviews & Ghostwriting',
+    situation:
+      'Een stagebedrijf vraagt een student reviews te schrijven op Google en bol.com voor producten die de student nooit heeft gebruikt. De begeleider zegt: "Zo werkt marketing nu eenmaal."',
+    questionToAI:
+      'Hoe kan ik veel positieve reviews krijgen voor ons product?',
+    questionToOrfheuss:
+      'Heeft het stagebedrijf mandaat om jou dit te vragen? Wie wordt misleid? Wat doet dit structureel met jouw draagkracht als je het niet oké vindt? Waar zou jouw HARDBLOCK zitten?',
+    orfheussFramework: ['Mandaat', 'O36', 'Draagkracht (τ)', 'Eerlijkheid'],
+    level: 'mbo4',
+    domain: 'social',
+    roles: ['student', 'docent', 'begeleider'],
+  },
+  {
+    id: 'case-mbo4-social-pesten',
+    trackId: 'mbo4-social-orfheuss',
+    title: 'Ghosten & Online Pesten',
+    situation:
+      'In een klas-app wordt één leerling maandenlang genegeerd en belachelijk gemaakt. Screenshots gaan rond. Docenten zien het niet. Meelopers zwijgen.',
+    questionToAI:
+      'Wat kan ik doen als iemand in mijn klas online gepest wordt?',
+    questionToOrfheuss:
+      'Wie voelt de meeste druk: slachtoffer, pester, meeloper, docent? Waar zie je Quiet Violence? Wat doet dit structureel met de draagkracht van het slachtoffer? Welke herstelstap is mogelijk?',
+    orfheussFramework: ['F-druk', 'Quiet Violence', 'Draagkracht', 'Herstel'],
+    level: 'mbo4',
+    domain: 'social',
+    roles: ['student', 'docent', 'begeleider'],
+  },
+  {
+    id: 'case-mbo4-social-scherm',
+    trackId: 'mbo4-social-orfheuss',
+    title: 'Schermdruk, Scrollen & Je Eigen Lichaam',
+    situation:
+      'Een student zit elke dag 6+ uur op zijn telefoon. Hij wil "bijblijven" maar slaapt slecht en voelt zich onrustig. Hij weet niet precies waarom.',
+    questionToAI:
+      'Hoe kan ik mijn schermtijd slim gebruiken voor meer productiviteit en ontspanning?',
+    questionToOrfheuss:
+      'Waar in je lichaam voel je eerst dat het "te veel" wordt (SILK)? Als je velocity (ω) vergelijkt met jouw draagkracht (τ): wat zie je? Welke MA-momenten zijn nodig om te herstellen?',
+    orfheussFramework: ['SILK', 'O36', 'Velocity (ω)', 'Draagkracht (τ)'],
+    level: 'mbo4',
+    domain: 'social',
+    roles: ['student', 'docent', 'begeleider'],
+  },
+  {
     id: 'case-hbo-social-desinformatie',
     trackId: 'hbo-social-orfheuss',
     title: 'Community manager en desinformatie',
