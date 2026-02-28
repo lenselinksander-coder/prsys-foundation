@@ -7,7 +7,6 @@ import { HomePage } from './pages/HomePage';
 import { TrackPage } from './pages/TrackPage';
 import { WorkbookPage } from './pages/WorkbookPage';
 import { WorkbookViewPage } from './pages/WorkbookViewPage';
-import { OrfheussLogo } from './components/OrfheussLogo';
 import { ThemeToggle } from './components/ThemeToggle';
 import './index.css';
 
