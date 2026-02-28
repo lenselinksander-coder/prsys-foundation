@@ -6,6 +6,27 @@ import { CaseDetail } from '../components/CaseDetail';
 import { useUser } from '../context/UserContext';
 import { useWorkbook } from '../context/WorkbookContext';
 
+function ReplitPromptBox({ prompt }: { prompt: string }) {
+  const [copied, setCopied] = useState(false);
+  const handleCopy = () => {
+    navigator.clipboard.writeText(prompt).then(() => {
+      setCopied(true);
+      setTimeout(() => setCopied(false), 2000);
+    });
+  };
+  return (
+    <div className="replit-prompt-box">
+      <div className="replit-prompt-label">Replit-openingsprompt</div>
+      <div className="replit-prompt-content">
+        <code className="replit-prompt-text">{prompt}</code>
+        <button className="btn btn-ghost btn-xs replit-prompt-copy" onClick={handleCopy}>
+          {copied ? '✓ Gekopieerd' : 'Kopieer'}
+        </button>
+      </div>
+    </div>
+  );
+}
+
 export const TrackPage: React.FC = () => {
   const { trackId } = useParams<{ trackId: string }>();
   const navigate = useNavigate();
@@ -54,6 +75,7 @@ export const TrackPage: React.FC = () => {
           <span>{track.moduleCount} modules</span>
           <span>{cases.length} ORFHEUSS-cases</span>
         </div>
+        {track.replitPrompt && <ReplitPromptBox prompt={track.replitPrompt} />}
       </div>
 
       {cases.length > 0 ? (

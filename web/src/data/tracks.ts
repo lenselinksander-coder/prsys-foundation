@@ -10,6 +10,7 @@ export const TRACKS: Track[] = [
     domain: 'marketing',
     roles: ['student', 'docent', 'begeleider'],
     moduleCount: 4,
+    replitPrompt: "Gebruik leergang 'ORFHEUSS in Marketing (MBO4)', start in Daylight met vraag: 'Mag deze campagne van de TaoGate?' en activeer PRSYS Blok 3–4 voor dark-pattern-toetsing.",
   },
   {
     id: 'hbo-marketing-orfheuss',
@@ -19,6 +20,7 @@ export const TRACKS: Track[] = [
     domain: 'marketing',
     roles: ['student', 'docent', 'begeleider'],
     moduleCount: 8,
+    replitPrompt: "Gebruik werkboek 'ORFHEUSS Werkboek Marketing & Communicatie (HBO)', open Case 1 in Daylight, lees het AI-advies, schakel dan naar Nocturne voor ORFHEUSS-analyse op mandaat, PRIJS en O36-schending.",
   },
   {
     id: 'uni-marketing-orfheuss',
@@ -28,6 +30,7 @@ export const TRACKS: Track[] = [
     domain: 'marketing',
     roles: ['student', 'docent'],
     moduleCount: 6,
+    replitPrompt: "Gebruik leergang 'Algoritmische Persuasie & Mediademocratie', start in Daylight met vraag: 'Welke biologische en democratische kosten heeft AI-gestuurde persuasie?' en activeer PRSYS Blok 3–4 en SILK.",
   },
 
   // ── SOCIAL / COMMUNICATIE ─────────────────────────────────────────────────
@@ -39,6 +42,7 @@ export const TRACKS: Track[] = [
     domain: 'social',
     roles: ['student', 'docent', 'begeleider'],
     moduleCount: 4,
+    replitPrompt: "Gebruik leergang 'Social Media & Ethiek (MBO4)', start in Daylight met vraag: 'Is dit een Quiet Violence- of F-druk-situatie?' en gebruik het eenvoudige PRSYS-mandaatschema.",
   },
   {
     id: 'hbo-social-orfheuss',
@@ -48,6 +52,7 @@ export const TRACKS: Track[] = [
     domain: 'social',
     roles: ['student', 'docent', 'begeleider'],
     moduleCount: 6,
+    replitPrompt: "Gebruik werkboek 'ORFHEUSS in Social & Communicatie (HBO)', open Case 1 in Daylight, doorloop canonflow Argos–Arachne–Logos–Hermes–Charon en leg je grensbeslissing vast in Nocturne.",
   },
   {
     id: 'uni-social-orfheuss',
@@ -57,6 +62,7 @@ export const TRACKS: Track[] = [
     domain: 'social',
     roles: ['student', 'docent'],
     moduleCount: 5,
+    replitPrompt: "Gebruik leergang 'Platformpolitiek & Digitale Publieke Sfeer', start in Daylight met vraag: 'Hoe toets je een platformbeslissing op legitimiteit en democratische draagkracht?' en activeer ORFHEUSS als pre-governance-laag.",
   },
 
   // ── DIGITAL / UX ─────────────────────────────────────────────────────────
