@@ -125,6 +125,87 @@ ORFHEUSS stelt de drie kernvragen ook hier:
 Als één ervan faalt: herontwerp. Niet optimaliseren.`,
   },
 
+  // ── Docenten Sociaal Domein ──────────────────────────────────────────────
+  {
+    id: 'wb-docenten-sociaal',
+    title: 'ORFHEUSS · Docentenhandleiding Sociaal Domein · HBO · 2026',
+    level: 'hbo',
+    domain: 'sociaal_domein',
+    roles: ['docent', 'begeleider'],
+    introMd: `# ORFHEUSS
+
+**Docentenhandleiding Sociaal Domein — HBO 2026**
+
+Dit werkboek begeleidt docenten bij het gebruik van ORFHEUSS-cases in sociaal-domein-opleidingen. Het bevat:
+
+- Didactische aanwijzingen per case (participatie, schuldhulp, veiligheid, dakloosheid)
+- Veelgestelde vragen van studenten over systeemdruk en beroepsethiek
+- Differentiatie-aanwijzingen voor niveau en domein
+- Suggesties voor casuïstiekbespreking in supervisie en portfolio
+
+## Basisprincipe voor de docent
+
+In het sociaal domein werken studenten met echte mensenlevens. De ORFHEUSS-toets is hier geen abstracte oefening — het is beroepsvoorbereiding op morele moed en professioneel oordelen onder systeemdruk.
+
+Jouw rol: laat studenten positie innemen, ook als het systeem een ander antwoord vraagt.
+
+**De codex is de fundering. Jij bent de brug tussen systeem en mens.**`,
+  },
+
+  // ── Docenten Finance ─────────────────────────────────────────────────────
+  {
+    id: 'wb-docenten-finance',
+    title: 'ORFHEUSS · Docentenhandleiding Finance & Algoritmische Besluitvorming · HBO · 2026',
+    level: 'hbo',
+    domain: 'finance',
+    roles: ['docent', 'begeleider'],
+    introMd: `# ORFHEUSS
+
+**Docentenhandleiding Finance & Algoritmische Besluitvorming — HBO 2026**
+
+Dit werkboek begeleidt docenten bij het gebruik van ORFHEUSS-cases in finance-opleidingen. Het bevat:
+
+- Didactische aanwijzingen voor algoritmische besluitvorming in krediet en pricing
+- Veelgestelde vragen over aansprakelijkheid, discriminatie en zorgplicht
+- Differentiatie-aanwijzingen per niveau
+- Suggesties voor portfolio-opdrachten en gesprekstoetsing
+
+## Basisprincipe voor de docent
+
+Financiële studenten zijn gewend aan kwantificeerbare uitkomsten. ORFHEUSS vraagt hen om met niet-kwantificeerbare waarden te werken: rechtvaardigheid, draagkracht, menselijke waardigheid.
+
+Dat vraagt een ander soort begeleiding — van antwoord-gericht naar redenering-gericht.
+
+**Toets niet op 'juist antwoord'. Toets op consistente redenering en bewustzijn van risico's voor mensen.**`,
+  },
+
+  // ── Docenten Digital ─────────────────────────────────────────────────────
+  {
+    id: 'wb-docenten-digital',
+    title: 'ORFHEUSS · Docentenhandleiding Digital & UX · HBO · 2026',
+    level: 'hbo',
+    domain: 'digital',
+    roles: ['docent', 'begeleider'],
+    introMd: `# ORFHEUSS
+
+**Docentenhandleiding Digital & UX — HBO 2026**
+
+Dit werkboek begeleidt docenten bij het gebruik van ORFHEUSS-cases in digital-design- en UX-opleidingen. Het bevat:
+
+- Didactische aanwijzingen voor privacy, consent en A/B-testing cases
+- Veelgestelde vragen over de grens tussen nudging en manipulatie
+- Differentiatie-aanwijzingen voor niveau en beroepscontext
+- Suggesties voor ontwerpkritiek als didactisch werkvorm
+
+## Basisprincipe voor de docent
+
+UX-studenten ontwerpen systemen die menselijk gedrag sturen. ORFHEUSS helpt hen inzien dat ontwerpers altijd een gate zijn — bewust of onbewust.
+
+Jouw rol: maak de keuzes die studenten maken in ontwerp expliciet en besprekbaar.
+
+**De ontwerper die niet nadenkt over macht, draagt die macht ongemerkt over aan het systeem.**`,
+  },
+
   // ── Docenten Marketing ───────────────────────────────────────────────────
   {
     id: 'wb-docenten-marketing',

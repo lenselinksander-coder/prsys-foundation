@@ -1,5 +1,10 @@
-import React from 'react';
-import { BrowserRouter, Routes, Route, Link, useLocation } from 'react-router-dom';
+import React, { useEffect } from 'react';
+import { BrowserRouter, Routes, Route, Link, useLocation, useNavigate } from 'react-router-dom';
+import { useUser } from './context/UserContext';
+import { useTheme } from './context/ThemeContext';
+import { WORKBOOKS } from './data/workbooks';
+import { LESSONS, CASE_LESSONS } from './data/lessons';
+import { DOMAIN_META } from './components/DomainSection';
 import { UserProvider } from './context/UserContext';
 import { WorkbookProvider } from './context/WorkbookContext';
 import { ThemeProvider } from './context/ThemeContext';
@@ -44,6 +49,7 @@ const App: React.FC = () => {
       <ThemeProvider>
       <UserProvider>
         <WorkbookProvider>
+          <RoleThemeBridge />
           <div className="app">
             <NavBar />
             <main className="main-content">
@@ -66,13 +72,19 @@ const App: React.FC = () => {
   );
 };
 
-// ── Werkboeken-overzicht (inline, simpel) ─────────────────────────────────
-import { useNavigate } from 'react-router-dom';
-import { WORKBOOKS } from './data/workbooks';
-import { useUser } from './context/UserContext';
-import { LESSONS, CASE_LESSONS } from './data/lessons';
-import { DOMAIN_META } from './components/DomainSection';
+// ── Role→Theme bridge ─────────────────────────────────────────────────────
+const RoleThemeBridge: React.FC = () => {
+  const { role } = useUser();
+  const { setTheme } = useTheme();
 
+  useEffect(() => {
+    setTheme(role === 'docent' ? 'nocturne' : 'daylight');
+  }, [role]);
+
+  return null;
+};
+
+// ── Werkboeken-overzicht (inline, simpel) ─────────────────────────────────
 const WorkbookenOverzicht: React.FC = () => {
   const { role, level } = useUser();
   const navigate = useNavigate();
