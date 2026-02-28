@@ -33,6 +33,7 @@ Houd taal eenvoudig, veel voorbeelden, en eindig altijd met:
     domain: 'marketing',
     roles: ['student', 'docent', 'begeleider'],
     moduleCount: 8,
+    workbookId: 'wb-hbo-marketing',
     replitPrompt: "Gebruik werkboek 'ORFHEUSS Werkboek Marketing & Communicatie (HBO)', open Case 1 in Daylight, lees het AI-advies, schakel dan naar Nocturne voor ORFHEUSS-analyse op mandaat, PRIJS en O36-schending.",
     replitSystemPrompt: `Je ondersteunt nu HBO-studenten Marketing & Communicatie met het ORFHEUSS-werkboek.
 
@@ -155,6 +156,7 @@ Zorg dat je altijd onderscheid houdt tussen beschrijving (wat is) en normatieve 
     domain: 'digital',
     roles: ['student', 'docent', 'begeleider'],
     moduleCount: 7,
+    workbookId: 'wb-hbo-digital',
   },
   {
     id: 'uni-digital-orfheuss',
@@ -184,6 +186,7 @@ Zorg dat je altijd onderscheid houdt tussen beschrijving (wat is) en normatieve 
     domain: 'finance',
     roles: ['student', 'docent', 'begeleider'],
     moduleCount: 6,
+    workbookId: 'wb-hbo-finance',
   },
   {
     id: 'uni-finance-orfheuss',
@@ -242,6 +245,7 @@ Zorg dat je altijd onderscheid houdt tussen beschrijving (wat is) en normatieve 
     domain: 'sociaal_domein',
     roles: ['student', 'docent', 'begeleider'],
     moduleCount: 7,
+    workbookId: 'wb-hbo-sociaal',
   },
   {
     id: 'uni-sociaal-orfheuss',
