@@ -12,32 +12,31 @@ export const WORKBOOKS: Workbook[] = [
 
 **Werkboek Marketing & Communicatie — HBO 2026**
 
-ORFHEUSS is geen gewone AI-tool. Het is een systeem dat bepaalt wanneer een AI-beslissing wél en niet mag doorgaan.
+In marketing en communicatie werken we met engagement, clicks, conversies en reach. AI-algoritmes optimaliseren campagnes, passen targeting aan en schalen snel op. Dat levert resultaten — maar ook risico's die niet zichtbaar zijn in dashboards.
 
-In marketing en communicatie werken we met engagement, clicks, conversies en reach. We optimaliseren campagnes, testen varianten en schalen snel op. AI-algoritmes van platforms versterken automatisch content, passen targeting aan en schuiven met budgetten.
+**De kernvraag van dit werkboek:** wanneer wordt optimalisatie een dark pattern? Wanneer gaat personalisatie over in manipulatie — en wie is verantwoordelijk?
 
-**De kernvraag:** waar ligt de grens? Wanneer wordt optimalisatie een dark pattern? Wanneer gaat personalisatie over in manipulatie — en wie is verantwoordelijk als een AI-campagne discrimineert of kwetsbare groepen uitbuit?
+ORFHEUSS brengt drie lagen aan:
 
-ORFHEUSS legt die grens vast via drie vragen:
+1. **G ≠ L ≠ E** (Brug 2) — wat AI genereert (G) is niet automatisch legitiem (L) en mag pas uitgevoerd worden (E) met geldig mandaat.
+2. **O36** — draagkracht (τ) en velocity (ω): gaat de snelheid van ons systeem boven wat mensen aankunnen?
+3. **SILK / PRIJS** — welke biologische, sociale en ecologische kosten worden niet meegeteld?
 
-1. **Mandaat** — Is er een geldig, expliciet mandaat voor deze actie?
-2. **Integriteit** — Is de informatie volledig, eerlijk en niet misleidend?
-3. **Draagkracht** — Kunnen de betrokkenen dit dragen — fysiek, emotioneel, maatschappelijk?
-
-Als één van deze vragen niet goed beantwoord kan worden: **STOP**. Geen actie. Escaleer naar de mens.
+Als één van deze toetsen faalt: **STOP**. Geen actie. Terug naar de mens.
 
 ---
 
 ## Hoe gebruik je dit werkboek?
 
-Per case volg je vier stappen:
+Elke casus volgt vijf stappen:
 
-1. **Situatie lezen** — begrijp de context en het dilemma
-2. **Vraag aan gewone AI** — observeer wat een gewone AI adviseert
-3. **Vraag via ORFHEUSS** — zie hoe ORFHEUSS toetst en eventueel blokkeert
-4. **Jouw reflectie** — schrijf je eigen observatie, verklaring en standpunt
+1. **Daylight 1 — Situatie & Data** — beschrijf de context via de Argos-lens: wie, wat, welke data, welke rol voor AI?
+2. **Daylight 2 — "Gewone AI" Marketingadvies** — observeer wat een gewone AI zou adviseren en markeer wat er ontbreekt.
+3. **Nocturne 1 — ORFHEUSS-analyse** — toets op Brug 2 (G ≠ L ≠ E), O36 (τ vs ω) en SILK/PRIJS.
+4. **Nocturne 2 — Ethiek, weigering & alternatieven** — bepaal of er mandaat is, formuleer een weigeringstatement en herontwerp.
+5. **Mini-reflectie** — schrijf je eigen standpunt als aankomend marketingprofessional.
 
-Je leert niet 'het goede antwoord'. Je leert het verschil *herkennen* en *duiden*.`,
+Je leert niet 'het goede antwoord'. Je leert het verschil *herkennen*, *duiden* en *begrenzen*.`,
   },
 
   // ── HBO Sociaal Domein ───────────────────────────────────────────────────
