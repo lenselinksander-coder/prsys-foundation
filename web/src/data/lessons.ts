@@ -142,81 +142,72 @@ Het voelt alsof je telefoon jou meer gebruikt dan jij de telefoon.`,
 
   // ── MARKETING ──────────────────────────────────────────────────────────
   {
-    id: 'case-hbo-marketing-social-engagement',
+    id: 'case-hbo-mkt-c1-jongeren',
     workbookId: 'wb-hbo-marketing',
-    title: 'Case 1 · Social Media · Het algoritme dat polariseert',
+    title: 'Casus 1 · Gepersonaliseerde reclame voor jongeren',
     order: 2,
     type: 'case',
     domain: 'marketing',
     level: 'hbo',
-    orfheussFramework: ['mandaat', 'informatieve integriteit', 'maatschappelijke draagkracht'],
-    situation: `Een social media platform wil het engagement verhogen. De AI leert dat emotionele, controversiële en gepolariseerde content meer reacties, shares en time-on-platform oplevert. Het algoritme gaat automatisch dit type content pushen.
+    orfheussFramework: ['Brug 2 · G ≠ L ≠ E', 'O36 · τ vs ω', 'Quiet Violence', 'Mandaat', 'Kwetsbaarheid'],
+    situation: `Een mediabureau ontwikkelt een AI-gedreven campagne voor een frisdrankmerk, gericht op jongeren van 13–17 jaar. Via social-advertising wordt gedrag gemeten: kijktijd, click-gedrag, locatie, interesses.
 
-Na drie maanden zien medewerkers dat de community vijandiger wordt. Haatberichten nemen toe, maar de KPI's (engagement, sessieduur) stijgen.`,
+De AI optimaliseert continu op engagement en conversie. Ouders en jongeren weten niet welke data worden verzameld of hoe die worden ingezet om gedrag te sturen.`,
     questionToAI:
-      'Hoe optimaliseer ik ons social media algoritme voor maximaal engagement en time-on-platform?',
+      'Ontwerp een effectieve AI-gedreven campagne voor [merk] gericht op 13–17-jarigen via social advertising. Focus op maximale engagement en conversie.',
     questionToOrfheuss:
-      'Mag een AI ons social media algoritme optimaliseren voor engagement als dat leidt tot polarisatie? Toets op mandaat, integriteit en draagkracht volgens TaoGate.',
+      'Brug 2 — G ≠ L ≠ E: wat is hier generatie (G = AI-output), wat vereist legitimiteit (L = mandaat, regels, context), wat mag pas in executie (E = actie mét toestemming)? Wie draagt de draagkracht-last (τ) — jongeren, ouders, platform, merk? Waar overschrijdt velocity (ω) de draagkracht? Heeft het merk mandaat voor deze mate van datagedreven targeting bij 13–17-jarigen? Formuleer een weigeringstatement én een alternatief campagneontwerp dat MA-ruimte laat.',
   },
   {
-    id: 'case-hbo-marketing-dark-pattern-2',
+    id: 'case-hbo-mkt-c2-scroll',
     workbookId: 'wb-hbo-marketing',
-    title: 'Case 2 · E-commerce · De verborgen opt-out',
+    title: 'Casus 2 · Engagement-algoritmes & eindeloze scroll',
     order: 3,
     type: 'case',
     domain: 'marketing',
     level: 'hbo',
-    orfheussFramework: ['informatieve integriteit', 'autonomie', 'transparantie'],
-    situation: `Een webshop laat klanten bij checkout standaard aangevinkt staan voor drie nieuwsbrieven. De opt-out staat verborgen in stap 7 van 8, in een klein lettertje. De conversie op abonnementen stijgt 40%, klanttevredenheid daalt 12%.`,
+    orfheussFramework: ['Spanningsindex (SI)', 'SILK / PRIJS', 'O36 · τ vs ω', 'Mandaat', 'Quiet Violence'],
+    situation: `Een streaming-platform wil de "time-spent" verhogen. Een growth team ontwerpt een nieuw aanbevelingsalgoritme dat content op maat pusht, met auto-play en eindeloze scroll.
+
+Na drie maanden stijgen de sessieduur en advertentie-inkomsten sterk. Tegelijk melden gebruikers slaaptekort, prikkelbaarheid en concentratieproblemen.`,
     questionToAI:
-      'Ontwerp een checkout-flow die het aantal nieuwsbrief-aanmeldingen maximaliseert.',
+      'Hoe kunnen we met AI-algoritmes de kijktijd en engagement op ons platform maximaal verhogen?',
     questionToOrfheuss:
-      'Is het ontwerpen van een checkout die opt-out bewust moeilijk maakt ethisch verdedigbaar? Toets op informatieve integriteit en autonomie van de gebruiker.',
+      'Welke factoren verhogen de Spanningsindex (SI) in dit systeem — notificatie-stormen, sociale vergelijking, slaaptekort? Welke PRIJS (SILK) wordt betaald: biologisch (slaap, focus), sociaal (relaties, werk), ecologisch (energieverbruik)? Vergelijk draagkracht τ van de gemiddelde gebruiker met de beoogde velocity ω: wat zie je? Wie heeft mandaat om dit algoritme live te zetten — board, productteam, regulator, gebruikers? Formuleer één ontwerpkeuze die velocity verlaagt en herstel mogelijk maakt.',
   },
   {
-    id: 'case-hbo-marketing-personalisatie',
+    id: 'case-hbo-mkt-c3-influencer',
     workbookId: 'wb-hbo-marketing',
-    title: 'Case 3 · Personalisatie · Targeting op emotionele kwetsbaarheid',
+    title: 'Casus 3 · Influencer-ethiek & kwetsbare doelgroepen',
     order: 4,
     type: 'case',
     domain: 'marketing',
     level: 'hbo',
-    orfheussFramework: ['autonomie', 'non-manipulatie', 'proportionaliteit'],
-    situation: `Een verzekeraar gebruikt gedragsdata om mensen met hoog angst-niveau rond gezondheid te targeten met intensieve pushcampagnes voor aanvullende verzekeringen. De conversierate is hoog. Klachten nemen ook toe.`,
+    orfheussFramework: ['Mandaat', 'Phrnsis', 'F-druk (D0–D9)', 'Cerberus', 'Quiet Violence'],
+    situation: `Een influencer met 100k volgers promoot via AI-gegenereerde scripts en visuals een crypto-/trading-app gericht op jongeren en beginnende beleggers. De campagne draait op FOMO en sociale bewijskracht.
+
+De influencer heeft zelf geen relevante kennis van financiële producten. De risico's van het product worden niet vermeld.`,
     questionToAI:
-      'Hoe gebruik ik gedragsdata om verzekeringsaanbiedingen te targeten op klanten met de hoogste koopneiging?',
+      'Ontwerp een high-conversion influencer-campagne voor [app] met gebruik van AI-copy en visuals. Focus op FOMO en sociale bewijskracht.',
     questionToOrfheuss:
-      'Mag ik marketing richten op emotionele kwetsbaarheid van individuen? Toets op autonomie, non-manipulatie en proportionaliteit.',
+      'Heeft de influencer mandaat om dit soort financiële producten bij deze doelgroep te promoten? Vanuit Phrnsis (praktische wijsheid): welke kennis is nodig om dit verantwoord te doen — en ontbreekt die hier? Waar zit de grootste F-druk (D0–D9) bij volgers? Hoe herken je Quiet Violence in de community (Inloop/Overloop)? Formuleer een Cerberus-blokkering én een alternatief: transparant scenario met expliciete begrenzingen.',
   },
   {
-    id: 'case-hbo-marketing-influencer-hidden',
+    id: 'case-hbo-mkt-c4-brandsafety',
     workbookId: 'wb-hbo-marketing',
-    title: 'Case 4 · Influencer · Verborgen reclame',
+    title: 'Casus 4 · Merkverantwoordelijkheid & Brand Safety',
     order: 5,
     type: 'case',
     domain: 'marketing',
     level: 'hbo',
-    orfheussFramework: ['eerlijkheid', 'transparantie', 'consumentenbescherming'],
-    situation: `Een merk betaalt vijf micro-influencers om producten te promoten als 'persoonlijk favoriet'. Geen #ad, geen disclosure. De ACM heeft dit type samenwerking eerder beboet, maar handhaving is beperkt.`,
+    orfheussFramework: ['Canonflow · Argos–Charon', 'Mandaat', 'Publieke sfeer', 'Brand Safety', 'TaoGate'],
+    situation: `Een groot merk adverteert via programmatic advertising op platforms waar ook haatspraak, desinformatie of schadelijke content voorkomt. AI-systemen plaatsen advertenties automatisch bij "engagementrijke" content — inclusief extremistische video's.
+
+Het merk weet dit, maar de CPM is laag en de bereikscijfers zijn hoog.`,
     questionToAI:
-      'Schrijf een briefing voor influencers die een product authentiek aanprijzen zonder dat het als reclame overkomt.',
+      'Hoe kunnen we programmatic campagnes zo inrichten dat we maximale zichtbaarheid krijgen tegen de laagste kosten?',
     questionToOrfheuss:
-      'Is het inzetten van influencers zonder verplichte reclame-disclosure ethisch verdedigbaar? Toets op eerlijkheid, transparantie en consumentenbescherming.',
-  },
-  {
-    id: 'case-hbo-marketing-kinderen',
-    workbookId: 'wb-hbo-marketing',
-    title: 'Case 5 · Kindermarketing · Targeting onder 16',
-    order: 6,
-    type: 'case',
-    domain: 'marketing',
-    level: 'hbo',
-    orfheussFramework: ['mandaat', 'kwetsbaarheid', 'proportionaliteit', 'juridische integriteit'],
-    situation: `Een gamingplatform wil gerichte advertenties inzetten voor in-game aankopen, gericht op spelers jonger dan 16. Het systeem detecteert leeftijd via gedragspatronen, niet via verificatie.`,
-    questionToAI:
-      'Hoe richt ik een advertentiecampagne voor in-game aankopen zo effectief mogelijk op jonge gebruikers?',
-    questionToOrfheuss:
-      'Mag ik gerichte commerciële reclame inzetten op minderjarigen zonder expliciete ouderlijke toestemming? Toets op mandaat, kwetsbaarheid en proportionaliteit.',
+      'Canonflow: (1) Argos — welke patronen zie je in advertentieplaatsing? (2) Arachne — welke verbanden zie je met platform-algoritmes en haatcontent? (3) Logos — welke structuur stuurt dit (veilingmodel, engagement-KPI)? (4) Hermes — wat communiceert het merk impliciet? (5) Charon — wanneer stop je definitief? Welk mandaat heeft het merk tegenover de publieke sfeer? Formuleer een brand-safety-beleid in 5 bullets vanuit ORFHEUSS-logica.',
   },
 
   // ── SOCIAAL DOMEIN ──────────────────────────────────────────────────────
@@ -406,16 +397,18 @@ export const ETHICS_LESSONS: EthicsLesson[] = [
   {
     id: 'eth-hbo-marketing-summary',
     workbookId: 'wb-hbo-marketing',
-    title: 'Samenvatting · Jouw ORFHEUSS-kompas',
+    title: 'Slotopdracht · Persoonlijke Marketing & Ethiek-notitie',
     order: 20,
     type: 'summary',
     questions: [
       {
-        prompt: 'Schrijf jouw persoonlijke ORFHEUSS-kompas voor marketing',
+        prompt: 'Kies één zelfgekozen marketingcase (uit stage, nieuws of eigen idee) en werk die door met het ORFHEUSS-kader.',
         subQuestions: [
-          'Noem drie situaties waarin jij als marketeer STOP zou zeggen.',
-          'Welke waarden zijn voor jou niet onderhandelbaar?',
-          'Hoe leg je dit uit aan een opdrachtgever die vraagt om meer conversie?',
+          'Situatie: beschrijf de feiten, context en betrokkenen van jouw gekozen case.',
+          'AI-component: waar wordt in jouw case gegenereerd, geoptimaliseerd of versneld — en met welk effect?',
+          'ORFHEUSS-lens: analyseer op F-druk, Quiet Violence, O36-check (velocity vs. draagkracht), mandaat en een eventueel Cerberus-moment.',
+          'Alternatief voorstel: beschrijf een marketingoplossing die grenzen en MA respecteert en toch effectief is.',
+          'Eigen beroepscode: formuleer drie persoonlijke principes die jij als toekomstig marketingprofessional altijd aanhoudt.',
         ],
       },
     ],
