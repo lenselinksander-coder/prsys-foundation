@@ -1,6 +1,8 @@
 export type Role = 'student' | 'docent' | 'begeleider';
-
 export type Level = 'mbo4' | 'hbo' | 'universiteit';
+
+export const ROLE_VALUES: readonly Role[] = ['student', 'docent', 'begeleider'];
+export const LEVEL_VALUES: readonly Level[] = ['mbo4', 'hbo', 'universiteit'];
 
 export type Domain =
   | 'marketing'
