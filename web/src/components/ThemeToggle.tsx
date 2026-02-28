@@ -1,36 +1,22 @@
-import React, { useEffect, useState } from 'react';
-
-type Theme = 'nocturne' | 'daylight';
-
-function getInitialTheme(): Theme {
-  const stored = localStorage.getItem('prsys-theme') as Theme | null;
-  if (stored === 'daylight' || stored === 'nocturne') return stored;
-  return window.matchMedia('(prefers-color-scheme: light)').matches ? 'daylight' : 'nocturne';
-}
+import React from 'react';
+import { useTheme } from '../context/ThemeContext';
 
 export const ThemeToggle: React.FC = () => {
-  const [theme, setTheme] = useState<Theme>(getInitialTheme);
-
-  useEffect(() => {
-    document.documentElement.setAttribute(
-      'data-theme',
-      theme === 'daylight' ? 'light' : 'dark'
-    );
-    localStorage.setItem('prsys-theme', theme);
-  }, [theme]);
-
-  const toggle = () => setTheme(t => t === 'nocturne' ? 'daylight' : 'nocturne');
+  const { theme, toggle } = useTheme();
 
   return (
     <button
       className="theme-toggle"
       onClick={toggle}
-      title={theme === 'nocturne' ? 'Schakel naar Daylight' : 'Schakel naar Nocturne'}
       aria-label="Thema wisselen"
+      title={theme === 'nocturne' ? 'Schakel naar Daylight' : 'Schakel naar Nocturne'}
     >
-      {theme === 'nocturne' ? '◑' : '◐'}
-      <span className="theme-toggle-label">
-        {theme === 'nocturne' ? 'Daylight' : 'Nocturne'}
+      <span className={`theme-toggle-word ${theme === 'daylight' ? 'is-active' : ''}`}>
+        DAYLIGHT
+      </span>
+      <span className="theme-toggle-sep">·</span>
+      <span className={`theme-toggle-word ${theme === 'nocturne' ? 'is-active' : ''}`}>
+        NOCTURNE
       </span>
     </button>
   );

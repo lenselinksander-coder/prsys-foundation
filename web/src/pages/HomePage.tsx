@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import { RoleLevelSelector } from '../components/RoleLevelSelector';
 import { DomainSection } from '../components/DomainSection';
 import { OrfheussBackground } from '../components/OrfheussBackground';
+import { useTheme } from '../context/ThemeContext';
 import type { Domain } from '../types';
 import { useUser } from '../context/UserContext';
 import { TRACKS } from '../data/tracks';
@@ -14,6 +15,7 @@ const DOMAINS: Domain[] = [
 export const HomePage: React.FC = () => {
   const { role, level } = useUser();
   const navigate = useNavigate();
+  const { theme, setTheme } = useTheme();
 
   const visibleDomains = DOMAINS.filter(d =>
     TRACKS.some(t => t.domain === d && t.level === level && t.roles.includes(role))
@@ -22,28 +24,56 @@ export const HomePage: React.FC = () => {
   return (
     <div className="home-page">
 
-      {/* ── 1. FULLSCREEN HERO ─────────────────────────────────────────── */}
-      <section className="hero hero--full">
-        <OrfheussBackground />
-        <div className="hero-inner">
-          <p className="hero-eyebrow">Welkom bij</p>
-          <h1 className="hero-wordmark">PRSYS</h1>
-          <p className="hero-tagline">
-            Loop door de TaoGate en ontmoet ORFHEUSS.
-          </p>
-          <p className="hero-tagline hero-tagline--sub">
-            Kies jouw rol, jouw niveau en jouw domein.
-          </p>
-          <p className="hero-tagline hero-tagline--sub">
-            Ontdek hoe AI mét rem werkt in jouw beroep: van marketing tot sociaal domein, van finance tot digital.
-          </p>
-          <a href="#taogate" className="hero-scroll-hint">
-            <span>Begin de reis</span>
-            <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
-              <path d="M8 3v10M3 9l5 5 5-5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
-            </svg>
-          </a>
+      {/* ── 1. ZEN HERO ─────────────────────────────────────────────────── */}
+      <section className="hero-zen">
+
+        {/* Ensō */}
+        <div className="hero-zen-enso" aria-hidden="true">
+          <svg viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M 100 22 A 78 78 0 1 1 117 24.8"
+              stroke="currentColor"
+              strokeWidth="6"
+              strokeLinecap="round"
+              fill="none"
+            />
+          </svg>
         </div>
+
+        {/* Typografie */}
+        <div className="hero-zen-text">
+          <p className="hero-zen-title">ORFHEUSS</p>
+          <div className="hero-zen-rule" />
+          <p className="hero-zen-sub">PRSYS · ACADEMY</p>
+        </div>
+
+        {/* Daylight / Nocturne grid */}
+        <div className="theme-grid" role="group" aria-label="Kies thema">
+          <button
+            className={`theme-block theme-block--daylight${theme === 'daylight' ? ' theme-block--active' : ''}`}
+            onClick={() => setTheme('daylight')}
+          >
+            <span className="theme-block-symbol">◐</span>
+            <span className="theme-block-name">DAYLIGHT</span>
+            <span className="theme-block-desc">Wit. Helder. Open.</span>
+          </button>
+          <button
+            className={`theme-block theme-block--nocturne${theme === 'nocturne' ? ' theme-block--active' : ''}`}
+            onClick={() => setTheme('nocturne')}
+          >
+            <span className="theme-block-symbol">◑</span>
+            <span className="theme-block-name">NOCTURNE</span>
+            <span className="theme-block-desc">Zwart. Stil. Diep.</span>
+          </button>
+        </div>
+
+        {/* Scroll hint */}
+        <a href="#taogate" className="hero-zen-scroll" aria-label="Verder">
+          <svg width="14" height="14" viewBox="0 0 16 16" fill="none">
+            <path d="M8 3v10M3 9l5 5 5-5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+          </svg>
+        </a>
+
       </section>
 
       {/* ── 2. TAOGATE ────────────────────────────────────────────────── */}

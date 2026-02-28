@@ -2,6 +2,7 @@ import React from 'react';
 import { BrowserRouter, Routes, Route, Link, useLocation } from 'react-router-dom';
 import { UserProvider } from './context/UserContext';
 import { WorkbookProvider } from './context/WorkbookContext';
+import { ThemeProvider } from './context/ThemeContext';
 import { HomePage } from './pages/HomePage';
 import { TrackPage } from './pages/TrackPage';
 import { WorkbookPage } from './pages/WorkbookPage';
@@ -41,6 +42,7 @@ const NavBar: React.FC = () => {
 const App: React.FC = () => {
   return (
     <BrowserRouter>
+      <ThemeProvider>
       <UserProvider>
         <WorkbookProvider>
           <div className="app">
@@ -60,6 +62,7 @@ const App: React.FC = () => {
           </div>
         </WorkbookProvider>
       </UserProvider>
+      </ThemeProvider>
     </BrowserRouter>
   );
 };
