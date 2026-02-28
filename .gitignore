@@ -27,6 +27,9 @@ workspace/local/
 *.swp
 *.swo
 
+# Dependencies
+node_modules/
+
 # Env
 .env
 .env.*
