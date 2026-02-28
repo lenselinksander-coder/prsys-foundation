@@ -412,6 +412,7 @@ textarea::placeholder { color: var(--text-faint); }
 .badge-domain  { background: var(--bg-elevated); color: var(--text-muted); }
 .badge-cases   { background: var(--bg-elevated); color: var(--text-muted); }
 .badge-modules { background: var(--bg-elevated); color: var(--text-muted); }
+.badge-role    { background: transparent; color: var(--text-muted); border: 1px solid var(--border); opacity: 0.6; font-style: italic; }
 .badge-done    { background: var(--bg-elevated); color: var(--accent); }
 
 .chip {
