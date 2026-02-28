@@ -981,6 +981,55 @@ textarea::placeholder { color: var(--text-faint); }
   flex-shrink: 0;
 }
 
+.replit-systemprompt-details {
+  margin-top: 0.75rem;
+  border-top: 1px solid var(--border);
+  padding-top: 0.5rem;
+}
+
+.replit-systemprompt-summary {
+  font-family: var(--font-ui);
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  cursor: pointer;
+  user-select: none;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.replit-systemprompt-summary::before {
+  content: '▶';
+  font-size: 0.6rem;
+  transition: transform 0.15s ease;
+}
+
+.replit-systemprompt-details[open] .replit-systemprompt-summary::before {
+  transform: rotate(90deg);
+}
+
+.replit-systemprompt-body { margin-top: 0.75rem; }
+
+.replit-systemprompt-text {
+  font-family: var(--font-code);
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+  white-space: pre-wrap;
+  word-break: break-word;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  padding: 0.75rem 1rem;
+  margin: 0 0 0.5rem;
+}
+
+.replit-systemprompt-footer {
+  display: flex;
+  justify-content: flex-end;
+}
+
 /* ── Case List & Cards ────────────────────────────────────────────────────── */
 .section-title {
   font-size: 1rem;

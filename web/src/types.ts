@@ -19,8 +19,9 @@ export interface Track {
   domain: Domain;
   roles: Role[];
   moduleCount: number;
-  workbookId?: string;    // koppeling naar werkboek indien aanwezig
-  replitPrompt?: string;  // standaard openingsprompt voor de Replit-agent
+  workbookId?: string;          // koppeling naar werkboek indien aanwezig
+  replitPrompt?: string;        // éénregelige openingsprompt voor de Replit-agent
+  replitSystemPrompt?: string;  // volledig systeem-prompt voor de Replit-agent
 }
 
 // ── Case (los, via TrackPage) ──────────────────────────────────────────────

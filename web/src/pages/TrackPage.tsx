@@ -6,23 +6,40 @@ import { CaseDetail } from '../components/CaseDetail';
 import { useUser } from '../context/UserContext';
 import { useWorkbook } from '../context/WorkbookContext';
 
-function ReplitPromptBox({ prompt }: { prompt: string }) {
+function CopyButton({ text, label = 'Kopieer' }: { text: string; label?: string }) {
   const [copied, setCopied] = useState(false);
   const handleCopy = () => {
-    navigator.clipboard.writeText(prompt).then(() => {
+    navigator.clipboard.writeText(text).then(() => {
       setCopied(true);
       setTimeout(() => setCopied(false), 2000);
     });
   };
   return (
+    <button className="btn btn-ghost btn-xs" onClick={handleCopy}>
+      {copied ? '✓ Gekopieerd' : label}
+    </button>
+  );
+}
+
+function ReplitPromptBox({ prompt, systemPrompt }: { prompt: string; systemPrompt?: string }) {
+  return (
     <div className="replit-prompt-box">
       <div className="replit-prompt-label">Replit-openingsprompt</div>
       <div className="replit-prompt-content">
         <code className="replit-prompt-text">{prompt}</code>
-        <button className="btn btn-ghost btn-xs replit-prompt-copy" onClick={handleCopy}>
-          {copied ? '✓ Gekopieerd' : 'Kopieer'}
-        </button>
+        <CopyButton text={prompt} />
       </div>
+      {systemPrompt && (
+        <details className="replit-systemprompt-details">
+          <summary className="replit-systemprompt-summary">Volledig systeem-prompt</summary>
+          <div className="replit-systemprompt-body">
+            <pre className="replit-systemprompt-text">{systemPrompt}</pre>
+            <div className="replit-systemprompt-footer">
+              <CopyButton text={systemPrompt} label="Kopieer systeem-prompt" />
+            </div>
+          </div>
+        </details>
+      )}
     </div>
   );
 }
@@ -75,7 +92,9 @@ export const TrackPage: React.FC = () => {
           <span>{track.moduleCount} modules</span>
           <span>{cases.length} ORFHEUSS-cases</span>
         </div>
-        {track.replitPrompt && <ReplitPromptBox prompt={track.replitPrompt} />}
+        {track.replitPrompt && (
+          <ReplitPromptBox prompt={track.replitPrompt} systemPrompt={track.replitSystemPrompt} />
+        )}
       </div>
 
       {cases.length > 0 ? (
