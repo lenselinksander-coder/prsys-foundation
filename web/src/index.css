@@ -1539,3 +1539,95 @@ textarea::placeholder { color: var(--text-faint); }
   .split-view { grid-template-columns: 1fr; }
   .split-panel--ai { border-right: none; border-bottom: 1px solid var(--border); }
 }
+
+/* ── Landing / poortpagina ────────────────────────────────────────────────── */
+.landing-page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #0f0f0f;
+}
+
+.landing-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2.5rem;
+}
+
+.landing-logo-wrap {
+  width: 160px;
+  height: 160px;
+}
+
+.landing-logo {
+  width: 100%;
+  height: 100%;
+}
+
+.landing-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+  width: 260px;
+}
+
+@keyframes schud {
+  0%   { transform: translateX(0); }
+  20%  { transform: translateX(-8px); }
+  40%  { transform: translateX(8px); }
+  60%  { transform: translateX(-5px); }
+  80%  { transform: translateX(5px); }
+  100% { transform: translateX(0); }
+}
+
+.landing-form--schud {
+  animation: schud 0.45s ease;
+}
+
+.landing-input {
+  width: 100%;
+  padding: 0.65rem 1rem;
+  background: #1c1c1c;
+  border: 1px solid rgba(255, 255, 255, 0.10);
+  border-radius: var(--radius);
+  color: #f0ede8;
+  font-family: 'EB Garamond', Georgia, serif;
+  font-size: 1rem;
+  letter-spacing: 0.04em;
+  text-align: center;
+  outline: none;
+  transition: border-color 0.2s;
+  box-sizing: border-box;
+}
+
+.landing-input::placeholder {
+  color: rgba(255, 255, 255, 0.25);
+  letter-spacing: 0.08em;
+}
+
+.landing-input:focus {
+  border-color: rgba(255, 255, 255, 0.30);
+}
+
+.landing-input--fout {
+  border-color: rgba(160, 64, 64, 0.60);
+}
+
+.landing-error {
+  margin: 0;
+  font-family: 'EB Garamond', Georgia, serif;
+  font-size: 0.85rem;
+  color: rgba(180, 80, 80, 0.90);
+  letter-spacing: 0.04em;
+}
+
+.landing-btn {
+  width: 100%;
+  margin-top: 0.25rem;
+  letter-spacing: 0.12em;
+  font-family: 'EB Garamond', Georgia, serif;
+  font-size: 0.9rem;
+}

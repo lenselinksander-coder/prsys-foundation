@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { BrowserRouter, Routes, Route, Link, useLocation, useNavigate } from 'react-router-dom';
 import { useUser } from './context/UserContext';
 import { useTheme } from './context/ThemeContext';
@@ -12,6 +12,7 @@ import { HomePage } from './pages/HomePage';
 import { TrackPage } from './pages/TrackPage';
 import { WorkbookPage } from './pages/WorkbookPage';
 import { WorkbookViewPage } from './pages/WorkbookViewPage';
+import { LandingPage } from './pages/LandingPage';
 import { ThemeToggle } from './components/ThemeToggle';
 import './index.css';
 
@@ -44,6 +45,14 @@ const NavBar: React.FC = () => {
 };
 
 const App: React.FC = () => {
+  const [toegang, setToegang] = useState(
+    () => localStorage.getItem('prsys-toegang') === '1'
+  );
+
+  if (!toegang) {
+    return <LandingPage onToegang={() => setToegang(true)} />;
+  }
+
   return (
     <BrowserRouter>
       <ThemeProvider>
