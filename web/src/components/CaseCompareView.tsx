@@ -114,6 +114,9 @@ export const CaseCompareView: React.FC<Props> = ({ caseId, domain, level, role, 
           {claudiusLoading ? 'Claudius denkt...' : claudiusOpen ? '▲ Verberg Claudius' : 'Vraag Claudius'}
         </button>
       </div>
+      <p className="claudius-disclaimer">
+        Claudius is een AI-assistent. Invoer wordt verwerkt via de ORFHEUSS API. Deel geen persoonsgegevens.
+      </p>
       {error && <span className="compare-error">{error}</span>}
 
       {open && compare && (
