@@ -39,3 +39,30 @@ export async function fetchCompare(params: {
 
   return res.json() as Promise<CompareResult>;
 }
+
+export interface ClaudiusResult {
+  caseId: string;
+  domain: Domain;
+  orfheussChecks: OrfheussResult;
+}
+
+export async function fetchClaudius(params: {
+  domain: Domain;
+  level: Level;
+  role: Role;
+  caseId: string;
+  situation: string;
+}): Promise<ClaudiusResult> {
+  const res = await fetch('/api/taogate/claudius', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify(params),
+  });
+
+  if (!res.ok) {
+    const err = await res.json().catch(() => ({}));
+    throw new Error((err as { error?: string }).error ?? `Server error ${res.status}`);
+  }
+
+  return res.json() as Promise<ClaudiusResult>;
+}

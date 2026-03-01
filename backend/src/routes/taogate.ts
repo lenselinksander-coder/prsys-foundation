@@ -1,6 +1,7 @@
 import { Router } from 'express';
 import type { Request, Response } from 'express';
 import { compareWithOrfheuss } from '../orfheussEngine.js';
+import { claudiusOrfheussCheck, ClaudiusNotAvailableError } from '../claudeOrfheussService.js';
 import type { CompareInput } from '../types.js';
 
 const router = Router();
@@ -9,28 +10,63 @@ const VALID_DOMAINS = new Set(['marketing', 'social', 'digital', 'finance', 'zor
 const VALID_LEVELS = new Set(['mbo4', 'hbo', 'universiteit']);
 const VALID_ROLES = new Set(['student', 'docent', 'begeleider']);
 
-router.post('/compare', (req: Request, res: Response) => {
-  const { domain, level, role, caseId } = req.body as Partial<CompareInput>;
-
+function validateCompareInput(
+  body: Partial<CompareInput & { situation?: string }>,
+  res: Response
+): (CompareInput & { situation?: string }) | null {
+  const { domain, level, role, caseId } = body;
   if (!domain || !VALID_DOMAINS.has(domain)) {
     res.status(400).json({ error: 'Ongeldig of ontbrekend veld: domain' });
-    return;
+    return null;
   }
   if (!level || !VALID_LEVELS.has(level)) {
     res.status(400).json({ error: 'Ongeldig of ontbrekend veld: level' });
-    return;
+    return null;
   }
   if (!role || !VALID_ROLES.has(role)) {
     res.status(400).json({ error: 'Ongeldig of ontbrekend veld: role' });
-    return;
+    return null;
   }
   if (!caseId || typeof caseId !== 'string' || caseId.length > 128) {
     res.status(400).json({ error: 'Ongeldig of ontbrekend veld: caseId' });
+    return null;
+  }
+  return { domain, level, role, caseId, situation: body.situation };
+}
+
+router.post('/compare', (req: Request, res: Response) => {
+  const input = validateCompareInput(req.body as Partial<CompareInput>, res);
+  if (!input) return;
+
+  const result = compareWithOrfheuss(input);
+  res.json(result);
+});
+
+// Claudius: Claude als live ORFHEUSS AI — codex als server-side systeem-prompt
+router.post('/claudius', async (req: Request, res: Response) => {
+  const input = validateCompareInput(
+    req.body as Partial<CompareInput & { situation?: string }>,
+    res
+  );
+  if (!input) return;
+
+  const situation = input.situation ?? '';
+  if (typeof situation !== 'string' || situation.length > 2000) {
+    res.status(400).json({ error: 'Ongeldig of ontbrekend veld: situation' });
     return;
   }
 
-  const result = compareWithOrfheuss({ domain, level, role, caseId });
-  res.json(result);
+  try {
+    const orfheussChecks = await claudiusOrfheussCheck(input, situation);
+    res.json({ caseId: input.caseId, domain: input.domain, orfheussChecks });
+  } catch (err) {
+    if (err instanceof ClaudiusNotAvailableError) {
+      res.status(503).json({ error: err.message });
+    } else {
+      console.error('[Claudius] Fout:', err);
+      res.status(500).json({ error: 'Claudius kon de ORFHEUSS-toets niet voltooien' });
+    }
+  }
 });
 
 export default router;
