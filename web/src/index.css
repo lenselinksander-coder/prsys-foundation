@@ -1347,6 +1347,13 @@ textarea::placeholder { color: var(--text-faint); }
   flex-wrap: wrap;
 }
 
+.compare-actions {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+  margin-bottom: 0.75rem;
+}
+
 .btn-compare {
   background: var(--bg-elevated);
   color: var(--accent);
@@ -1362,10 +1369,59 @@ textarea::placeholder { color: var(--text-faint); }
 .btn-compare:hover:not(:disabled) { background: var(--accent); color: #fff; }
 .btn-compare:disabled { opacity: 0.5; cursor: not-allowed; }
 
+.btn-claudius {
+  background: var(--bg-elevated);
+  color: var(--text-muted);
+  border: 1px dashed var(--border);
+  padding: 0.5rem 1.2rem;
+  border-radius: var(--radius-sm);
+  font-size: 0.875rem;
+  font-weight: 600;
+  font-family: inherit;
+  cursor: pointer;
+  transition: background 0.15s, color 0.15s, border-color 0.15s;
+}
+.btn-claudius:hover:not(:disabled) { background: var(--bg-elevated); color: var(--accent); border-color: var(--accent); border-style: solid; }
+.btn-claudius:disabled { opacity: 0.5; cursor: not-allowed; }
+
 .compare-error {
   font-size: 0.8rem;
   color: var(--red);
 }
+
+/* ── Claudius live resultaat ──────────────────────────────────────────────── */
+.claudius-block {
+  margin-top: 1rem;
+  border: 1px dashed var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+
+.claudius-header {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.6rem 1rem;
+  background: var(--bg-elevated);
+  border-bottom: 1px solid var(--border);
+}
+
+.claudius-label {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--text-muted);
+}
+
+.claudius-badge {
+  font-size: 0.7rem;
+  padding: 0.15rem 0.5rem;
+  border-radius: 999px;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  color: var(--text-muted);
+}
+
+.claudius-error { margin-top: 0.5rem; display: block; }
 
 /* ── Split-view ───────────────────────────────────────────────────────────── */
 .split-view {

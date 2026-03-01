@@ -112,6 +112,7 @@ const CaseBlock: React.FC<{ lesson: CaseLesson }> = ({ lesson }) => {
           domain={lesson.domain}
           level={lesson.level}
           role={role}
+          situation={lesson.situation}
         />
 
         <label className="field-label" style={{ marginTop: '1rem' }}>Hoe toetst ORFHEUSS dit? Wat is het verschil?</label>
