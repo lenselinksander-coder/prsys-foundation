@@ -1389,6 +1389,13 @@ textarea::placeholder { color: var(--text-faint); }
   color: var(--red);
 }
 
+.claudius-disclaimer {
+  font-size: 0.72rem;
+  color: var(--text-muted);
+  margin: 0.35rem 0 0;
+  opacity: 0.7;
+}
+
 /* ── Claudius live resultaat ──────────────────────────────────────────────── */
 .claudius-block {
   margin-top: 1rem;
