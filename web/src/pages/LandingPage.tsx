@@ -1,24 +1,32 @@
 import React, { useState } from 'react';
 import { OrfheussLogo } from '../components/OrfheussLogo';
+import { login } from '../services/authApi';
 
 interface LandingPageProps {
-  onToegang: () => void;
+  onLogin: (token: string) => void;
 }
 
-export const LandingPage: React.FC<LandingPageProps> = ({ onToegang }) => {
+export const LandingPage: React.FC<LandingPageProps> = ({ onLogin }) => {
+  const [email, setEmail] = useState('');
   const [wachtwoord, setWachtwoord] = useState('');
-  const [fout, setFout] = useState(false);
+  const [fout, setFout] = useState<string | null>(null);
   const [schud, setSchud] = useState(false);
+  const [laden, setLaden] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (wachtwoord.trim().toLowerCase() === 'noblesse oblige') {
-      localStorage.setItem('prsys-toegang', '1');
-      onToegang();
-    } else {
-      setFout(true);
+    setLaden(true);
+    setFout(null);
+    try {
+      const { token } = await login(email.trim(), wachtwoord);
+      onLogin(token);
+    } catch (err) {
+      const msg = err instanceof Error ? err.message : 'Inloggen mislukt';
+      setFout(msg);
       setSchud(true);
       setTimeout(() => setSchud(false), 500);
+    } finally {
+      setLaden(false);
     }
   };
 
@@ -35,31 +43,46 @@ export const LandingPage: React.FC<LandingPageProps> = ({ onToegang }) => {
           noValidate
         >
           <input
+            className="landing-input"
+            type="email"
+            placeholder="E-mailadres"
+            value={email}
+            onChange={e => {
+              setEmail(e.target.value);
+              if (fout) setFout(null);
+            }}
+            autoFocus
+            autoComplete="email"
+            aria-label="E-mailadres"
+            disabled={laden}
+          />
+
+          <input
             className={`landing-input${fout ? ' landing-input--fout' : ''}`}
             type="password"
             placeholder="Wachtwoord"
             value={wachtwoord}
             onChange={e => {
               setWachtwoord(e.target.value);
-              if (fout) setFout(false);
+              if (fout) setFout(null);
             }}
-            autoFocus
             autoComplete="current-password"
             aria-label="Wachtwoord"
+            disabled={laden}
           />
 
           {fout && (
             <p className="landing-error" role="alert">
-              Toegang geweigerd.
+              {fout}
             </p>
           )}
 
           <button
             className="btn btn-primary landing-btn"
             type="submit"
-            disabled={wachtwoord.trim() === ''}
+            disabled={laden || !email.trim() || !wachtwoord.trim()}
           >
-            Betreden
+            {laden ? 'Inloggen...' : 'Betreden'}
           </button>
         </form>
       </div>

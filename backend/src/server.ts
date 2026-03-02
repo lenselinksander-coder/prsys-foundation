@@ -3,6 +3,8 @@ import cors from 'cors';
 import path from 'path';
 import { fileURLToPath } from 'url';
 import taogateRouter from './routes/taogate.js';
+import authRouter from './routes/auth.js';
+import { authMiddleware } from './auth/middleware.js';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const app = express();
@@ -19,8 +21,12 @@ if (isDev) {
 
 app.use(express.json());
 
-// API routes
-app.use('/api/taogate', taogateRouter);
+// Auth routes — public (geen authMiddleware)
+app.use('/api/auth', authRouter);
+
+// TaoGate routes — beveiligd met JWT
+app.use('/api/taogate', authMiddleware, taogateRouter);
+
 app.get('/api/health', (_req, res) => {
   res.json({ status: 'ok' });
 });
