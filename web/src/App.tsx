@@ -13,6 +13,7 @@ import { TrackPage } from './pages/TrackPage';
 import { WorkbookPage } from './pages/WorkbookPage';
 import { WorkbookViewPage } from './pages/WorkbookViewPage';
 import { LandingPage } from './pages/LandingPage';
+import { AiGatePage } from './pages/AiGatePage';
 import { ThemeToggle } from './components/ThemeToggle';
 import { getStoredToken, isTokenValid, decodeToken, storeToken } from './services/authApi';
 import './index.css';
@@ -60,6 +61,14 @@ const App: React.FC = () => {
           storeToken(newToken);
           setToken(newToken);
         }}
+      />
+    );
+  }
+
+  if (!decoded?.ai_gate_completed) {
+    return (
+      <AiGatePage
+        onComplete={(newToken: string) => setToken(newToken)}
       />
     );
   }

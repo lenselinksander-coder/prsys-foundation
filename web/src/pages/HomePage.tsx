@@ -153,7 +153,48 @@ export const HomePage: React.FC = () => {
         </div>
       </section>
 
-      {/* ── 4. INSTAP ─────────────────────────────────────────────────── */}
+      {/* ── 4. CLAUDIUS-KADER ─────────────────────────────────────────── */}
+      <section id="claudius" className="journey-section journey-claudius">
+        <div className="journey-inner">
+          <div className="journey-symbol">⬡</div>
+          <h2 className="journey-title">Claudius — wat doet het, wat niet</h2>
+          <p className="journey-lead">
+            Claudius is de AI binnen ORFHEUSS. Geen beslisser — een toetser.
+            Begrijp de grens voordat je ermee werkt.
+          </p>
+          <div className="claudius-home-block">
+            <div className="claudius-col claudius-col--doet">
+              <div className="claudius-col-header">Doet</div>
+              <ul>
+                <li>Toetst op mandaat, integriteit en draagkracht</li>
+                <li>Stelt ethische vragen bij twijfelgevallen</li>
+                <li>Herkent wanneer een beslissing te snel gaat</li>
+                <li>Geeft terug aan de mens als het niet klopt</li>
+              </ul>
+            </div>
+            <div className="claudius-col claudius-col--doetniet">
+              <div className="claudius-col-header">Doet niet</div>
+              <ul>
+                <li>Neemt besluiten namens jou of een cliënt</li>
+                <li>Vervangt professioneel of juridisch oordeel</li>
+                <li>Optimaliseert output boven ethiek</li>
+                <li>Geeft een definitief advies</li>
+              </ul>
+            </div>
+            <div className="claudius-col claudius-col--wanneer">
+              <div className="claudius-col-header">Wanneer inzetten</div>
+              <ul>
+                <li>Bij cliëntcasussen met conflicterende belangen</li>
+                <li>Bij AI-ondersteunde adviezen die anderen raken</li>
+                <li>Bij budgetbesluiten met ethische implicaties</li>
+                <li>Bij crisis- of tijdsdruk-situaties</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ── 5. INSTAP ─────────────────────────────────────────────────── */}
       <section id="instap" className="journey-section journey-enter">
         <div className="journey-inner journey-inner--centered">
           <h2 className="journey-title">Kies jouw route</h2>
