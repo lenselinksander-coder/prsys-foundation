@@ -5,7 +5,7 @@
  * De codex-inhoud verlaat de server NOOIT — studenten zien alleen het resultaat.
  */
 import Anthropic from '@anthropic-ai/sdk';
-import type { CompareInput, OrfheussResult } from './types.js';
+import type { CompareInput, OrfheussResult, Level } from './types.js';
 
 // Probeer codex te laden uit environment of interne module (gitignored).
 // Als geen van beiden beschikbaar is, werkt de service niet → 503.
@@ -28,7 +28,16 @@ function loadCodex(): string {
 
 const CODEX_CONTENT = loadCodex();
 
-const SYSTEM_PROMPT_PREFIX = `Je bent ORFHEUSS — een ethisch poortwachter-systeem voor AI-beslissingen.
+const NIVEAU_TOON: Record<Level, string> = {
+  mbo4: 'Je spreekt met een MBO niveau 4 student. Gebruik concrete, praktische taal. Vermijd jargon. Geef duidelijke voorbeelden. Houd redenering stap voor stap.',
+  hbo: 'Je spreekt met een HBO student of professional. Gebruik analytische, professionele taal. Verwijs naar beroepsethische normen. Vraag door op beleidsgevolgen en verantwoordelijkheidsketens.',
+  universiteit: 'Je spreekt met een universitaire student of wetenschapper. Gebruik theoretisch-kritische taal. Verwijs naar juridische kaders, academische ethiek en maatschappijtheorie. Verwacht diepgaande onderbouwing.',
+};
+
+function buildSystemPromptPrefix(niveau: Level): string {
+  return `Je bent ORFHEUSS — een ethisch poortwachter-systeem voor AI-beslissingen.
+
+${NIVEAU_TOON[niveau]}
 
 Je taak: analyseer de gegeven casus en geef een ORFHEUSS-toets terug.
 
@@ -46,6 +55,7 @@ STRIKTE REGELS:
 
 ORFHEUSS CODEX:
 `;
+}
 
 export class ClaudiusNotAvailableError extends Error {
   constructor(reason: string) {
@@ -56,7 +66,8 @@ export class ClaudiusNotAvailableError extends Error {
 
 export async function claudiusOrfheussCheck(
   input: CompareInput,
-  caseSituation: string
+  caseSituation: string,
+  niveau?: Level
 ): Promise<OrfheussResult> {
   if (!process.env.ANTHROPIC_API_KEY) {
     throw new ClaudiusNotAvailableError('ANTHROPIC_API_KEY niet geconfigureerd');
@@ -67,6 +78,7 @@ export async function claudiusOrfheussCheck(
     );
   }
 
+  const effectiveLevel = niveau ?? input.level;
   const client = new Anthropic({ apiKey: process.env.ANTHROPIC_API_KEY });
 
   const userMessage = `Casus-ID: ${input.caseId}
@@ -82,7 +94,7 @@ Voer de ORFHEUSS-toets uit en geef uitsluitend JSON terug.`;
   const message = await client.messages.create({
     model: 'claude-sonnet-4-6',
     max_tokens: 1024,
-    system: SYSTEM_PROMPT_PREFIX + CODEX_CONTENT,
+    system: buildSystemPromptPrefix(effectiveLevel) + CODEX_CONTENT,
     messages: [{ role: 'user', content: userMessage }],
   });
 

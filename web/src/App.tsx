@@ -13,7 +13,9 @@ import { TrackPage } from './pages/TrackPage';
 import { WorkbookPage } from './pages/WorkbookPage';
 import { WorkbookViewPage } from './pages/WorkbookViewPage';
 import { LandingPage } from './pages/LandingPage';
+import { AiGatePage } from './pages/AiGatePage';
 import { ThemeToggle } from './components/ThemeToggle';
+import { getStoredToken, isTokenValid, decodeToken, storeToken } from './services/authApi';
 import './index.css';
 
 const NavBar: React.FC = () => {
@@ -45,37 +47,55 @@ const NavBar: React.FC = () => {
 };
 
 const App: React.FC = () => {
-  const [toegang, setToegang] = useState(
-    () => localStorage.getItem('prsys-toegang') === '1'
-  );
+  const [token, setToken] = useState<string | null>(() => {
+    const t = getStoredToken();
+    return t && isTokenValid(t) ? t : null;
+  });
 
-  if (!toegang) {
-    return <LandingPage onToegang={() => setToegang(true)} />;
+  const decoded = token ? decodeToken(token) : null;
+
+  if (!token) {
+    return (
+      <LandingPage
+        onLogin={(newToken: string) => {
+          storeToken(newToken);
+          setToken(newToken);
+        }}
+      />
+    );
+  }
+
+  if (!decoded?.ai_gate_completed) {
+    return (
+      <AiGatePage
+        onComplete={(newToken: string) => setToken(newToken)}
+      />
+    );
   }
 
   return (
     <BrowserRouter>
       <ThemeProvider>
-      <UserProvider>
-        <WorkbookProvider>
-          <RoleThemeBridge />
-          <div className="app">
-            <NavBar />
-            <main className="main-content">
-              <Routes>
-                <Route path="/" element={<HomePage />} />
-                <Route path="/track/:trackId" element={<TrackPage />} />
-                <Route path="/werkboek" element={<WorkbookPage />} />
-                <Route path="/werkboeken" element={<WorkbookenOverzicht />} />
-                <Route path="/werkboek/:workbookId" element={<WorkbookViewPage />} />
-              </Routes>
-            </main>
-            <footer className="footer">
-              <p>ORFHEUSS Academy — TaoGate lesprogramma</p>
-            </footer>
-          </div>
-        </WorkbookProvider>
-      </UserProvider>
+        <UserProvider initialRole={decoded?.role} initialLevel={decoded?.level}>
+          <WorkbookProvider>
+            <RoleThemeBridge />
+            <div className="app">
+              <NavBar />
+              <main className="main-content">
+                <Routes>
+                  <Route path="/" element={<HomePage />} />
+                  <Route path="/track/:trackId" element={<TrackPage />} />
+                  <Route path="/werkboek" element={<WorkbookPage />} />
+                  <Route path="/werkboeken" element={<WorkbookenOverzicht />} />
+                  <Route path="/werkboek/:workbookId" element={<WorkbookViewPage />} />
+                </Routes>
+              </main>
+              <footer className="footer">
+                <p>ORFHEUSS Academy — TaoGate lesprogramma</p>
+              </footer>
+            </div>
+          </WorkbookProvider>
+        </UserProvider>
       </ThemeProvider>
     </BrowserRouter>
   );

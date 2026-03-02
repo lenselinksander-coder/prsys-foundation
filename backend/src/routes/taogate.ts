@@ -2,6 +2,7 @@ import { Router } from 'express';
 import type { Request, Response } from 'express';
 import { compareWithOrfheuss } from '../orfheussEngine.js';
 import { claudiusOrfheussCheck, ClaudiusNotAvailableError } from '../claudeOrfheussService.js';
+import { aiGateMiddleware } from '../auth/middleware.js';
 import type { CompareInput } from '../types.js';
 
 const router = Router();
@@ -43,7 +44,8 @@ router.post('/compare', (req: Request, res: Response) => {
 });
 
 // Claudius: Claude als live ORFHEUSS AI — codex als server-side systeem-prompt
-router.post('/claudius', async (req: Request, res: Response) => {
+// aiGateMiddleware vereist ai_gate_completed: true in JWT (authMiddleware is al toegepast via server.ts)
+router.post('/claudius', aiGateMiddleware, async (req: Request, res: Response) => {
   const input = validateCompareInput(
     req.body as Partial<CompareInput & { situation?: string }>,
     res
@@ -56,9 +58,13 @@ router.post('/claudius', async (req: Request, res: Response) => {
     return;
   }
 
+  // Gebruik niveau uit JWT als authoritative source voor de system prompt
+  const jwtLevel = req.user?.level;
+  const trustedInput = jwtLevel ? { ...input, level: jwtLevel } : input;
+
   try {
-    const orfheussChecks = await claudiusOrfheussCheck(input, situation);
-    res.json({ caseId: input.caseId, domain: input.domain, orfheussChecks });
+    const orfheussChecks = await claudiusOrfheussCheck(trustedInput, situation, jwtLevel);
+    res.json({ caseId: trustedInput.caseId, domain: trustedInput.domain, orfheussChecks });
   } catch (err) {
     if (err instanceof ClaudiusNotAvailableError) {
       res.status(503).json({ error: err.message });

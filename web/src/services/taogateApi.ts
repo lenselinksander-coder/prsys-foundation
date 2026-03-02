@@ -1,5 +1,12 @@
 import type { Domain, Level, Role } from '../types';
 
+function authHeaders(): Record<string, string> {
+  const token = sessionStorage.getItem('prsys-jwt');
+  return token
+    ? { 'Content-Type': 'application/json', Authorization: `Bearer ${token}` }
+    : { 'Content-Type': 'application/json' };
+}
+
 export interface PlainAiProfile {
   optimisesFor: string[];
   ignoresRisks: string[];
@@ -28,7 +35,7 @@ export async function fetchCompare(params: {
 }): Promise<CompareResult> {
   const res = await fetch('/api/taogate/compare', {
     method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
+    headers: authHeaders(),
     body: JSON.stringify(params),
   });
 
@@ -55,7 +62,7 @@ export async function fetchClaudius(params: {
 }): Promise<ClaudiusResult> {
   const res = await fetch('/api/taogate/claudius', {
     method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
+    headers: authHeaders(),
     body: JSON.stringify(params),
   });
 

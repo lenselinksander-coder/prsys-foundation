@@ -23,9 +23,21 @@ interface UserContextValue {
 
 const UserContext = createContext<UserContextValue | undefined>(undefined);
 
-export const UserProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
-  const [role, setRoleState] = useState<Role>(() => loadStored('orfheuss-role', 'student', ROLE_VALUES));
-  const [level, setLevelState] = useState<Level>(() => loadStored('orfheuss-level', 'hbo', LEVEL_VALUES));
+interface UserProviderProps {
+  children: React.ReactNode;
+  initialRole?: string; // from JWT — seeds state, user can still override
+  initialLevel?: string; // from JWT — seeds state, user can still override
+}
+
+export const UserProvider: React.FC<UserProviderProps> = ({ children, initialRole, initialLevel }) => {
+  const [role, setRoleState] = useState<Role>(() => {
+    if (initialRole && (ROLE_VALUES as readonly string[]).includes(initialRole)) return initialRole as Role;
+    return loadStored('orfheuss-role', 'student', ROLE_VALUES);
+  });
+  const [level, setLevelState] = useState<Level>(() => {
+    if (initialLevel && (LEVEL_VALUES as readonly string[]).includes(initialLevel)) return initialLevel as Level;
+    return loadStored('orfheuss-level', 'hbo', LEVEL_VALUES);
+  });
 
   const setRole = (r: Role) => { setRoleState(r); persist('orfheuss-role', r); };
   const setLevel = (l: Level) => { setLevelState(l); persist('orfheuss-level', l); };

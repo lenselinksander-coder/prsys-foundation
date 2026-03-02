@@ -4,20 +4,17 @@ import { useTheme } from '../context/ThemeContext';
 export const ThemeToggle: React.FC = () => {
   const { theme, toggle } = useTheme();
 
+  const label = theme === 'daylight' ? '☀ Daylight' : '🌙 Nocturne';
+  const title = theme === 'daylight' ? 'Schakel naar Nocturne (donkere modus)' : 'Schakel naar Daylight';
+
   return (
     <button
       className="theme-toggle"
       onClick={toggle}
-      aria-label="Thema wisselen"
-      title={theme === 'nocturne' ? 'Schakel naar Daylight' : 'Schakel naar Nocturne'}
+      aria-label={`Thema: ${label}. Klik om te wisselen.`}
+      title={title}
     >
-      <span className={`theme-toggle-word ${theme === 'daylight' ? 'is-active' : ''}`}>
-        DAYLIGHT
-      </span>
-      <span className="theme-toggle-sep">·</span>
-      <span className={`theme-toggle-word ${theme === 'nocturne' ? 'is-active' : ''}`}>
-        NOCTURNE
-      </span>
+      {label}
     </button>
   );
 };
