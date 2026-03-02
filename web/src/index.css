@@ -1241,6 +1241,84 @@ textarea::placeholder { color: var(--text-faint); }
 .workbook-header { margin-bottom: 2rem; }
 .workbook-subtitle { color: var(--text-muted); margin: 0.25rem 0 0; }
 
+/* ── Niveau-groepen (WorkbookPage) ────────────────────────────────────────── */
+.level-group {
+  margin-bottom: 2.5rem;
+}
+
+.level-group-header {
+  margin-bottom: 1rem;
+}
+
+.level-group-label {
+  display: inline-block;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--text-faint);
+  padding: 0.2rem 0.6rem;
+  border: 1px solid var(--border);
+  border-radius: 3px;
+}
+
+.level-group-divider {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin: 2rem 0 1rem;
+}
+
+.level-group-divider::before,
+.level-group-divider::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: var(--border);
+}
+
+.level-group-divider-label {
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--text-faint);
+  white-space: nowrap;
+}
+
+/* ── Docentenhandleidingen kader ──────────────────────────────────────────── */
+.docent-frame {
+  margin-top: 3rem;
+  padding: 1.5rem;
+  border: 1px solid var(--border);
+  border-left: 3px solid var(--text-muted);
+  border-radius: var(--radius);
+  background: var(--bg-elevated);
+}
+
+.docent-frame-header {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin-bottom: 0.35rem;
+}
+
+.docent-frame-icon {
+  font-style: normal;
+  opacity: 0.6;
+}
+
+.docent-frame-desc {
+  font-size: 0.8rem;
+  color: var(--text-faint);
+  margin: 0 0 1.25rem;
+}
+
 .saved-date {
   font-size: 0.75rem;
   color: var(--text-faint);
