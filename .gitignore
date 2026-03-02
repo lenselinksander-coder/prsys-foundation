@@ -33,6 +33,7 @@ node_modules/
 # Env
 .env
 .env.*
+!.env.example
 
 # Auth data — gebruikers-JSON, nooit committen
 data/
