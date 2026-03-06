@@ -15,8 +15,8 @@
   --border:      #2e2e2e;
   --border-focus:#c8c4bc;
   --text:        #f0ede8;
-  --text-muted:  #888880;
-  --text-faint:  #444440;
+  --text-muted:  #aeaea8;  /* was #888880 — 5.4:1 → 8.5:1 op #0f0f0f */
+  --text-faint:  #868680;  /* was #444440 — 2.0:1 → 5.3:1 op #0f0f0f */
   --accent:      #d4cfc9;
   --accent-hover:#ffffff;
   --green:       #4a7a5e;
