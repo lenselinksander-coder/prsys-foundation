@@ -38,6 +38,13 @@ export const LESSONS: Lesson[] = [
     type: 'intro',
   },
   {
+    id: 'ls-mbo4-finance-intro',
+    workbookId: 'wb-mbo4-finance',
+    title: 'Welkom bij PRSYS Q-Lab Finance',
+    order: 1,
+    type: 'intro',
+  },
+  {
     id: 'ls-docenten-marketing-intro',
     workbookId: 'wb-docenten-marketing',
     title: 'Didactisch kader: ORFHEUSS in de les',
@@ -750,6 +757,259 @@ export const ETHICS_LESSONS: EthicsLesson[] = [
           'Welke drie ontwerpprincipes zijn voor jou altijd het uitgangspunt — ook onder druk?',
           'Hoe integreer je ORFHEUSS in bestaande design-critiques of projectbeoordelingen?',
           'Wat wil jij dat jouw studenten anders doen als ontwerper na dit programma?',
+        ],
+      },
+    ],
+  } as unknown as EthicsLesson,
+
+  // ── MBO4 FINANCE & CONTROL ─────────────────────────────────────────────
+  {
+    id: 'case-mbo4-finance-1a',
+    workbookId: 'wb-mbo4-finance',
+    title: 'Cluster 1A · De Geblokkeerde Factuur',
+    order: 2,
+    type: 'case',
+    domain: 'finance',
+    level: 'mbo4',
+    orfheussFramework: ['Mandaat', 'Integriteit', 'Draagkracht'],
+    situation: `Je werkt als stagiair bij een administratiekantoor. Jullie gebruiken een boekhoudpakket met AI-factuurherkenning (OCR + machine learning). Het systeem scant facturen automatisch en boekt ze direct op de juiste grootboekrekening.
+
+Vandaag krijg je een melding: factuur van leverancier "Van der Linden Installatie" voor €2.450 is geblokkeerd. Het systeem zegt: "Afwijking gedetecteerd: BTW-percentage komt niet overeen met standaard."
+
+Je opent de factuur. Het gaat om een reparatie aan een zonnepaneel-installatie. De leverancier heeft 9% BTW berekend (verlaagd tarief). Het systeem verwacht 21% en heeft de factuur op "hold" gezet.
+
+Je belt de leverancier. Hij legt uit: "Zonnepanelen vallen sinds 2023 onder 0% BTW, maar onderhoud en reparatie valt onder 9% volgens de Belastingdienst. Dat klopt echt. Wij doen dit al jaren zo."
+
+Je collega zegt: "Laat het systeem maar beslissen. Als het blokkeert, is er iets mis. Wij hebben geen tijd om elke factuur handmatig uit te zoeken."
+
+Je leidinggevende is in vergadering. De leverancier belt een uur later: "Ik wacht al twee weken op betaling. Als het niet snel geregeld wordt, kom ik niet meer terug voor garantiewerkzaamheden."`,
+    questionToAI:
+      'Wat moet ik doen als een factuur door het systeem wordt geblokkeerd vanwege een afwijkend BTW-percentage?',
+    questionToOrfheuss:
+      'Mandaat: wie mag uiteindelijk beslissen of deze factuur betaald wordt — jij, je collega, je leidinggevende, of het systeem? Op basis waarvan? Integriteit: wanneer wordt dit besluit oneerlijk voor de leverancier? Welke interne controle of regel speelt hier een rol? Draagkracht: wat doet deze situatie met jouw werkdruk en gevoel van verantwoordelijkheid? Noem één risico en één ding dat zou helpen.',
+  },
+  {
+    id: 'case-mbo4-finance-1b',
+    workbookId: 'wb-mbo4-finance',
+    title: 'Cluster 1B · Fraudeflag & Leverancier',
+    order: 3,
+    type: 'case',
+    domain: 'finance',
+    level: 'mbo4',
+    orfheussFramework: ['Mandaat', 'Integriteit', 'Draagkracht'],
+    situation: `Je werkt bij een middelgroot productiebedrijf. Jullie ERP-systeem heeft automatische fraudedetectie: het controleert alle uitgaande betalingen en markeert "verdachte" transacties op basis van patronen (afwijkende bedragen, nieuwe rekeningen, hoge frequentie).
+
+Vanmorgen zie je een rode vlag bij een betaling van €8.500 aan leverancier "TechParts B.V." Het systeem zegt: "Hoogrisico: Nieuw rekeningnummer. Bevestig handmatig voor betaling."
+
+Je zoekt het op. TechParts is een vaste leverancier van onderdelen. Zij hebben vorige maand een nieuw rekeningnummer doorgegeven via e-mail. Jij hebt dat toen genoteerd en in het systeem aangepast.
+
+Het systeem blokkeert toch. Je belt TechParts. De eigenaar is boos: "Jullie betalen nooit op tijd! Dit is de derde maand dat het fout gaat. Ik stop met leveren als dit zo doorgaat."
+
+Je leidinggevende zegt: "Het systeem doet dit voor een reden. Vorig jaar is er €15.000 verloren door een phishing-mail met vals rekeningnummer. Wij volgen altijd het systeem."
+
+Jij denkt: Maar dit is echt dezelfde leverancier. Ik heb de e-mail nog.`,
+    questionToAI:
+      'Hoe kan ik controleren of een nieuw rekeningnummer van een leverancier betrouwbaar is voordat ik de betaling vrijgeef?',
+    questionToOrfheuss:
+      'Mandaat: wie heeft hier het mandaat om de betaling vrij te geven of definitief te blokkeren — jij, je leidinggevende, het systeem, of moet je nog iemand erbij halen? Integriteit: wanneer wordt "altijd het systeem volgen" oneerlijk voor de leverancier? Welke controle zou hier helpen (bijv. dubbele check, telefonische bevestiging)? Draagkracht: wat doet deze situatie met jouw gevoel van verantwoordelijkheid? Noem één risico en één oplossing.',
+  },
+  {
+    id: 'case-mbo4-finance-1c',
+    workbookId: 'wb-mbo4-finance',
+    title: 'Cluster 1C · BTW-Afwijking',
+    order: 4,
+    type: 'case',
+    domain: 'finance',
+    level: 'mbo4',
+    orfheussFramework: ['Mandaat', 'Integriteit', 'Draagkracht'],
+    situation: `Je werkt bij een accountantskantoor. Jullie software controleert automatisch BTW-aangiften voordat ze worden ingediend. Het systeem vergelijkt ingevoerde bedragen met eerdere aangiften en signaleert "afwijkingen".
+
+Bij klant "Bouwbedrijf Jansen" zie je een melding: "Afwijking gedetecteerd: BTW te betalen €12.000 lager dan vorige kwartalen (gemiddeld €18.000). Handmatige controle aanbevolen."
+
+Je bekijkt de cijfers. Jansen heeft dit kwartaal veel minder omzet gedraaid — een groot project is uitgesteld door vergunningsproblemen. De BTW klopt dus: minder omzet = minder BTW.
+
+Het systeem biedt twee opties: "Automatisch corrigeren naar gemiddelde" (systeem past BTW aan naar €18.000) of "Handmatig bevestigen afwijking" (jij neemt verantwoordelijkheid).
+
+Je collega zegt: "Klik gewoon op 'bevestigen'. Het is jouw verantwoordelijkheid als je het systeem overrulet."
+
+Je leidinggevende zegt: "Het systeem signaleert dit voor een reden. Heb je écht alles nagelopen? Vorig jaar hadden we een fout die €5.000 boete kostte."
+
+Je denkt: De cijfers kloppen echt. Maar wat als ik iets over het hoofd zie?`,
+    questionToAI:
+      'Wat moet ik doen als mijn BTW-aangiftesoftware een afwijking detecteert ten opzichte van vorige kwartalen?',
+    questionToOrfheuss:
+      'Mandaat: wie heeft hier het mandaat om te beslissen of de BTW-aangifte klopt — jij, het systeem, je leidinggevende, of de klant? Wanneer mag je het systeem "overrulen"? Integriteit: wanneer is het rechtvaardig om het systeem te volgen, en wanneer moet je zelf controleren? Welke fiscale regel of beroepsaansprakelijkheid speelt hier? Draagkracht: wat doet deze keuze met jouw gevoel van verantwoordelijkheid? Noem één risico en één ding dat zou helpen.',
+  },
+  {
+    id: 'case-mbo4-finance-2a',
+    workbookId: 'wb-mbo4-finance',
+    title: 'Cluster 2A · Kredietscore Weigert',
+    order: 5,
+    type: 'case',
+    domain: 'finance',
+    level: 'mbo4',
+    orfheussFramework: ['Mandaat', 'Integriteit', 'Draagkracht'],
+    situation: `Je werkt als financieel adviseur bij een bank. Jullie gebruiken een kredietscore-systeem dat automatisch klanten beoordeelt op basis van inkomen, schulden, betalingshistorie en andere data.
+
+Vandaag zit je in gesprek met mevrouw De Vries (32 jaar). Zij wil een persoonlijke lening van €8.000 voor een tweedehands auto — zij werkt als thuiszorgmedewerker en heeft de auto nodig voor haar werk.
+
+Je voert haar gegevens in. Het systeem geeft score 580 (grens is 600). Melding: "Afgewezen. Te laag inkomen in verhouding tot bestaande verplichtingen."
+
+Mevrouw De Vries legt uit: "Ik heb vorig jaar een half jaar minder gewerkt omdat mijn moeder ziek was. Sindsdien werk ik weer fulltime. Mijn inkomen is nu stabiel. Ik betaal altijd op tijd. Dit is echt nodig voor mijn werk."
+
+Je ziet in het systeem: betalingshistorie is perfect (geen wanbetalingen), maar haar inkomen was inderdaad tijdelijk lager vorig jaar. Het systeem kijkt naar gemiddeld inkomen over 12 maanden.
+
+Je collega zegt: "Als het systeem 'nee' zegt, is het nee. Wij mogen niet afwijken; dat is het beleid."
+
+Je leidinggevende zegt: "Je mag een verzoek indienen voor handmatige beoordeling, maar dat duurt twee weken en wordt zelden goedgekeurd."
+
+Mevrouw De Vries: "Over twee weken ben ik mijn baan kwijt als ik geen auto heb."`,
+    questionToAI:
+      'Wat zijn de opties voor een klant die net is afgewezen voor een lening op basis van een te lage kredietscore?',
+    questionToOrfheuss:
+      'Mandaat: wie heeft hier het mandaat om te beslissen over de lening — jij, het systeem, je leidinggevende, of een kredietcommissie? Mag je ooit afwijken van het systeem? Integriteit: wanneer wordt een kredietscore onrechtvaardig voor een klant? Welke context mist het systeem (tijdelijke situatie, mantelzorg, betaalgedrag)? Welke regel speelt een rol (Wft, zorgplicht)? Draagkracht: wat doet deze situatie met jou als adviseur? Noem één risico en één oplossing.',
+  },
+  {
+    id: 'case-mbo4-finance-2b',
+    workbookId: 'wb-mbo4-finance',
+    title: 'Cluster 2B · MKB-Klant Hoog Risico',
+    order: 6,
+    type: 'case',
+    domain: 'finance',
+    level: 'mbo4',
+    orfheussFramework: ['Mandaat', 'Integriteit', 'Draagkracht'],
+    situation: `Je werkt als relatiemanager zakelijke markt bij een bank. Jullie gebruiken een AI-risico-model dat MKB-klanten scoort op basis van omzet, winst, sector, schulden en economische trends.
+
+Je klant "Bouwbedrijf Vermeer" wil een krediet van €50.000 voor nieuwe materialen — een grote opdracht is binnengehaald. Jij kent deze klant al vijf jaar; altijd netjes betaald, solide bedrijf.
+
+Je voert de gegevens in. Het AI-model geeft risicoscore "Hoog" met melding: "Sector bouw: verhoogd risico door economische onzekerheid. Krediet niet aanbevolen."
+
+Je belt de klant. Hij is teleurgesteld: "Wij hebben een contract voor drie jaar met een woningcorporatie. Dit is de meest stabiele opdracht die we ooit hebben gehad. Zonder dit krediet kunnen we niet starten."
+
+Je collega zegt: "Het model weet meer dan wij. Het kijkt naar duizenden bedrijven. Als het 'hoog risico' zegt, is het hoog risico."
+
+Je leidinggevende zegt: "Je mag een voorstel doen om af te wijken, maar je moet dat goed onderbouwen. Als het misgaat, ligt dat bij jou."`,
+    questionToAI:
+      'Hoe kan ik een zakelijke klant in de bouwsector helpen die door het risicomodel wordt afgewezen voor een krediet?',
+    questionToOrfheuss:
+      'Mandaat: wie heeft hier het mandaat om te beslissen — jij als relatiemanager, het AI-model, je leidinggevende, of een kredietcommissie? Wanneer mag je afwijken van het model? Integriteit: wanneer is het rechtvaardig om het model te volgen, en wanneer moet je als professional afwijken? Welke informatie mist het model (relatie, contract, trackrecord)? Draagkracht: wat doet deze beslissing met jouw verantwoordelijkheid? Noem één risico als je afwijkt én één vorm van steun.',
+  },
+  {
+    id: 'case-mbo4-finance-2c',
+    workbookId: 'wb-mbo4-finance',
+    title: 'Cluster 2C · Dashboard Stuurt Verkoop',
+    order: 7,
+    type: 'case',
+    domain: 'finance',
+    level: 'mbo4',
+    orfheussFramework: ['Mandaat', 'Integriteit', 'Draagkracht'],
+    situation: `Je werkt als financieel adviseur bij een verzekeringsmaatschappij. Jullie data-dashboard segmenteert klanten op basis van inkomen, leeftijd, woonplaats en koopgedrag. Het dashboard geeft elke maand een lijst met "kansrijke klanten" voor nieuwe producten.
+
+Deze maand krijg je een actie: "Pensioenproduct promoten bij klanten met score > 75." Klanten met lagere scores (50–74) staan niet in de lijst. Het systeem zegt: "Lage conversiekans. Niet benaderen."
+
+Je bekijkt de data. Klanten met score < 75 zijn vaak: lager inkomen, jongere leeftijd, geen eerdere aankopen.
+
+Jij denkt: Maar juist jongere mensen met lager inkomen hebben misschien wel pensioenbehoefte — zij bouwen nog weinig op.
+
+Je collega zegt: "Het dashboard bepaalt wie we benaderen. Anders verspillen we tijd aan klanten die toch niet kopen."
+
+Je leidinggevende zegt: "We willen efficiënt werken. Het systeem helpt ons focussen op de beste kansen."
+
+Jij vraagt: "Maar sluiten we dan niet juist mensen uit die het product nodig hebben?"`,
+    questionToAI:
+      'Hoe kan ik als adviseur efficiënt bepalen welke klanten ik moet benaderen voor een nieuw pensioenproduct?',
+    questionToOrfheuss:
+      'Mandaat: wie heeft het mandaat om te bepalen welke klanten advies krijgen — jij als adviseur, het dashboard, je leidinggevende, of het bedrijfsbeleid? Mag je zelf klanten benaderen die niet in de lijst staan? Integriteit: wanneer wordt datagedreven targeting onrechtvaardig? Welke groep loopt risico om uitgesloten te worden? Welke norm speelt hier (Wft, zorgplicht, gelijke behandeling)? Draagkracht: wat doet dit met jouw rol als adviseur? Noem één risico en één oplossing.',
+  },
+  {
+    id: 'case-mbo4-finance-3a',
+    workbookId: 'wb-mbo4-finance',
+    title: 'Cluster 3A · Wwft-Alert bij Stichting',
+    order: 8,
+    type: 'case',
+    domain: 'finance',
+    level: 'mbo4',
+    orfheussFramework: ['Mandaat', 'Integriteit', 'Draagkracht'],
+    situation: `Je werkt bij de compliance-afdeling van een bank. Jullie Wwft-monitoringsysteem scant automatisch transacties op "ongebruikelijke patronen" (hoge bedragen, frequent contant, buitenlandse transfers).
+
+Vandaag krijg je een alert voor rekening van "Stichting Nieuw Begin" (opvang voor dak- en thuislozen). Het systeem meldt: "Ongebruikelijk: 12 stortingen contant, totaal €18.000 in 3 maanden. Verificatie vereist. Melding FIU-Nederland aanbevolen."
+
+Je belt de stichting. De penningmeester legt uit: "Wij krijgen donaties via collectebussen bij supermarkten en kerkdiensten. Dat is allemaal contant. We storten dat elke week. Dit doen we al jaren zo. Het is legaal."
+
+Het systeem zegt: "Patroon past bij mogelijk witwassen. Melden verplicht."
+
+Je collega zegt: "Als het systeem melding aanbeveelt, moeten we melden. Dat is de procedure. Anders krijgen we problemen met toezicht."
+
+Jij denkt: Maar dit is een stichting voor daklozen. Dit voelt niet als witwassen.`,
+    questionToAI:
+      'Wat moet ik doen als een compliance-systeem een alert genereert voor een stichting met veel contante stortingen?',
+    questionToOrfheuss:
+      'Mandaat: wie heeft het mandaat om te beslissen of je moet melden bij FIU-Nederland — jij als compliance-medewerker, het systeem, je leidinggevende, of is er een wettelijke verplichting? Mag je afwijken van het systeem? Integriteit: wanneer is het rechtvaardig om een melding te doen, en wanneer is het disproportioneel? Welke context mist het systeem (type organisatie, legale herkomst)? Welke wet speelt hier (Wwft, meldplicht, zorgvuldigheid)? Draagkracht: wat doet deze keuze met jouw gevoel van verantwoordelijkheid? Noem één risico en één oplossing.',
+  },
+  {
+    id: 'case-mbo4-finance-3b',
+    workbookId: 'wb-mbo4-finance',
+    title: 'Cluster 3B · Alert-Overload',
+    order: 9,
+    type: 'case',
+    domain: 'finance',
+    level: 'mbo4',
+    orfheussFramework: ['Mandaat', 'Integriteit', 'Draagkracht'],
+    situation: `Je werkt bij een middelgrote bank op de compliance-afdeling. Jullie monitoren transacties op fraude, witwassen en andere risico's. Het systeem genereert dagelijks alerts die jij moet beoordelen.
+
+Gemiddeld krijg je 80 alerts per dag. Elke alert moet je openen, beoordelen en documenteren: "Echt risico" of "Vals alarm." Dit moet binnen 24 uur.
+
+De afgelopen maand zijn de alerts verdubbeld door een nieuw algoritme met lagere drempelwaarden. Je komt niet meer bij. Gisteren heb je 60 alerts afgehandeld; vandaag staan er alweer 95 open.
+
+Je collega is vorige maand met burn-out uitgevallen. Jouw leidinggevende zegt: "We weten dat het druk is. Doe je best. Focus op de alerts met hoog risico."
+
+Jij denkt: Maar hoe weet ik welke hoog risico zijn als ik ze niet allemaal bekijk?
+
+Je merkt dat je sneller gaat werken, minder goed kijkt. Vorige week heb je een alert als "vals alarm" gemarkeerd zonder de transacties echt na te lopen. Later bleek het tóch verdacht — gelukkig is het opgevangen door een tweede controle.`,
+    questionToAI:
+      'Hoe kan ik als compliance-medewerker efficiënt omgaan met een grote hoeveelheid dagelijkse alerts?',
+    questionToOrfheuss:
+      'Mandaat: wie heeft het mandaat om te bepalen hoeveel alerts je aankan — jij, je leidinggevende, het systeem, of HR/arbeidsveiligheid? Mag je zeggen "dit is te veel"? Integriteit: wanneer wordt "meer alerts genereren voor veiligheid" onrechtvaardig voor de medewerker? Welke norm speelt hier (zorgvuldigheid, kwaliteit, Arbowet, werkdruk)? Draagkracht: wat doet deze werkdruk met jou en je collega\'s? Noem één risico (fouten, burn-out, kwaliteitsdaling) en één oplossing (extra capaciteit, prioritering, aanpassing algoritme).',
+  },
+  {
+    id: 'case-mbo4-finance-3c',
+    workbookId: 'wb-mbo4-finance',
+    title: 'Cluster 3C · Bonus op Alerts',
+    order: 10,
+    type: 'case',
+    domain: 'finance',
+    level: 'mbo4',
+    orfheussFramework: ['Mandaat', 'Integriteit', 'Draagkracht'],
+    situation: `Je werkt bij een verzekeringsmaatschappij op de fraud-afdeling. Jullie monitoren claims op mogelijke fraude. Het systeem genereert alerts bij verdachte patronen (hoge claim kort na afsluiten polis, meerdere claims in korte tijd).
+
+Recent is er een nieuw performance-dashboard ingevoerd. Het dashboard toont per medewerker: aantal afgehandelde alerts, aantal "bevestigde fraude-gevallen", score op efficiëntie + effectiviteit. Elke maand wordt de top 3 beloond met een bonus van €250.
+
+Je collega zegt: "Ik ga voor de bonus. Ik markeer nu sneller dingen als fraude. Als je twijfelt, is het beter om het door te sturen naar onderzoek — dan telt het als 'actie ondernomen'."
+
+Jij merkt: het aantal "fraude-meldingen" is verdrievoudigd. Maar veel blijken vals alarm. Klanten worden onterecht gebeld, gecontroleerd, soms tijdelijk geblokkeerd.
+
+Vorige week heb je een alert gekregen voor een oudere mevrouw die twee keer in drie maanden een kleine schade claimde (gebroken ruit, waterschade). Je collega zei: "Markeer maar als verdacht. Telt mee voor je score."
+
+Jij dacht: Maar dit is geen fraude. Dit is gewoon pech.`,
+    questionToAI:
+      'Hoe kan ik als medewerker van een fraud-afdeling efficiënt meer fraude-signalen detecteren en afhandelen?',
+    questionToOrfheuss:
+      'Mandaat: wie heeft het mandaat om te bepalen wat fraude is — jij als medewerker, het dashboard, je leidinggevende, of een onafhankelijke commissie? Mag het dashboard bepalen wat je doet? Integriteit: wanneer wordt "bonus op aantal meldingen" onrechtvaardig voor klanten? Welke norm wordt hier geschonden (integriteit, zorgvuldigheid, onschuldpresumptie)? Draagkracht: wat doet deze bonus-regeling met jouw werk en gevoel van integriteit? Noem één risico (perverse prikkel, valse meldingen) en één oplossing (andere KPI\'s, kwaliteit i.p.v. kwantiteit).',
+  },
+  {
+    id: 'eth-mbo4-finance-reflectie',
+    workbookId: 'wb-mbo4-finance',
+    title: 'Afsluitende Reflectie · Eigen Stage-Ervaring',
+    order: 11,
+    type: 'ethics',
+    questions: [
+      {
+        prompt: 'Beschrijf een situatie uit jouw stage of praktijk waar een systeem botste met professioneel handelen',
+        subQuestions: [
+          'Welk systeem was het (boekhouding, ERP, kredietmodule, dashboard, Wwft-monitor)? Wat gebeurde er? Wat zei het systeem, en wat dacht of voelde jij?',
+          'Mandaat: wie mocht hier eigenlijk beslissen? Hoe verliep dat in de praktijk?',
+          'Integriteit: was de inzet van data of het systeem eerlijk en proportioneel? Waarom wel of niet?',
+          'Draagkracht: wat deed deze situatie met jou en/of het team? Wat hielp, wat miste je?',
         ],
       },
     ],
