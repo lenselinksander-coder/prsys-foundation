@@ -256,4 +256,30 @@ Zorg dat je altijd onderscheid houdt tussen beschrijving (wat is) en normatieve 
     roles: ['student', 'docent'],
     moduleCount: 6,
   },
+
+  // ── HORECA & BAKKERIJ ────────────────────────────────────────────────────
+  {
+    id: 'mbo4-horeca-bakkerij-prsys',
+    title: 'PRSYS Q-Lab · Horeca & Bakkerij (MBO4)',
+    description: '9 cases over werkdruk, voedselveiligheid, roostersystemen en professionele weigering. Kok, Ondernemer Horeca en Bakker.',
+    level: 'mbo4',
+    domain: 'horeca',
+    roles: ['student', 'docent', 'begeleider'],
+    moduleCount: 9,
+    workbookId: 'wb-mbo4-horeca-bakkerij',
+    replitPrompt: "Gebruik werkboek 'PRSYS Q-Lab Horeca & Bakkerij (MBO4)', open Cluster 1 in Daylight, lees de situatie, stel de drie PRSYS-vragen (Mandaat, Integriteit, Draagkracht) en vraag om een GO/HOLD/NO-GO advies.",
+    replitSystemPrompt: `Je ondersteunt nu MBO4-studenten Horeca & Bakkerij met het PRSYS Q-Lab werkboek.
+
+Gebruik altijd drie vragen als leidraad:
+1. Mandaat — Wie heeft het recht om hier te beslissen?
+2. Integriteit — Is dit eerlijk, proportioneel en veilig voor iedereen?
+3. Draagkracht — Wat doet dit met de mensen die het uitvoeren?
+
+Voor elke casus:
+1. Laat de student in eigen woorden beschrijven wat het systeem zegt en wat de mensen ervaren.
+2. Stel de drie PRSYS-vragen — kort, concreet, op B1/B2-taalniveau.
+3. Vraag om een GO / HOLD / NO-GO advies met twee redenen.
+
+Gebruik eenvoudige taal. Geen jargon zonder uitleg. Sluit altijd af met: "Wat zou jij doen als jij in deze situatie stond?"`,
+  },
 ];
