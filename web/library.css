@@ -1,0 +1,141 @@
+/* web/library.css — Pantone-waaier UI */
+
+:root {
+  /* Pantone-gebaseerde categoriekleur­palet */
+  --color-legal:        #1B3A6B; /* Deep Blue   – The Law        */
+  --color-ethics:       #C8A97E; /* Warm Sand   – The Ethics     */
+  --color-policy:       #7A8C99; /* Cool Grey   – The Policy     */
+  --color-cases:        #D97B00; /* Amber       – The Cases      */
+  --color-education:    #4C8C4A; /* Forest Green– Education      */
+  --color-architecture: #5C4A8C; /* Deep Purple – Architecture   */
+  --color-governance:   #2E7D8C; /* Teal        – Governance     */
+  --color-orfheuss:     #8C1A1A; /* Deep Red    – Orfheuss       */
+
+  --bg:        #F5F2EE;
+  --surface:   #FFFFFF;
+  --text:      #1A1A1A;
+  --text-muted:#6B6B6B;
+  --radius:    8px;
+  --shadow:    0 2px 8px rgba(0,0,0,0.08);
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: "Georgia", serif;
+  background: var(--bg);
+  color: var(--text);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Header */
+.header {
+  background: var(--color-legal);
+  color: #fff;
+  padding: 2rem 2.5rem 1.5rem;
+}
+.header__title  { font-size: 1.8rem; letter-spacing: .04em; }
+.header__subtitle { font-size: .95rem; opacity: .75; margin-top: .25rem; }
+
+/* Category nav (Pantone-waaier) */
+.category-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .5rem;
+  padding: 1rem 2.5rem;
+  background: var(--surface);
+  border-bottom: 1px solid #e0dbd5;
+}
+
+.category-nav__btn {
+  padding: .45rem 1rem;
+  border: none;
+  border-radius: var(--radius);
+  cursor: pointer;
+  font-size: .85rem;
+  font-family: inherit;
+  color: #fff;
+  transition: opacity .15s, transform .1s;
+}
+.category-nav__btn:hover  { opacity: .85; }
+.category-nav__btn.active { outline: 3px solid #fff; outline-offset: 2px; transform: scale(1.04); }
+
+/* Category colours */
+.category-nav__btn[data-cat="legal"]        { background: var(--color-legal); }
+.category-nav__btn[data-cat="ethics"]       { background: var(--color-ethics); color: #333; }
+.category-nav__btn[data-cat="policy"]       { background: var(--color-policy); }
+.category-nav__btn[data-cat="cases"]        { background: var(--color-cases); }
+.category-nav__btn[data-cat="education"]    { background: var(--color-education); }
+.category-nav__btn[data-cat="architecture"] { background: var(--color-architecture); }
+.category-nav__btn[data-cat="governance"]   { background: var(--color-governance); }
+.category-nav__btn[data-cat="orfheuss"]     { background: var(--color-orfheuss); }
+
+/* Main library area */
+.library {
+  flex: 1;
+  padding: 2rem 2.5rem;
+}
+
+.library__empty {
+  color: var(--text-muted);
+  font-style: italic;
+  margin-top: 2rem;
+}
+.library__empty code {
+  font-family: monospace;
+  background: #e8e4de;
+  padding: .1em .35em;
+  border-radius: 4px;
+}
+
+/* Document grid */
+.library__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 1.25rem;
+}
+
+.doc-card {
+  background: var(--surface);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: .6rem;
+  border-left: 4px solid var(--card-color, #ccc);
+  transition: box-shadow .15s;
+}
+.doc-card:hover { box-shadow: 0 4px 16px rgba(0,0,0,0.13); }
+
+.doc-card__title {
+  font-size: 1rem;
+  font-weight: bold;
+  word-break: break-word;
+}
+.doc-card__meta {
+  font-size: .8rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: .04em;
+}
+.doc-card__badge {
+  align-self: flex-start;
+  padding: .2em .55em;
+  border-radius: 4px;
+  font-size: .75rem;
+  font-family: monospace;
+  color: #fff;
+  background: var(--card-color, #888);
+}
+
+/* Footer */
+.footer {
+  text-align: center;
+  padding: 1rem;
+  color: var(--text-muted);
+  font-size: .8rem;
+  border-top: 1px solid #e0dbd5;
+}
