@@ -10,7 +10,8 @@ export type Domain =
   | 'digital'
   | 'finance'
   | 'zorg'
-  | 'sociaal_domein';
+  | 'sociaal_domein'
+  | 'horeca';
 
 // ── Track (leergang-overzicht) ─────────────────────────────────────────────
 export interface Track {

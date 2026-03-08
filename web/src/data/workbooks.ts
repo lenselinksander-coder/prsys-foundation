@@ -242,6 +242,48 @@ Elke les volg je dezelfde vier stappen:
 **Belangrijk:** dit werkboek zoekt niet 'het goede antwoord'. Het helpt je om druk, grenzen en stille schade (Quiet Violence) te leren herkennen.`,
   },
 
+  // ── MBO4 Horeca & Bakkerij ───────────────────────────────────────────────
+  {
+    id: 'wb-mbo4-horeca-bakkerij',
+    title: 'PRSYS Q-Lab · Werkboek Horeca & Bakkerij · MBO4 · 2026',
+    level: 'mbo4',
+    domain: 'horeca',
+    roles: ['student', 'docent', 'begeleider'],
+    introMd: `# PRSYS Q-Lab · Horeca & Bakkerij
+
+**Werkboek MBO-4 · 2026**
+
+*AI adviseert. Mensen beslissen. De kok blijft verantwoordelijk — ook als het systeem het anders zegt.*
+
+In jouw vak werk je steeds vaker met digitale systemen: roostersoftware, HACCP-apps, reserveringsplatforms, beoordelingsapps. Die systemen helpen — maar ze kunnen ook fouten maken. Of ze meten niet wat écht belangrijk is.
+
+In dit werkboek leer je hoe je omgaat met situaties waarbij een systeem iets zegt, maar jij als professional twijfelt. Je oefent met drie vragen die altijd gelden:
+
+1. **Mandaat** — Wie heeft het recht om hier te beslissen?
+2. **Integriteit** — Is dit eerlijk, proportioneel en veilig — voor iedereen?
+3. **Draagkracht** — Wat doet dit met de mensen die het moeten uitvoeren?
+
+---
+
+## Hoe werk je een casus uit?
+
+**Stap 1 — Lees de situatie**
+Markeer wat het *systeem* zegt en wat de *mensen* ervaren.
+
+**Stap 2 — Beantwoord de drie PRSYS-vragen**
+Mandaat, Integriteit, Draagkracht. Korte zinnen mogen.
+
+**Stap 3 — Koppel aan theorie**
+Zoek één begrip uit je lesboek dat bij de casus past.
+
+**Stap 4 — Maak je advies**
+Kies: **GO** / **HOLD** / **NO-GO** — met twee redenen.
+
+---
+
+**Kwalificaties:** Kok (95390) · Ondernemer Horeca (93820) · Bakker (97640)`,
+  },
+
   // ── Docenten Marketing ───────────────────────────────────────────────────
   {
     id: 'wb-docenten-marketing',
