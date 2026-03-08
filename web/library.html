@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tabularium Foundation — Library</title>
+  <link rel="stylesheet" href="library.css" />
+</head>
+<body>
+  <header class="header">
+    <h1 class="header__title">Tabularium Foundation</h1>
+    <p class="header__subtitle">Documentenbibliotheek</p>
+  </header>
+
+  <nav class="category-nav" id="category-nav">
+    <!-- Dynamisch gevuld door library.js -->
+  </nav>
+
+  <main class="library" id="library">
+    <section class="library__empty" id="empty-state">
+      <p>Selecteer een categorie of voeg documenten toe via <code>foundation/import/</code>.</p>
+    </section>
+    <section class="library__grid" id="doc-grid" hidden></section>
+  </main>
+
+  <footer class="footer">
+    <small>Tabularium Foundation · Taogate classificatie</small>
+  </footer>
+
+  <script src="library.js" type="module"></script>
+</body>
+</html>
