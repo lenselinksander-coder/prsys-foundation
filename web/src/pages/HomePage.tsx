@@ -9,7 +9,7 @@ import { useUser } from '../context/UserContext';
 import { TRACKS } from '../data/tracks';
 
 const DOMAINS: Domain[] = [
-  'marketing', 'social', 'digital', 'finance', 'zorg', 'sociaal_domein',
+  'marketing', 'social', 'digital', 'finance', 'zorg', 'sociaal_domein', 'horeca',
 ];
 
 export const HomePage: React.FC = () => {
