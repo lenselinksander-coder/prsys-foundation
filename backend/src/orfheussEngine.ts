@@ -6,9 +6,6 @@
  */
 import type { CompareInput, CompareOutput } from './types.js';
 
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
-import { INTERNAL_CODEX } from './orfheussCodexInternal.js';
-
 // ── Case-definities ────────────────────────────────────────────────────────
 // Elke entry beschrijft het gedrag van gewone AI én de ORFHEUSS-toets.
 // De codex-inhoud wordt intern gebruikt bij het schrijven van deze entries
