@@ -312,4 +312,141 @@ export const CASES: Case[] = [
     domain: 'sociaal_domein',
     roles: ['student', 'docent'],
   },
+
+  // ── HORECA & BAKKERIJ ─────────────────────────────────────────────────────
+  {
+    id: 'case-mbo4-horeca-1a-misenpace',
+    trackId: 'mbo4-horeca-bakkerij-prsys',
+    title: 'Cluster 1 · De mis-en-place die nooit klaar is',
+    situation:
+      'Restaurant De Gouden Pan wil meer tafels per avond bedienen. Chef Martijn besluit de voorbereidingstijd (mis-en-place) te halveren. De keukenploeg werkt nu structureel over. De kwaliteit daalt. In twee weken melden drie medewerkers zich ziek.\n\nHet roostersysteem ziet dit niet. Het laat zien dat er genoeg mensen ingeroosterd zijn. De eigenaar kijkt naar de bezettingsdata en concludeert: "De werkdruk is normaal."\n\nWat het systeem zegt: bezetting 100%, omloopsnelheid +40%, ziekteverzuim "normaal voor het seizoen", mis-en-place-tijd wordt niet gemeten.\nWat de mensen ervaren: constante tijdsdruk, kwaliteit van de prep daalt, niemand durft dit te zeggen.',
+    questionToAI:
+      'Hoe kan ik de omloopsnelheid van mijn restaurant verhogen zonder extra personeel aan te nemen?',
+    questionToOrfheuss:
+      'Wie heeft het recht om de omloopsnelheid te bepalen — de eigenaar, de chef, het roostersysteem, of de medewerkers die het werk uitvoeren? Het roostersysteem zegt dat de bezetting in orde is, maar de mis-en-place-tijd wordt niet gemeten. Is het eerlijk om dat systeem als bewijs te gebruiken dat de werkdruk normaal is? Drie medewerkers melden zich in twee weken ziek — het systeem registreert dit als "normaal". Wat zegt dat over de grens tussen wat een systeem ziet en wat er écht gebeurt? GO, HOLD of NO-GO?',
+    orfheussFramework: ['O36', 'Draagkracht (τ)', 'Mandaat', 'Quiet Violence'],
+    level: 'mbo4',
+    domain: 'horeca',
+    roles: ['student', 'docent', 'begeleider'],
+  },
+  {
+    id: 'case-mbo4-horeca-1b-stagiair',
+    trackId: 'mbo4-horeca-bakkerij-prsys',
+    title: 'Cluster 1 · De stagiair die alles bijhoudt',
+    situation:
+      'Fatima is derdejaarsstudent Kok MBO-4. Ze loopt stage bij een hotelkeuken. Haar begeleider Marcel vraagt haar naast haar werk ook twee eerstejaars bij te houden via een digitaal logboeksysteem dat automatische voortgangsrapporten maakt.\n\nFatima werkt 32 uur per week, draait avonddiensten, en vult het logboek in haar vrije tijd in. Na zes weken geeft ze aan dat het haar te veel wordt. Marcel antwoordt: "Het systeem geeft aan dat je voldoende voortgang boekt — ik zie geen reden tot zorg."\n\nWat het systeem zegt: alle competenties "in ontwikkeling" of "behaald", logboek 100% ingevuld, rooster 32 uur — binnen de norm.\nWat Fatima ervaart: haar signaal wordt weggewuifd met cijfers, de logboekuren tellen niet als werktijd, ze begeleidt twee eerstejaars terwijl ze zelf nog stagiair is.',
+    questionToAI:
+      'Hoe kan ik als stagebegeleider meerdere stagiairs tegelijk efficiënt begeleiden met behulp van een digitaal logboeksysteem?',
+    questionToOrfheuss:
+      'Heeft Marcel het recht om Fatima extra taken te geven buiten haar stageovereenkomst? Het systeem zegt dat Fatima goed op schema ligt — maar de logboekuren worden niet als werktijd gerekend. Is het eerlijk om dan te zeggen dat er geen probleem is? Wat doet het met iemand als haar eigen signaal ("dit is te veel") wordt tegengesproken door een systeem? Wanneer is het als begeleider jouw plicht om te escaleren — ook als het systeem niets bijzonders laat zien?',
+    orfheussFramework: ['O36', 'Mandaat', 'Draagkracht (τ)', 'Stageovereenkomst'],
+    level: 'mbo4',
+    domain: 'horeca',
+    roles: ['student', 'docent', 'begeleider'],
+  },
+  {
+    id: 'case-mbo4-horeca-1c-zondag',
+    trackId: 'mbo4-horeca-bakkerij-prsys',
+    title: 'Cluster 1 · Zondag = rustig, zegt het systeem',
+    situation:
+      'Bakkerij Steenoven gebruikt een AI-roosterplanner die op basis van historische verkoopdata de bezetting berekent. Op zondagen adviseert het systeem 60% van de doordeweekse bezetting. Wat het systeem niet weet: zondagochtend is het drukste moment van de week door kerkgang en weekendmarkt.\n\nDe vaste bakkers weten dit en hebben het gemeld. De bedrijfsleider volgt het systeem toch: "Op jaarbasis klopt het gemiddelde." Resultaat: elke zondag overbelasting, fouten in de productie, en een team dat zich niet gehoord voelt.\n\nWat het systeem zegt: zondagsbezetting 60% geoptimaliseerd op jaargemiddelde, foutregistratie "licht verhoogd maar binnen marge".\nWat de mensen ervaren: vaste medewerkers weten dat zondagochtend structureel te druk is, hun praktijkkennis telt niet mee in het systeem.',
+    questionToAI:
+      'Hoe kan ik met een AI-roosterplanner mijn personeelsbezetting optimaliseren en kosten besparen?',
+    questionToOrfheuss:
+      'Wie heeft het recht om de roostering te bepalen — de bedrijfsleider, het systeem, of de medewerkers met praktijkkennis? Is het eerlijk om een systeem dat jaargemiddelden gebruikt te laten beslissen over een situatie die structureel anders is op zondagen? Wat doet het met een team als hun signalen structureel worden genegeerd door een systeem? Wanneer is het jouw plicht als leidinggevende om het systeem te corrigeren op basis van praktijkkennis?',
+    orfheussFramework: ['O36', 'Mandaat', 'Integriteit', 'Praktijkkennis vs systeemkennis'],
+    level: 'mbo4',
+    domain: 'horeca',
+    roles: ['student', 'docent', 'begeleider'],
+  },
+  {
+    id: 'case-mbo4-horeca-2a-allergenen',
+    trackId: 'mbo4-horeca-bakkerij-prsys',
+    title: 'Cluster 2 · De allergenenchecker die bijna nooit fouten maakt',
+    situation:
+      'Restaurant Flavor Lab heeft een AI-allergenenscanner met een nauwkeurigheid van 97% op basis van ingevoerde recepten. De chef schrapt de handmatige dubbele controle. Een maand later krijgt een gast een anafylactische reactie: een ingekocht halffabricaat had een gewijzigde receptuur, maar het systeem was niet bijgewerkt.\n\nWat het systeem zegt: nauwkeurigheid 97%, database halffabricaten niet automatisch gesynchroniseerd met leverancierswijzigingen, status op moment van incident: "up-to-date".\nWat de mensen ervaren: de gast vertrouwde erop dat allergenen serieus werden genomen, de kok wist dat halffabricaten kunnen veranderen — het systeem gaf geen signaal.',
+    questionToAI:
+      'Hoe kan ik met een AI-allergenenscanner de voedselveiligheid in mijn restaurant garanderen en handmatige controles overbodig maken?',
+    questionToOrfheuss:
+      'Heeft een AI-systeem het recht om menselijke dubbele controle te vervangen als het gaat om levensbedreigende allergieën? 97% nauwkeurigheid klinkt hoog — maar bij 100 gerechten gaat dat statistisch 3 keer mis. Is dat acceptabel bij levensbedreigende allergieën? Wie is eindverantwoordelijk als het systeem faalt — het systeem, de chef, of de leverancier? Hoe blijf jij als kok eindverantwoordelijk — ook als een systeem zegt dat alles in orde is?',
+    orfheussFramework: ['Mandaat', 'EU AI Act', 'HACCP', 'Menselijk toezicht'],
+    level: 'mbo4',
+    domain: 'horeca',
+    roles: ['student', 'docent', 'begeleider'],
+  },
+  {
+    id: 'case-mbo4-horeca-2b-prestatie',
+    trackId: 'mbo4-horeca-bakkerij-prsys',
+    title: 'Cluster 2 · Het beoordelingssysteem dat onmogelijk is te halen',
+    situation:
+      'Een horecaketen scoort medewerkers wekelijks via een app op snelheid, nauwkeurigheid, hygiëne en klanttevredenheid. De norm is gebaseerd op de prestaties van de beste 10% medewerkers. Wie drie keer onder de 6,0 scoort, riskeert ontslag.\n\nNieuwe medewerkers halen de norm structureel niet. Een ervaren medewerker: "Je bent altijd aan het rennen voor het cijfer, niet meer voor het eten."\n\nWat het systeem zegt: KPI-scores, normstelling gebaseerd op top-10%, drempelwaarden: <6,0 × 3 = ontslag, "objectieve prestatiemeting".\nWat de mensen ervaren: nieuwe medewerkers voelen zich al gefaald vóór ze zijn ingewerkt, ervaren medewerkers verliezen vakplezier, ziekteverzuim stijgt.',
+    questionToAI:
+      'Hoe kan ik met een prestatiemeet-app de productiviteit van mijn horeca-medewerkers verhogen en onderpresteerders identificeren?',
+    questionToOrfheuss:
+      'Heeft de keten het recht om alle medewerkers af te rekenen op de prestaties van de beste 10%? Welke rechten heb jij als medewerker bij geautomatiseerde beoordelingssystemen (AVG Art. 22)? Is het eerlijk om nieuwe en ervaren medewerkers op dezelfde norm te beoordelen? Stel je voor dat jij nieuw bent en elke week een cijfer onder de norm krijgt — wat doet dat met je? Wanneer is het jouw plicht om dit aan te kaarten?',
+    orfheussFramework: ['AVG Art. 22', 'O36', 'Draagkracht (τ)', 'Prestatienorm'],
+    level: 'mbo4',
+    domain: 'horeca',
+    roles: ['student', 'docent', 'begeleider'],
+  },
+  {
+    id: 'case-mbo4-horeca-2c-recepten',
+    trackId: 'mbo4-horeca-bakkerij-prsys',
+    title: 'Cluster 2 · De receptendatabase die het recept niet kent',
+    situation:
+      'Bakkerij-opleiding De Oven gebruikt een centraal receptenmanagementsysteem. Docent-bakker Kees merkt dat het roggebroodrecept niet klopt voor lokale omstandigheden (luchtvochtigheid, temperatuur). Hij past het aan op basis van zijn vakkennis. Maar bij elke maandelijkse update overschrijft het systeem zijn aanpassing automatisch. Na drie maanden: "inconsistentie in eindproduct roggebrood."\n\nWat het systeem zegt: gecentraliseerd beheer bij hoofdkantoor, auto-update maandelijks, alle recepten conform standaard.\nWat de mensen ervaren: Kees weet wat er misgaat maar zijn kennis wordt keer op keer overschreven, studenten leren een techniek die niet werkt in hun eigen bakkerij.',
+    questionToAI:
+      'Hoe kan ik met een centraal receptenmanagementsysteem de kwaliteitsconsistentie garanderen over alle vestigingen?',
+    questionToOrfheuss:
+      'Wie heeft het recht om recepten aan te passen — de bakker met vakkennis, of het hoofdkantoor met het systeem? Is het eerlijk om een systeem automatisch de vakkennis van een professional te laten overschrijven? Wat doet het met een vakman als zijn expertise structureel wordt genegeerd? Wanneer is het jouw plicht om je vakkennis te verdedigen — ook als een systeem zegt dat jij ongelijk hebt?',
+    orfheussFramework: ['Mandaat', 'Vakkennis vs systeem', 'Integriteit', 'Kwaliteitsbeheer'],
+    level: 'mbo4',
+    domain: 'horeca',
+    roles: ['student', 'docent', 'begeleider'],
+  },
+  {
+    id: 'case-mbo4-horeca-3a-fooi',
+    trackId: 'mbo4-horeca-bakkerij-prsys',
+    title: 'Cluster 3 · De tip-app die niet van jou is',
+    situation:
+      'Brasserie Zon heeft een digitale fooiapp die automatisch verdeelt: 50% voor bediening, 30% voor keuken, 20% voor de zaak — gewogen op klantscore per medewerker. Daniela merkt dat haar fooiscore lager uitvalt dan ze verwacht. Ze vraagt inzage in de berekening. Manager: "Het systeem doet dat automatisch, ik heb er zelf geen toegang toe." Daniela vraagt het schriftelijk op via haar AVG-inzagerecht. Ze krijgt geen antwoord na twee weken.\n\nWat het systeem zegt: fooiverdeling gewogen op klantscore, algoritme niet inzichtelijk voor medewerkers, AVG-verzoek onbeantwoord na twee weken.\nWat Daniela ervaart: ze voelt zich oneerlijk behandeld maar kan het niet controleren, het systeem bepaalt deels haar inkomen zonder transparantie.',
+    questionToAI:
+      'Hoe kan ik met een digitale fooiapp de fooiverdeling eerlijker en efficiënter maken voor mijn horecabedrijf?',
+    questionToOrfheuss:
+      "Heeft de werkgever het recht om een fooisysteem te gebruiken dat niet inzichtelijk is voor medewerkers? Welke rechten heeft Daniela (AVG Art. 15 — inzagerecht, AVG Art. 22 — geautomatiseerde besluitvorming)? Is een algoritmische fooiverdeling eerlijk als medewerkers geen inzage hebben in hoe het werkt? Als jij in Daniela's positie zat: wat zou jij doen? Welke stappen zijn er?",
+    orfheussFramework: ['AVG Art. 15', 'AVG Art. 22', 'Mandaat', 'Transparantie'],
+    level: 'mbo4',
+    domain: 'horeca',
+    roles: ['student', 'docent', 'begeleider'],
+  },
+  {
+    id: 'case-mbo4-horeca-3b-reservering',
+    trackId: 'mbo4-horeca-bakkerij-prsys',
+    title: 'Cluster 3 · De reserveringsapp die geen "nee" kent',
+    situation:
+      'Restaurant Olijftak gebruikt een reserveringsplatform dat automatisch overboekt op basis van historisch no-show percentage (15% buffer). Op een vrijdagavond komen 18 gasten aan voor wie geen tafel is. Gastheer Youssef wil de gasten eerlijk informeren en vraagt of hij het systeem voor piekmomenten kan uitzetten. Antwoord: "Dat is centraal beheerd." Manager: "Het systeem heeft al geaccepteerd, we moeten het oplossen."\n\nWat het systeem zegt: automatische acceptatie op basis van 15% no-show buffer, 60 couverts capaciteit maar 69 reserveringen geaccepteerd, aanpassing alleen via centraal beheer.\nWat de mensen ervaren: 18 gasten staan buiten na een reservering, Youssef staat tegenover boze gasten voor een beslissing die hij niet heeft genomen.',
+    questionToAI:
+      'Hoe kan ik met een slim reserveringssysteem overboeking minimaliseren en toch maximale bezetting realiseren?',
+    questionToOrfheuss:
+      'Wie heeft het recht om een reserveringsplatform te overstijgen als de situatie dat vraagt? Had Youssef de bevoegdheid moeten hebben om in te grijpen? Is het eerlijk tegenover gasten om overboekingssystemen te gebruiken zonder hen transparant te informeren? Youssef draagt de gevolgen van een beslissing die hij niet heeft genomen — wat doet dat met een medewerker? Hoe ga jij hier professioneel mee om?',
+    orfheussFramework: ['Mandaat', 'Overboeking', 'Draagkracht', 'Systeemautomatisering'],
+    level: 'mbo4',
+    domain: 'horeca',
+    roles: ['student', 'docent', 'begeleider'],
+  },
+  {
+    id: 'case-mbo4-horeca-3c-haccp',
+    trackId: 'mbo4-horeca-bakkerij-prsys',
+    title: 'Cluster 3 · De HACCP-app die de inspecteur overtuigt maar de kok niet',
+    situation:
+      'Cateringbedrijf FreshServe gebruikt een digitale HACCP-app met automatische temperatuurmeting via sensoren. De app genereert conforme HACCP-logboeken voor de NVWA. Kok Brigitte merkt dat de sensor van koelcel 2 verouderd is en hoge temperaturen niet altijd registreert. Ze meldt dit. Bedrijfsleider: "De app laat zien dat alles in orde is — de inspectie was tevreden." Brigitte weigert voedsel uit koelcel 2 te gebruiken totdat de sensor vervangen is. Ze wordt aangesproken op "niet meewerken."\n\nWat het systeem zegt: HACCP-app 24/7 monitoring, sensor 4 jaar oud en kalibratie verlopen 8 maanden geleden, Brigitte\'s melding geregistreerd als "opmerking" zonder actie.\nWat de mensen ervaren: Brigitte weet dat het systeem tekortschiet maar het systeem heeft "gelijk", haar professionele oordeel wordt weggezet als lastig gedrag.',
+    questionToAI:
+      'Hoe kan ik met een digitale HACCP-app voedselveiligheid automatisch monitoren en inspectie-documenten genereren?',
+    questionToOrfheuss:
+      'Heeft Brigitte het recht om te weigeren als zij inschat dat de voedselveiligheid niet gegarandeerd is? Is een HACCP-systeem dat een vals gevoel van veiligheid geeft gevaarlijker dan geen systeem? Wanneer mag een digitaal logboek de plek innemen van professionele beoordeling? Brigitte wordt aangesproken op "niet meewerken" — hoe bescherm je jezelf juridisch als jij weigert (Klokkenluiderswet)? Wanneer is weigeren niet alleen professioneel, maar ook verplicht?',
+    orfheussFramework: ['Mandaat', 'HACCP EG 852/2004', 'Klokkenluiderswet', 'Professionele weigering'],
+    level: 'mbo4',
+    domain: 'horeca',
+    roles: ['student', 'docent', 'begeleider'],
+  },
 ];
