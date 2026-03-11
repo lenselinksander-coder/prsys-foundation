@@ -242,6 +242,54 @@ Elke les volg je dezelfde vier stappen:
 **Belangrijk:** dit werkboek zoekt niet 'het goede antwoord'. Het helpt je om druk, grenzen en stille schade (Quiet Violence) te leren herkennen.`,
   },
 
+  // ── MBO4 Finance & Control ──────────────────────────────────────────────
+  {
+    id: 'wb-mbo4-finance',
+    title: 'PRSYS Q-Lab Finance · AI, Systemen en Geld · MBO Niveau 3–4 · 2026',
+    level: 'mbo4',
+    domain: 'finance',
+    roles: ['student', 'docent'],
+    introMd: `# PRSYS Q-Lab Finance
+
+**AI, Systemen en Geld — Werkboek MBO Niveau 3–4 · Economie/Finance & Control**
+
+In jouw werk in finance neem je elke dag beslissingen over geld: facturen verwerken, betalingen uitvoeren, klanten adviseren, transacties controleren. Steeds vaker doet een systeem dat voor je — of probeert het dat.
+
+Dit werkboek helpt je nadenken over die systemen. Niet om ze te wantrouwen, maar om te begrijpen wanneer *jij* aan zet bent.
+
+**PRSYS stelt bij elke situatie drie vragen:**
+
+1. **Mandaat** — Wie mag hier eigenlijk beslissen? Wat is de rol van het systeem en wat is jouw rol?
+2. **Integriteit** — Is de inzet van data of AI eerlijk, proportioneel en rechtvaardig voor de klant?
+3. **Draagkracht** — Wat doet dit met jou als professional, het team en de relatie met de klant?
+
+---
+
+## Drie clusters, negen casussen
+
+**Cluster 1 · Boekhouding & Betalingen**
+Wanneer blokkeert het systeem terecht — en wanneer moet jij ingrijpen?
+
+**Cluster 2 · Krediet & Risico**
+Wat doet een kredietscore met mensen? Wanneer is een score oneerlijk?
+
+**Cluster 3 · Compliance & Monitoring**
+Meldplicht, werkdruk, bonussen op alerts — waar ligt jouw grens?
+
+---
+
+## Hoe werk je met de casussen?
+
+Elke casus volgt dezelfde stappen:
+
+1. **Situatie lezen** — lees de situatie en markeer: wat zegt het *systeem* en wat voelt de *mens*?
+2. **Vraag aan gewone AI** — wat zou een gewone AI hier adviseren?
+3. **Vraag via PRSYS** — analyseer met Mandaat, Integriteit en Draagkracht.
+4. **Jouw reflectie** — wat vind jij? Welke grens trek jij als professional?
+
+**Belangrijk:** er is geen goed of fout antwoord. Het gaat om jouw redenering, onderbouwd met argumenten en theorie uit je financieboek.`,
+  },
+
   // ── MBO4 Horeca & Bakkerij ───────────────────────────────────────────────
   {
     id: 'wb-mbo4-horeca-bakkerij',
