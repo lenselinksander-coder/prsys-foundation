@@ -8,7 +8,7 @@ interface AiGatePageProps {
 
 const CHECKS = [
   'Ik begrijp dat AI-antwoorden fouten kunnen bevatten en altijd menselijke verificatie vereisen.',
-  'Ik gebruik AI als aanvulling op mijn oordeel — niet als vervanging ervan.',
+  'Ik gebruik AI als aanvulling op mijn oordeel, niet als vervanging ervan.',
   'Ik deel geen vertrouwelijke of persoonsgebonden informatie met AI-systemen.',
   'Ik documenteer AI-gebruik wanneer dit invloed heeft op besluiten die anderen raken.',
   'Ik begrijp dat ORFHEUSS een ethisch toetsingsinstrument is, geen definitief advies.',

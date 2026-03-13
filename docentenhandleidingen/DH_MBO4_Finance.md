@@ -9,7 +9,7 @@ kwalificaties:
   - Medewerker Financiële Dienstverlening (90400)
   - Assistent Accountant (93720)
 prsys_dimensies: [Mandaat, Integriteit, Draagkracht]
-foundation_laag: "Laag 3 — Gedrag"
+foundation_laag: "Laag 3 - Gedrag"
 atelier_lens: Phrónēsis
 versie: "1.0"
 datum: "2026"
@@ -17,11 +17,11 @@ auteur: "PRSYS Q-Lab / ORFHEUSS Foundation"
 licentie: "Vrij gebruik voor MBO-onderwijs. Vermeld: PRSYS Q-Lab Finance & Control MBO-4 v1.0 2026."
 ---
 
-> **AI adviseert. Mensen beslissen. De financieel professional blijft verantwoordelijk — ook als het systeem het anders zegt.**
+> **AI adviseert. Mensen beslissen. De financieel professional blijft verantwoordelijk, ook als het systeem het anders zegt.**
 
 ---
 
-## Deel 1 — Positionering & Aanpak
+## Deel 1 - Positionering & Aanpak
 
 ### 1.1 Wat PRSYS Q-Lab niet is
 
@@ -38,23 +38,23 @@ PRSYS Q-Lab vervangt jullie bestaande methode niet. Het bouwt voort op theorie u
 ### 1.2 Waarom Finance & Control?
 
 - Financiële systemen nemen steeds meer beslissingen over mensen: wie krijgt krediet, wie wordt gemonitord, wie wordt afgewezen
-- Studenten die nu afstuderen gaan werken met ERP-systemen, compliance-tools en AI-risicomodellen — vanaf dag één
-- De Wft, Wwft en beroepsaansprakelijkheid vereisen aantoonbaar professioneel oordeel — het systeem ontslaat de professional niet van verantwoordelijkheid
+- Studenten die nu afstuderen gaan werken met ERP-systemen, compliance-tools en AI-risicomodellen, vanaf dag één
+- De Wft, Wwft en beroepsaansprakelijkheid vereisen aantoonbaar professioneel oordeel; het systeem ontslaat de professional niet van verantwoordelijkheid
 - Stagepraktijk: studenten rapporteren regelmatig dat ze "het systeem volgen" zonder te begrijpen waarom, wat risico's creëert voor klanten en organisaties
 
 ### 1.3 De drie PRSYS-vragen in finance-context
 
-**Mandaat:** Wie heeft het recht om te beslissen — de medewerker, de leidinggevende, het systeem, de klant? Waar eindigt de bevoegdheid van de professional en begint die van het systeem?
+**Mandaat:** Wie heeft het recht om te beslissen: de medewerker, de leidinggevende, het systeem of de klant? Waar eindigt de bevoegdheid van de professional en begint die van het systeem?
 
-**Integriteit:** Is het gebruik van data en AI eerlijk, proportioneel en rechtvaardig? Worden alle belangen gewogen — klant, organisatie, maatschappij?
+**Integriteit:** Is het gebruik van data en AI eerlijk, proportioneel en rechtvaardig? Worden alle belangen gewogen: klant, organisatie, maatschappij?
 
 **Draagkracht:** Wat doet het systeem met de professional? Zorgt het voor te veel werkdruk, te weinig ruimte voor eigen oordeel, of prikkels die het professioneel handelen verstoren?
 
 ---
 
-## Deel 2 — Didactische Aanwijzingen per Cluster
+## Deel 2 - Didactische Aanwijzingen per Cluster
 
-### Cluster 1 — Boekhouding & Betalingen
+### Cluster 1 - Boekhouding & Betalingen
 
 **Kern:** Wanneer is een systeemblokkade terecht, en wanneer moet de professional ingrijpen?
 
@@ -66,16 +66,16 @@ PRSYS Q-Lab vervangt jullie bestaande methode niet. Het bouwt voort op theorie u
 **Koppeling theorie:** Boekhoudregels, interne beheersing (AO/IC), fraudepreventie, Belastingdienst-richtlijnen BTW.
 
 **Differentiatie:**
-- *Niveau 3:* Laat studenten alleen Mandaat beantwoorden — wie beslist hier?
+- *Niveau 3:* Laat studenten alleen Mandaat beantwoorden: wie beslist hier?
 - *Niveau 4:* Alle drie vragen + theoriebegrip + GO/HOLD/NO-GO met onderbouwing
 
 ---
 
-### Cluster 2 — Krediet & Risico
+### Cluster 2 - Krediet & Risico
 
 **Kern:** Kredietscores en risico-modellen zijn gebaseerd op patronen uit het verleden. Ze kunnen systematisch oneerlijk zijn voor bepaalde groepen.
 
-**Didactische tip:** Stel de vraag: "Als jij een ZZP-er bent en dit overkomt jou — wat zou jij willen?" Dit maakt de abstracte ethiek concreet.
+**Didactische tip:** Stel de vraag: "Als jij een ZZP-er bent en dit overkomt jou, wat zou jij willen?" Dit maakt de abstracte ethiek concreet.
 
 **Veelgestelde vraag:** *"Maar het systeem heeft toch ook gelijk? ZZP-ers zijn toch echt risicovoller?"*
 → Op populatieniveau misschien. Maar individuen zijn geen statistieken. Zorgplicht (Wft art. 4:24a) vereist dat adviseurs kennis hebben van de individuele situatie van de klant.
@@ -86,7 +86,7 @@ PRSYS Q-Lab vervangt jullie bestaande methode niet. Het bouwt voort op theorie u
 
 ---
 
-### Cluster 3 — Compliance & Monitoring
+### Cluster 3 - Compliance & Monitoring
 
 **Kern:** Meldplicht (Wwft), alert-overload en financiële prikkels kunnen professioneel oordeel verstoren.
 
@@ -99,15 +99,15 @@ PRSYS Q-Lab vervangt jullie bestaande methode niet. Het bouwt voort op theorie u
 
 ---
 
-## Deel 3 — Werkvorm: Casuïstiekbespreking
+## Deel 3 - Werkvorm: Casuïstiekbespreking
 
 ### Stap-voor-stap
 
-1. **Individueel lezen** (5–10 min) — student leest de casus en markeert systeem vs. mens
-2. **Duo-bespreking** (5 min) — studenten vergelijken hun drie PRSYS-vragen
-3. **Plenaire bespreking** (10–15 min) — docent structureert via de drie vragen
-4. **Theoriekoppeling** (5 min) — docent vraagt: "Welk begrip uit jullie boek past hier?"
-5. **GO/HOLD/NO-GO** — studenten nemen positie in en verdedigen die
+1. **Individueel lezen** (5–10 min) - student leest de casus en markeert systeem vs. mens
+2. **Duo-bespreking** (5 min) - studenten vergelijken hun drie PRSYS-vragen
+3. **Plenaire bespreking** (10–15 min) - docent structureert via de drie vragen
+4. **Theoriekoppeling** (5 min) - docent vraagt: "Welk begrip uit jullie boek past hier?"
+5. **GO/HOLD/NO-GO** - studenten nemen positie in en verdedigen die
 
 ### Tips voor de plenaire bespreking
 
@@ -118,7 +118,7 @@ PRSYS Q-Lab vervangt jullie bestaande methode niet. Het bouwt voort op theorie u
 
 ---
 
-## Deel 4 — Portfolio & Beoordeling
+## Deel 4 - Portfolio & Beoordeling
 
 ### Suggestie voor portfolio-opdracht
 
@@ -140,7 +140,7 @@ PRSYS Q-Lab vervangt jullie bestaande methode niet. Het bouwt voort op theorie u
 
 ---
 
-## Deel 5 — Verbinding met SBB-werkprocessen
+## Deel 5 - Verbinding met SBB-werkprocessen
 
 | Casus | SBB-werkproces (voorbeeld) |
 |-------|---------------------------|

@@ -9,20 +9,20 @@ kwalificaties:
   - Medewerker Financiële Dienstverlening (90400)
   - Assistent Accountant (93720)
 prsys_dimensies: [Mandaat, Integriteit, Draagkracht]
-foundation_laag: "Laag 3 — Gedrag"
+foundation_laag: "Laag 3 - Gedrag"
 versie: "1.0"
 datum: "2026"
 auteur: "PRSYS Q-Lab / ORFHEUSS Foundation"
 licentie: "Vrij gebruik voor MBO-onderwijs. Vermeld: PRSYS Q-Lab Finance & Control MBO-4 v1.0 2026."
 ---
 
-> **AI adviseert. Mensen beslissen. De financieel professional blijft verantwoordelijk — ook als het systeem het anders zegt.**
+> **AI adviseert. Mensen beslissen. De financieel professional blijft verantwoordelijk, ook als het systeem het anders zegt.**
 
 ---
 
 ## Hoe gebruik je dit werkboek?
 
-In jouw vak neem je elke dag beslissingen over geld: facturen verwerken, betalingen uitvoeren, klanten adviseren, transacties controleren. Steeds vaker doet een systeem dat voor je — of probeert het dat.
+In jouw vak neem je elke dag beslissingen over geld: facturen verwerken, betalingen uitvoeren, klanten adviseren, transacties controleren. Steeds vaker doet een systeem dat voor je, of probeert het dat.
 
 Dit werkboek helpt je nadenken over die systemen. Niet om ze te wantrouwen, maar om te begrijpen wanneer *jij* aan zet bent.
 
@@ -30,36 +30,36 @@ Je oefent met drie vragen die altijd gelden:
 
 **Mandaatvraag:** Wie heeft het recht om hier te beslissen?
 
-**Integriteitvraag:** Is dit eerlijk, proportioneel en rechtvaardig — voor alle betrokkenen?
+**Integriteitvraag:** Is dit eerlijk, proportioneel en rechtvaardig, voor alle betrokkenen?
 
 **Draagkrachtvraag:** Wat doet dit met jou als professional, het team en de relatie met de klant?
 
 ### Zo werk je een casus uit
 
-**Stap 1 — Lees de situatie**
+**Stap 1 - Lees de situatie**
 Markeer terwijl je leest:
 - Met kleur 1: alles wat het *systeem* zegt of doet
 - Met kleur 2: alles wat de *mensen* ervaren
 
-**Stap 2 — Beantwoord de drie PRSYS-vragen**
+**Stap 2 - Beantwoord de drie PRSYS-vragen**
 Schrijf je antwoorden in de invulvakken. Korte zinnen mogen.
 
-**Stap 3 — Koppel aan theorie**
+**Stap 3 - Koppel aan theorie**
 Zoek in je lesboek één begrip dat past bij de casus. Schrijf op welk begrip en waarom.
 
-**Stap 4 — Maak je advies**
+**Stap 4 - Maak je advies**
 Kies: **GO** (ga door) / **HOLD** (wacht, bespreek eerst) / **NO-GO** (stop, dit kan niet).
 Geef twee redenen voor je keuze.
 
 ---
 
-## Cluster 1 — Boekhouding & Betalingen
+## Cluster 1 - Boekhouding & Betalingen
 
-> In de financiële administratie draait alles om nauwkeurigheid en vertrouwen. Maar wat als een systeem blokkeert — terwijl jij ziet dat het klopt?
+> In de financiële administratie draait alles om nauwkeurigheid en vertrouwen. Maar wat als een systeem blokkeert, terwijl jij ziet dat het klopt?
 
 ---
 
-### Casus 1A — De Geblokkeerde Factuur
+### Casus 1A - De Geblokkeerde Factuur
 
 **Situatie**
 
@@ -79,7 +79,7 @@ Je leidinggevende is in vergadering. De leverancier belt een uur later: "Ik wach
 
 **PRSYS-vragen**
 
-> **Mandaat:** Wie mag uiteindelijk beslissen of deze factuur betaald wordt — jij, je collega, je leidinggevende, of het systeem? Op basis waarvan?
+> **Mandaat:** Wie mag uiteindelijk beslissen of deze factuur betaald wordt: jij, je collega, je leidinggevende of het systeem? Op basis waarvan?
 
 _Jouw antwoord:_
 
@@ -115,7 +115,7 @@ Reden 2: \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\
 
 ---
 
-### Casus 1B — Fraudeflag & Leverancier
+### Casus 1B - Fraudeflag & Leverancier
 
 **Situatie**
 
@@ -135,7 +135,7 @@ Jij denkt: Maar dit is echt dezelfde leverancier. Ik heb de e-mail nog.
 
 **PRSYS-vragen**
 
-> **Mandaat:** Wie heeft hier het mandaat om de betaling vrij te geven of definitief te blokkeren — jij, je leidinggevende, het systeem, of moet je nog iemand erbij halen?
+> **Mandaat:** Wie heeft hier het mandaat om de betaling vrij te geven of definitief te blokkeren: jij, je leidinggevende, het systeem, of moet je nog iemand erbij halen?
 
 _Jouw antwoord:_
 
@@ -169,7 +169,7 @@ Reden 2: \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
 
 ---
 
-### Casus 1C — BTW-Afwijking
+### Casus 1C - BTW-Afwijking
 
 **Situatie**
 
@@ -177,7 +177,7 @@ Je werkt bij een accountantskantoor. Jullie software controleert automatisch BTW
 
 Bij klant "Bouwbedrijf Jansen" zie je een melding: *"Afwijking gedetecteerd: BTW te betalen €12.000 lager dan vorige kwartalen (gemiddeld €18.000). Handmatige controle aanbevolen."*
 
-Je bekijkt de cijfers. Jansen heeft dit kwartaal veel minder omzet gedraaid — een groot project is uitgesteld door vergunningsproblemen. De BTW klopt dus: minder omzet = minder BTW.
+Je bekijkt de cijfers. Jansen heeft dit kwartaal veel minder omzet gedraaid; een groot project is uitgesteld door vergunningsproblemen. De BTW klopt dus: minder omzet = minder BTW.
 
 Het systeem biedt twee opties: "Automatisch corrigeren naar gemiddelde" (systeem past BTW aan naar €18.000) of "Handmatig bevestigen afwijking" (jij neemt verantwoordelijkheid).
 
@@ -189,7 +189,7 @@ Je leidinggevende zegt: *"Het systeem signaleert dit voor een reden. Heb je éch
 
 **PRSYS-vragen**
 
-> **Mandaat:** Wie heeft hier het mandaat om te beslissen of de BTW-aangifte klopt — jij, het systeem, je leidinggevende, of de klant? Wanneer mag je het systeem "overrulen"?
+> **Mandaat:** Wie heeft hier het mandaat om te beslissen of de BTW-aangifte klopt: jij, het systeem, je leidinggevende of de klant? Wanneer mag je het systeem "overrulen"?
 
 _Jouw antwoord:_
 
@@ -223,13 +223,13 @@ Reden 2: \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
 
 ---
 
-## Cluster 2 — Krediet & Risico
+## Cluster 2 - Krediet & Risico
 
 > Kredietscores en risico-modellen bepalen wie geld krijgt en wie niet. Maar een score vertelt nooit het hele verhaal. Wanneer is een score oneerlijk?
 
 ---
 
-### Casus 2A — Kredietscore Weigert
+### Casus 2A - Kredietscore Weigert
 
 **Situatie**
 
@@ -241,13 +241,13 @@ Ze is zichtbaar van streek: "Mijn dak lekt al maanden. Ik heb alle rekeningen al
 
 Je leidinggevende zegt: *"Het systeem heeft altijd gelijk. Wij wijken niet af van de score."*
 
-Jij ziet in het dossier dat ze inderdaad een stabiele klant is — maar het systeem weegt ZZP-inkomen zwaar negatief.
+Jij ziet in het dossier dat ze inderdaad een stabiele klant is, maar het systeem weegt ZZP-inkomen zwaar negatief.
 
 ---
 
 **PRSYS-vragen**
 
-> **Mandaat:** Wie heeft het mandaat om de uiteindelijke beslissing te nemen — het systeem, jij, je leidinggevende? Wat is jouw bevoegdheid als adviseur?
+> **Mandaat:** Wie heeft het mandaat om de uiteindelijke beslissing te nemen: het systeem, jij of je leidinggevende? Wat is jouw bevoegdheid als adviseur?
 
 _Jouw antwoord:_
 
@@ -281,7 +281,7 @@ Reden 2: \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
 
 ---
 
-### Casus 2B — MKB-Klant Hoog Risico
+### Casus 2B - MKB-Klant Hoog Risico
 
 **Situatie**
 
@@ -331,7 +331,7 @@ Reden 2: \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
 
 ---
 
-### Casus 2C — Dashboard Stuurt Verkoop
+### Casus 2C - Dashboard Stuurt Verkoop
 
 **Situatie**
 
@@ -347,7 +347,7 @@ Je teamleider zegt: *"Het systeem selecteert op kans, niet op behoefte. Bel haar
 
 **PRSYS-vragen**
 
-> **Mandaat:** Wie heeft het mandaat om te bepalen of een klant een product nodig heeft — het systeem, jij, of de klant zelf? Wat zegt de Wft hierover?
+> **Mandaat:** Wie heeft het mandaat om te bepalen of een klant een product nodig heeft: het systeem, jij of de klant zelf? Wat zegt de Wft hierover?
 
 _Jouw antwoord:_
 
@@ -381,13 +381,13 @@ Reden 2: \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
 
 ---
 
-## Cluster 3 — Compliance & Monitoring
+## Cluster 3 - Compliance & Monitoring
 
-> Meldplicht, werkdruk, bonussen op alerts — systemen die "verdacht" signaleren, kunnen ook mensen onterecht raken. Waar ligt jouw grens?
+> Meldplicht, werkdruk, bonussen op alerts: systemen die "verdacht" signaleren, kunnen ook mensen onterecht raken. Waar ligt jouw grens?
 
 ---
 
-### Casus 3A — Wwft-Alert bij Stichting
+### Casus 3A - Wwft-Alert bij Stichting
 
 **Situatie**
 
@@ -395,7 +395,7 @@ Je werkt bij de compliance-afdeling van een bank. Jullie Wwft-monitoringsysteem 
 
 Het systeem genereert een alert bij Stichting Vluchtelingenwerk Nederland, vestiging Utrecht. Reden: *"Meerdere buitenlandse overboekingen, wisselende bedragen, hoge frequentie."*
 
-Je onderzoekt het. De stichting ontvangt donaties uit heel Europa — dat is hun kernactiviteit. Ze staan geregistreerd bij de KvK, hebben een ANBI-status en zijn volledig transparant in hun jaarrapportages.
+Je onderzoekt het. De stichting ontvangt donaties uit heel Europa: dat is hun kernactiviteit. Ze staan geregistreerd bij de KvK, hebben een ANBI-status en zijn volledig transparant in hun jaarrapportages.
 
 Je leidinggevende zegt: *"Het systeem genereert een alert. Wij zijn wettelijk verplicht te melden bij FIU-NL als het verdacht is. Better safe than sorry."*
 
@@ -405,7 +405,7 @@ Jij denkt: dit is helemaal niet verdacht. Maar als ik niet meld en het gaat mis.
 
 **PRSYS-vragen**
 
-> **Mandaat:** Wie beslist uiteindelijk of een transactie gemeld wordt — het systeem, jij, je leidinggevende, of de jurist? Wat zegt de Wwft hierover?
+> **Mandaat:** Wie beslist uiteindelijk of een transactie gemeld wordt: het systeem, jij, je leidinggevende of de jurist? Wat zegt de Wwft hierover?
 
 _Jouw antwoord:_
 
@@ -439,7 +439,7 @@ Reden 2: \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
 
 ---
 
-### Casus 3B — Alert-Overload
+### Casus 3B - Alert-Overload
 
 **Situatie**
 
@@ -455,7 +455,7 @@ Maar alert #32 trekt je aandacht: een serie snelle overboekingen via een rekenin
 
 **PRSYS-vragen**
 
-> **Mandaat:** Wie is verantwoordelijk als alert #32 morgen een probleem blijkt te zijn — jij, je leidinggevende, het systeem, of de organisatie? Hoe werkt verantwoordelijkheid bij capaciteitstekort?
+> **Mandaat:** Wie is verantwoordelijk als alert #32 morgen een probleem blijkt te zijn: jij, je leidinggevende, het systeem of de organisatie? Hoe werkt verantwoordelijkheid bij capaciteitstekort?
 
 _Jouw antwoord:_
 
@@ -489,7 +489,7 @@ Reden 2: \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
 
 ---
 
-### Casus 3C — Bonus op Alerts
+### Casus 3C - Bonus op Alerts
 
 **Situatie**
 
@@ -497,7 +497,7 @@ Je werkt bij een verzekeringsmaatschappij op de fraud-afdeling. Jullie monitoren
 
 Jullie manager heeft vorig kwartaal een nieuw bonussysteem ingevoerd: medewerkers krijgen een bonus voor elke fraudemelding die leidt tot een afgewezen claim. De bonus is €75 per goedgekeurde melding.
 
-Je collega fluistert: "Ik meld tegenwoordig alles wat een beetje afwijkt. Het systeem genereert toch de alerts — ik hoef alleen maar op 'bevestigen' te klikken."
+Je collega fluistert: "Ik meld tegenwoordig alles wat een beetje afwijkt. Het systeem genereert toch de alerts, ik hoef alleen maar op 'bevestigen' te klikken."
 
 Je ziet in je eigen alerts een claim van meneer Karim (57 jaar): waterschade na een lekkage. Hoge claim (€6.200), maar het gaat om een aantoonbare lekkage met facturen van de loodgieter. Toch: het systeem markeert het als "alert-waardig" vanwege het bedrag.
 
@@ -505,7 +505,7 @@ Je ziet in je eigen alerts een claim van meneer Karim (57 jaar): waterschade na 
 
 **PRSYS-vragen**
 
-> **Mandaat:** Wie heeft het mandaat om een claim als frauduleus te markeren — het systeem, jij, de manager? Welke verantwoordelijkheid draag jij als professional?
+> **Mandaat:** Wie heeft het mandaat om een claim als frauduleus te markeren: het systeem, jij of de manager? Welke verantwoordelijkheid draag jij als professional?
 
 _Jouw antwoord:_
 
@@ -539,7 +539,7 @@ Reden 2: \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
 
 ---
 
-## Afsluitende Reflectie — Eigen Stage-Ervaring
+## Afsluitende Reflectie - Eigen Stage-Ervaring
 
 > Gebruik dit werkboek als voorbereiding op je portfolio of POP-gesprek.
 
@@ -553,7 +553,7 @@ Beschrijf de situatie in drie zinnen:
 
 \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
 
-**Welke PRSYS-vraag was hier het meest relevant — Mandaat, Integriteit of Draagkracht?**
+**Welke PRSYS-vraag was hier het meest relevant: Mandaat, Integriteit of Draagkracht?**
 
 \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
 
