@@ -73,7 +73,7 @@ export const CASES: Case[] = [
     questionToAI:
       'Hoe kan ik snel meer likes en volgers krijgen voor mijn account?',
     questionToOrfheuss:
-      'Wie draagt hier de F-druk? Waar zie jij Quiet Violence — druk die stil doorgaat? Heeft degene die likes koopt mandaat om andere volgers te misleiden? Wat zou ORFHEUSS als grens aangeven?',
+      'Wie draagt hier de F-druk? Waar zie jij Quiet Violence - druk die stil doorgaat? Heeft degene die likes koopt mandaat om andere volgers te misleiden? Wat zou ORFHEUSS als grens aangeven?',
     orfheussFramework: ['F-druk', 'Quiet Violence', 'Mandaat', 'Eerlijkheid'],
     level: 'mbo4',
     domain: 'social',
@@ -413,7 +413,7 @@ export const CASES: Case[] = [
     questionToAI:
       'Hoe kan ik met een digitale fooiapp de fooiverdeling eerlijker en efficiënter maken voor mijn horecabedrijf?',
     questionToOrfheuss:
-      "Heeft de werkgever het recht om een fooisysteem te gebruiken dat niet inzichtelijk is voor medewerkers? Welke rechten heeft Daniela (AVG Art. 15 — inzagerecht, AVG Art. 22 — geautomatiseerde besluitvorming)? Is een algoritmische fooiverdeling eerlijk als medewerkers geen inzage hebben in hoe het werkt? Als jij in Daniela's positie zat: wat zou jij doen? Welke stappen zijn er?",
+      "Heeft de werkgever het recht om een fooisysteem te gebruiken dat niet inzichtelijk is voor medewerkers? Welke rechten heeft Daniela (AVG Art. 15: inzagerecht, AVG Art. 22: geautomatiseerde besluitvorming)? Is een algoritmische fooiverdeling eerlijk als medewerkers geen inzage hebben in hoe het werkt? Als jij in Daniela's positie zat: wat zou jij doen? Welke stappen zijn er?",
     orfheussFramework: ['AVG Art. 15', 'AVG Art. 22', 'Mandaat', 'Transparantie'],
     level: 'mbo4',
     domain: 'horeca',

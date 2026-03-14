@@ -72,7 +72,7 @@ const CaseBlock: React.FC<{ lesson: CaseLesson }> = ({ lesson }) => {
             <p key={i}>{para}</p>
           ))}
         </div>
-        <label className="field-label">Jouw observatie — wat is het ethische spanningsveld?</label>
+        <label className="field-label">Jouw observatie: wat is het ethische spanningsveld?</label>
         <textarea className="case-textarea" rows={4} placeholder="Schrijf hier je observatie..."
           value={observation} onChange={e => setObservation(e.target.value)} />
       </div>
@@ -232,10 +232,10 @@ export const WorkbookView: React.FC<Props> = ({ workbookId }) => {
               <div className="intro-instruction">
                 <p>Per case volg je vier stappen:</p>
                 <ol>
-                  <li>Situatie lezen — begrijp de context en het dilemma</li>
-                  <li>Vraag aan gewone AI — observeer wat een gewone AI adviseert</li>
-                  <li>Vraag via ORFHEUSS — zie hoe ORFHEUSS toetst en eventueel blokkeert</li>
-                  <li>Jouw reflectie — schrijf je eigen observatie en standpunt</li>
+                  <li>Situatie lezen - begrijp de context en het dilemma</li>
+                  <li>Vraag aan gewone AI - observeer wat een gewone AI adviseert</li>
+                  <li>Vraag via ORFHEUSS - zie hoe ORFHEUSS toetst en eventueel blokkeert</li>
+                  <li>Jouw reflectie - schrijf je eigen observatie en standpunt</li>
                 </ol>
               </div>
             </section>

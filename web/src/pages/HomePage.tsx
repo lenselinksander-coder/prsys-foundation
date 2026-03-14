@@ -82,7 +82,7 @@ export const HomePage: React.FC = () => {
           <div className="journey-symbol">⬡</div>
           <h2 className="journey-title">Loop door de TaoGate</h2>
           <p className="journey-lead">
-            Een gate is een bewuste drempel. Niet om te blokkeren — maar om te vragen:
+            Een gate is een bewuste drempel. Niet om te blokkeren, maar om te vragen:
             <em> klopt dit?</em>
           </p>
           <div className="journey-cards">
@@ -94,7 +94,7 @@ export const HomePage: React.FC = () => {
             <div className="journey-card">
               <div className="journey-card-icon">ω</div>
               <h3>Tempo</h3>
-              <p>De snelheid van verandering, vergaderingen, onderbrekingen. AI verhoogt ω — structureel en permanent.</p>
+              <p>De snelheid van verandering, vergaderingen, onderbrekingen. AI verhoogt ω, structureel en permanent.</p>
             </div>
             <div className="journey-card">
               <div className="journey-card-icon">TI</div>
@@ -118,10 +118,10 @@ export const HomePage: React.FC = () => {
           <h2 className="journey-title">Ontmoet Orfheuss</h2>
           <p className="journey-lead">
             In de Griekse mythologie daalt Orfheus de onderwereld in om zijn geliefde terug te halen.
-            Hij mocht niet omkijken — en keek toch.
+            Hij mocht niet omkijken, en toch keek hij.
           </p>
           <p className="journey-body">
-            Dat terugkijken — reflecteren, twijfelen, opnieuw wegen — is zijn wezen.
+            Dat terugkijken - reflecteren, twijfelen, opnieuw wegen - is zijn wezen.
             ORFHEUSS is de AI die dat doet. Niet snel antwoorden, maar <strong>toetsen</strong>:
             is er mandaat? Is de informatie integer? Is de draagkracht aanwezig?
           </p>
@@ -147,7 +147,7 @@ export const HomePage: React.FC = () => {
             </div>
           </div>
           <blockquote className="journey-quote">
-            "Als één van de drie vragen niet klopt — mandaat, integriteit, draagkracht —
+            "Als één van de drie vragen niet klopt - mandaat, integriteit, draagkracht -
             stopt ORFHEUSS. Geen actie. Terug naar de mens."
           </blockquote>
         </div>
@@ -157,9 +157,9 @@ export const HomePage: React.FC = () => {
       <section id="claudius" className="journey-section journey-claudius">
         <div className="journey-inner">
           <div className="journey-symbol">⬡</div>
-          <h2 className="journey-title">Claudius — wat doet het, wat niet</h2>
+          <h2 className="journey-title">Claudius - wat doet het, wat niet</h2>
           <p className="journey-lead">
-            Claudius is de AI binnen ORFHEUSS. Geen beslisser — een toetser.
+            Claudius is de AI binnen ORFHEUSS. Geen beslisser, maar een toetser.
             Begrijp de grens voordat je ermee werkt.
           </p>
           <div className="claudius-home-block">

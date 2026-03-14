@@ -159,7 +159,7 @@ export const CaseDetail: React.FC<Props> = ({ cas, onBack }) => {
             </button>
             {compareError && (
               <span className="compare-error">
-                Backend niet bereikbaar — vergelijking niet beschikbaar.
+                De backend is niet bereikbaar - vergelijking niet beschikbaar.
               </span>
             )}
           </div>

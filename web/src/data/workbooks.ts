@@ -10,17 +10,17 @@ export const WORKBOOKS: Workbook[] = [
     roles: ['student', 'docent', 'begeleider'],
     introMd: `# ORFHEUSS
 
-**Werkboek Marketing & Communicatie — HBO 2026**
+**Werkboek Marketing & Communicatie - HBO 2026**
 
-In marketing en communicatie werken we met engagement, clicks, conversies en reach. AI-algoritmes optimaliseren campagnes, passen targeting aan en schalen snel op. Dat levert resultaten — maar ook risico's die niet zichtbaar zijn in dashboards.
+In marketing en communicatie werken we met engagement, clicks, conversies en reach. AI-algoritmes optimaliseren campagnes, passen targeting aan en schalen snel op. Dat levert resultaten, maar ook risico's die niet zichtbaar zijn in dashboards.
 
-**De kernvraag van dit werkboek:** wanneer wordt optimalisatie een dark pattern? Wanneer gaat personalisatie over in manipulatie — en wie is verantwoordelijk?
+**De kernvraag van dit werkboek:** wanneer wordt optimalisatie een dark pattern? Wanneer gaat personalisatie over in manipulatie, en wie is verantwoordelijk?
 
 ORFHEUSS brengt drie lagen aan:
 
-1. **G ≠ L ≠ E** (Brug 2) — wat AI genereert (G) is niet automatisch legitiem (L) en mag pas uitgevoerd worden (E) met geldig mandaat.
-2. **O36** — draagkracht (τ) en velocity (ω): gaat de snelheid van ons systeem boven wat mensen aankunnen?
-3. **SILK / PRIJS** — welke biologische, sociale en ecologische kosten worden niet meegeteld?
+1. **G ≠ L ≠ E** (Brug 2): wat AI genereert (G) is niet automatisch legitiem (L) en mag pas uitgevoerd worden (E) met geldig mandaat.
+2. **O36**: draagkracht (τ) en velocity (ω): gaat de snelheid van ons systeem boven wat mensen aankunnen?
+3. **SILK / PRIJS**: welke biologische, sociale en ecologische kosten worden niet meegeteld?
 
 Als één van deze toetsen faalt: **STOP**. Geen actie. Terug naar de mens.
 
@@ -30,11 +30,11 @@ Als één van deze toetsen faalt: **STOP**. Geen actie. Terug naar de mens.
 
 Elke casus volgt vijf stappen:
 
-1. **Daylight 1 — Situatie & Data** — beschrijf de context via de Argos-lens: wie, wat, welke data, welke rol voor AI?
-2. **Daylight 2 — "Gewone AI" Marketingadvies** — observeer wat een gewone AI zou adviseren en markeer wat er ontbreekt.
-3. **Nocturne 1 — ORFHEUSS-analyse** — toets op Brug 2 (G ≠ L ≠ E), O36 (τ vs ω) en SILK/PRIJS.
-4. **Nocturne 2 — Ethiek, weigering & alternatieven** — bepaal of er mandaat is, formuleer een weigeringstatement en herontwerp.
-5. **Mini-reflectie** — schrijf je eigen standpunt als aankomend marketingprofessional.
+1. **Daylight 1 - Situatie & Data** - beschrijf de context via de Argos-lens: wie, wat, welke data, welke rol voor AI?
+2. **Daylight 2 - "Gewone AI" Marketingadvies** - observeer wat een gewone AI zou adviseren en markeer wat er ontbreekt.
+3. **Nocturne 1 - ORFHEUSS-analyse** - toets op Brug 2 (G ≠ L ≠ E), O36 (τ vs ω) en SILK/PRIJS.
+4. **Nocturne 2 - Ethiek, weigering & alternatieven** - bepaal of er mandaat is, formuleer een weigeringstatement en herontwerp.
+5. **Mini-reflectie** - schrijf je eigen standpunt als aankomend marketingprofessional.
 
 Je leert niet 'het goede antwoord'. Je leert het verschil *herkennen*, *duiden* en *begrenzen*.`,
   },
@@ -48,17 +48,17 @@ Je leert niet 'het goede antwoord'. Je leert het verschil *herkennen*, *duiden* 
     roles: ['student', 'docent', 'begeleider'],
     introMd: `# ORFHEUSS
 
-**Werkboek Sociaal Domein — HBO 2026**
+**Werkboek Sociaal Domein - HBO 2026**
 
 In het sociaal domein werken we met echte levens: inkomen, veiligheid, participatie en gezondheid. Beslissingen over trajecten, sancties, opvang en zorg worden steeds vaker door of mét AI voorbereid.
 
-Voor cliënten met een complex verhaal — trauma, schulden, vlucht, of bureaucratische overbelasting — is extra zorgvuldigheid vereist. Juist hier is een grenssysteem nodig.
+Voor cliënten met een complex verhaal - trauma, schulden, vlucht, of bureaucratische overbelasting - is extra zorgvuldigheid vereist. Juist hier is een grenssysteem nodig.
 
 ORFHEUSS stelt bij elke digitale stap drie vragen:
 
-1. **Mandaat** — Wie heeft hier feitelijk toestemming en bevoegdheid gegeven?
-2. **Integriteit** — Is de informatie waarop gehandeld wordt volledig en eerlijk?
-3. **Draagkracht** — Kan de cliënt dit dragen, gegeven haar situatie?
+1. **Mandaat:** wie heeft hier feitelijk toestemming en bevoegdheid gegeven?
+2. **Integriteit:** is de informatie waarop gehandeld wordt volledig en eerlijk?
+3. **Draagkracht:** kan de cliënt dit dragen, gegeven haar situatie?
 
 Als één van deze vragen niet goed beantwoord kan worden: **STOP**. Geen actie. Terug naar de mens.
 
@@ -68,10 +68,10 @@ Als één van deze vragen niet goed beantwoord kan worden: **STOP**. Geen actie.
 
 Per case:
 
-1. **Situatie lezen** — begrijp de cliënt, het systeem en het dilemma
-2. **Vraag aan gewone AI** — noteer wat een gewone AI zou adviseren
-3. **Vraag via ORFHEUSS** — zie hoe ORFHEUSS toetst en blokkeert
-4. **Jouw reflectie** — schrijf je eigen professionele oordeel
+1. **Situatie lezen** - begrijp de cliënt, het systeem en het dilemma
+2. **Vraag aan gewone AI** - noteer wat een gewone AI zou adviseren
+3. **Vraag via ORFHEUSS** - zie hoe ORFHEUSS toetst en blokkeert
+4. **Jouw reflectie** - schrijf je eigen professionele oordeel
 
 Gebruik dit werkboek ook als voorbereiding op casuïstiekbespreking.`,
   },
@@ -85,7 +85,7 @@ Gebruik dit werkboek ook als voorbereiding op casuïstiekbespreking.`,
     roles: ['student', 'docent', 'begeleider'],
     introMd: `# ORFHEUSS
 
-**Werkboek Finance & Algoritmische Besluitvorming — HBO 2026**
+**Werkboek Finance & Algoritmische Besluitvorming - HBO 2026**
 
 In de financiële sector worden steeds meer beslissingen genomen door of mét algoritmes: kredietverstrekking, verzekeringspremies, beleggingsadvies, dynamic pricing.
 
@@ -93,9 +93,9 @@ De vraag is niet of dat mag. De vraag is: *wanneer* mag dat, *onder welke voorwa
 
 ORFHEUSS toetst op drie assen:
 
-1. **Mandaat** — Heeft de klant of cliënt hiermee ingestemd? Is er een wettelijke grondslag?
-2. **Integriteit** — Is de informatie die de beslissing stuurt volledig, eerlijk en niet discriminerend?
-3. **Draagkracht** — Kan de klant de gevolgen van deze beslissing dragen?
+1. **Mandaat:** heeft de klant of cliënt hiermee ingestemd? Is er een wettelijke grondslag?
+2. **Integriteit:** is de informatie die de beslissing stuurt volledig, eerlijk en niet discriminerend?
+3. **Draagkracht:** kan de klant de gevolgen van deze beslissing dragen?
 
 Als één as faalt: blokkade of vertraging. De mens is de gate.`,
   },
@@ -109,17 +109,17 @@ Als één as faalt: blokkade of vertraging. De mens is de gate.`,
     roles: ['student', 'docent', 'begeleider'],
     introMd: `# ORFHEUSS
 
-**Werkboek Digital & UX — HBO 2026**
+**Werkboek Digital & UX - HBO 2026**
 
-Digitale producten zijn nooit neutraal. Elke interface-keuze stuurt gedrag. Dark patterns, cookiewalls, nudging en A/B-tests zijn krachtige instrumenten — en ze worden steeds vaker door AI gegenereerd of geoptimaliseerd.
+Digitale producten zijn nooit neutraal. Elke interface-keuze stuurt gedrag. Dark patterns, cookiewalls, nudging en A/B-tests zijn krachtige instrumenten, en ze worden steeds vaker door AI gegenereerd of geoptimaliseerd.
 
 Als UX-professional ben jij de gate. Jij beslist wat gebouwd wordt en hoe.
 
 ORFHEUSS stelt de drie kernvragen ook hier:
 
-1. **Mandaat** — Heeft de gebruiker hiermee ingestemd? Begrijpt hij wat er gebeurt?
-2. **Integriteit** — Is de interface eerlijk? Wordt de gebruiker gestuurd of misleid?
-3. **Draagkracht** — Kan de gebruiker de gevolgen overzien en ermee omgaan?
+1. **Mandaat:** heeft de gebruiker hiermee ingestemd? Begrijpt hij wat er gebeurt?
+2. **Integriteit:** is de interface eerlijk? Wordt de gebruiker gestuurd of misleid?
+3. **Draagkracht:** kan de gebruiker de gevolgen overzien en ermee omgaan?
 
 Als één ervan faalt: herontwerp. Niet optimaliseren.`,
   },
@@ -133,7 +133,7 @@ Als één ervan faalt: herontwerp. Niet optimaliseren.`,
     roles: ['docent', 'begeleider'],
     introMd: `# ORFHEUSS
 
-**Docentenhandleiding Sociaal Domein — HBO 2026**
+**Docentenhandleiding Sociaal Domein - HBO 2026**
 
 Dit werkboek begeleidt docenten bij het gebruik van ORFHEUSS-cases in sociaal-domein-opleidingen. Het bevat:
 
@@ -144,7 +144,7 @@ Dit werkboek begeleidt docenten bij het gebruik van ORFHEUSS-cases in sociaal-do
 
 ## Basisprincipe voor de docent
 
-In het sociaal domein werken studenten met echte mensenlevens. De ORFHEUSS-toets is hier geen abstracte oefening — het is beroepsvoorbereiding op morele moed en professioneel oordelen onder systeemdruk.
+In het sociaal domein werken studenten met echte mensenlevens. De ORFHEUSS-toets is hier geen abstracte oefening; het is beroepsvoorbereiding op morele moed en professioneel oordelen onder systeemdruk.
 
 Jouw rol: laat studenten positie innemen, ook als het systeem een ander antwoord vraagt.
 
@@ -160,7 +160,7 @@ Jouw rol: laat studenten positie innemen, ook als het systeem een ander antwoord
     roles: ['docent', 'begeleider'],
     introMd: `# ORFHEUSS
 
-**Docentenhandleiding Finance & Algoritmische Besluitvorming — HBO 2026**
+**Docentenhandleiding Finance & Algoritmische Besluitvorming - HBO 2026**
 
 Dit werkboek begeleidt docenten bij het gebruik van ORFHEUSS-cases in finance-opleidingen. Het bevat:
 
@@ -173,7 +173,7 @@ Dit werkboek begeleidt docenten bij het gebruik van ORFHEUSS-cases in finance-op
 
 Financiële studenten zijn gewend aan kwantificeerbare uitkomsten. ORFHEUSS vraagt hen om met niet-kwantificeerbare waarden te werken: rechtvaardigheid, draagkracht, menselijke waardigheid.
 
-Dat vraagt een ander soort begeleiding — van antwoord-gericht naar redenering-gericht.
+Dat vraagt een ander soort begeleiding: van antwoord-gericht naar redenering-gericht.
 
 **Toets niet op 'juist antwoord'. Toets op consistente redenering en bewustzijn van risico's voor mensen.**`,
   },
@@ -187,7 +187,7 @@ Dat vraagt een ander soort begeleiding — van antwoord-gericht naar redenering-
     roles: ['docent', 'begeleider'],
     introMd: `# ORFHEUSS
 
-**Docentenhandleiding Digital & UX — HBO 2026**
+**Docentenhandleiding Digital & UX - HBO 2026**
 
 Dit werkboek begeleidt docenten bij het gebruik van ORFHEUSS-cases in digital-design- en UX-opleidingen. Het bevat:
 
@@ -198,7 +198,7 @@ Dit werkboek begeleidt docenten bij het gebruik van ORFHEUSS-cases in digital-de
 
 ## Basisprincipe voor de docent
 
-UX-studenten ontwerpen systemen die menselijk gedrag sturen. ORFHEUSS helpt hen inzien dat ontwerpers altijd een gate zijn — bewust of onbewust.
+UX-studenten ontwerpen systemen die menselijk gedrag sturen. ORFHEUSS helpt hen inzien dat ontwerpers altijd een gate zijn, bewust of onbewust.
 
 Jouw rol: maak de keuzes die studenten maken in ontwerp expliciet en besprekbaar.
 
@@ -214,9 +214,9 @@ Jouw rol: maak de keuzes die studenten maken in ontwerp expliciet en besprekbaar
     roles: ['student', 'docent', 'begeleider'],
     introMd: `# ORFHEUSS
 
-**Werkboek Social Media & Ethiek — MBO4 · 2026**
+**Werkboek Social Media & Ethiek - MBO4 · 2026**
 
-Elke dag gebruik je social media: liken, posten, scrollen, volgen. Maar steeds vaker zijn er situaties die niet helemaal goed voelen — likes kopen, nep-reviews, ghosten, of je telefoon die je eigenlijk niet meer loslaat.
+Elke dag gebruik je social media: liken, posten, scrollen, volgen. Maar steeds vaker zijn er situaties die niet helemaal goed voelen: likes kopen, nep-reviews, ghosten, of je telefoon die je eigenlijk niet meer loslaat.
 
 Dit werkboek helpt je om dat gevoel te onderzoeken. Niet om een goed antwoord te geven, maar om taal te vinden voor wat je al voelt.
 
@@ -224,9 +224,9 @@ ORFHEUSS vraagt bij elke situatie: *wie draagt hier de druk, en mag dit eigenlij
 
 Drie sleutelbegrippen:
 
-1. **Grens** — waar moet er gestopt worden?
-2. **Mandaat** — heeft iemand jouw ja gekregen voor dit?
-3. **Herstel** — wat is er nodig als het toch fout is gegaan?
+1. **Grens:** waar moet er gestopt worden?
+2. **Mandaat:** heeft iemand jouw ja gekregen voor dit?
+3. **Herstel:** wat is er nodig als het toch fout is gegaan?
 
 ---
 
@@ -234,12 +234,60 @@ Drie sleutelbegrippen:
 
 Elke les volg je dezelfde vier stappen:
 
-1. **Situatie lezen (Daylight)** — je beschrijft in eigen woorden wat er gebeurt. Geen oordeel, alleen: wie, wat, waar, wanneer.
-2. **Vraag aan gewone AI (Daylight)** — je noteert het advies dat een gewone AI zou geven (snel, handig, meer bereik).
-3. **Vraag via ORFHEUSS (Nocturne)** — je onderzoekt druk, grenzen en gevolgen. Je vraagt: 'Wie voelt druk, en waarvan?' en 'Waar zou iemand "stop" moeten zeggen?'
-4. **Jouw reflectie (Nocturne)** — je schrijft kort wat jij vindt, wat je voelt in je lichaam, en welke grens jij trekt.
+1. **Situatie lezen (Daylight)** - je beschrijft in eigen woorden wat er gebeurt. Geen oordeel, alleen: wie, wat, waar, wanneer.
+2. **Vraag aan gewone AI (Daylight)** - je noteert het advies dat een gewone AI zou geven (snel, handig, meer bereik).
+3. **Vraag via ORFHEUSS (Nocturne)** - je onderzoekt druk, grenzen en gevolgen. Je vraagt: 'Wie voelt druk, en waarvan?' en 'Waar zou iemand "stop" moeten zeggen?'
+4. **Jouw reflectie (Nocturne)** - je schrijft kort wat jij vindt, wat je voelt in je lichaam, en welke grens jij trekt.
 
 **Belangrijk:** dit werkboek zoekt niet 'het goede antwoord'. Het helpt je om druk, grenzen en stille schade (Quiet Violence) te leren herkennen.`,
+  },
+
+  // ── MBO4 Finance & Control ──────────────────────────────────────────────
+  {
+    id: 'wb-mbo4-finance',
+    title: 'PRSYS Q-Lab Finance · AI, Systemen en Geld · MBO Niveau 3–4 · 2026',
+    level: 'mbo4',
+    domain: 'finance',
+    roles: ['student', 'docent'],
+    introMd: `# PRSYS Q-Lab Finance
+
+**AI, Systemen en Geld - Werkboek MBO Niveau 3–4 · Economie/Finance & Control**
+
+In jouw werk in finance neem je elke dag beslissingen over geld: facturen verwerken, betalingen uitvoeren, klanten adviseren, transacties controleren. Steeds vaker doet een systeem dat voor je, of probeert het dat.
+
+Dit werkboek helpt je nadenken over die systemen. Niet om ze te wantrouwen, maar om te begrijpen wanneer *jij* aan zet bent.
+
+**PRSYS stelt bij elke situatie drie vragen:**
+
+1. **Mandaat:** wie mag hier eigenlijk beslissen? Wat is de rol van het systeem en wat is jouw rol?
+2. **Integriteit:** is de inzet van data of AI eerlijk, proportioneel en rechtvaardig voor de klant?
+3. **Draagkracht:** wat doet dit met jou als professional, het team en de relatie met de klant?
+
+---
+
+## Drie clusters, negen casussen
+
+**Cluster 1 · Boekhouding & Betalingen**
+Wanneer blokkeert het systeem terecht, en wanneer moet jij ingrijpen?
+
+**Cluster 2 · Krediet & Risico**
+Wat doet een kredietscore met mensen? Wanneer is een score oneerlijk?
+
+**Cluster 3 · Compliance & Monitoring**
+Meldplicht, werkdruk, bonussen op alerts: waar ligt jouw grens?
+
+---
+
+## Hoe werk je met de casussen?
+
+Elke casus volgt dezelfde stappen:
+
+1. **Situatie lezen** - lees de situatie en markeer: wat zegt het *systeem* en wat voelt de *mens*?
+2. **Vraag aan gewone AI** - wat zou een gewone AI hier adviseren?
+3. **Vraag via PRSYS** - analyseer met Mandaat, Integriteit en Draagkracht.
+4. **Jouw reflectie** - wat vind jij? Welke grens trek jij als professional?
+
+**Belangrijk:** er is geen goed of fout antwoord. Het gaat om jouw redenering, onderbouwd met argumenten en theorie uit je financieboek.`,
   },
 
   // ── MBO4 Horeca & Bakkerij ───────────────────────────────────────────────
@@ -253,31 +301,31 @@ Elke les volg je dezelfde vier stappen:
 
 **Werkboek MBO-4 · 2026**
 
-*AI adviseert. Mensen beslissen. De kok blijft verantwoordelijk — ook als het systeem het anders zegt.*
+*AI adviseert. Mensen beslissen. De kok blijft verantwoordelijk, ook als het systeem het anders zegt.*
 
-In jouw vak werk je steeds vaker met digitale systemen: roostersoftware, HACCP-apps, reserveringsplatforms, beoordelingsapps. Die systemen helpen — maar ze kunnen ook fouten maken. Of ze meten niet wat écht belangrijk is.
+In jouw vak werk je steeds vaker met digitale systemen: roostersoftware, HACCP-apps, reserveringsplatforms, beoordelingsapps. Die systemen helpen, maar ze kunnen ook fouten maken. Of ze meten niet wat écht belangrijk is.
 
 In dit werkboek leer je hoe je omgaat met situaties waarbij een systeem iets zegt, maar jij als professional twijfelt. Je oefent met drie vragen die altijd gelden:
 
-1. **Mandaat** — Wie heeft het recht om hier te beslissen?
-2. **Integriteit** — Is dit eerlijk, proportioneel en veilig — voor iedereen?
-3. **Draagkracht** — Wat doet dit met de mensen die het moeten uitvoeren?
+1. **Mandaat:** wie heeft het recht om hier te beslissen?
+2. **Integriteit:** is dit eerlijk, proportioneel en veilig, voor iedereen?
+3. **Draagkracht:** wat doet dit met de mensen die het moeten uitvoeren?
 
 ---
 
 ## Hoe werk je een casus uit?
 
-**Stap 1 — Lees de situatie**
+**Stap 1 - Lees de situatie**
 Markeer wat het *systeem* zegt en wat de *mensen* ervaren.
 
-**Stap 2 — Beantwoord de drie PRSYS-vragen**
+**Stap 2 - Beantwoord de drie PRSYS-vragen**
 Mandaat, Integriteit, Draagkracht. Korte zinnen mogen.
 
-**Stap 3 — Koppel aan theorie**
+**Stap 3 - Koppel aan theorie**
 Zoek één begrip uit je lesboek dat bij de casus past.
 
-**Stap 4 — Maak je advies**
-Kies: **GO** / **HOLD** / **NO-GO** — met twee redenen.
+**Stap 4 - Maak je advies**
+Kies: **GO** / **HOLD** / **NO-GO**, met twee redenen.
 
 ---
 
@@ -293,7 +341,7 @@ Kies: **GO** / **HOLD** / **NO-GO** — met twee redenen.
     roles: ['docent', 'begeleider'],
     introMd: `# ORFHEUSS
 
-**Docentenhandleiding Marketing & Communicatie — HBO 2026**
+**Docentenhandleiding Marketing & Communicatie - HBO 2026**
 
 Dit werkboek begeleidt docenten bij het gebruik van ORFHEUSS-cases in de les. Het bevat:
 
@@ -308,6 +356,6 @@ ORFHEUSS vraagt studenten niet om 'het goede antwoord'. Het vraagt hen om het *v
 
 Jouw rol: structureer het gesprek, verdiep de reflectie, laat studenten positie innemen.
 
-**Gebruik de codex niet als inhoud in de les.** De codex is de fundering — jij bent de brug.`,
+**Gebruik de codex niet als inhoud in de les.** De codex is de fundering; jij bent de brug.`,
   },
 ];

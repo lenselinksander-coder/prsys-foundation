@@ -8,7 +8,7 @@ interface AiGatePageProps {
 
 const CHECKS = [
   'Ik begrijp dat AI-antwoorden fouten kunnen bevatten en altijd menselijke verificatie vereisen.',
-  'Ik gebruik AI als aanvulling op mijn oordeel — niet als vervanging ervan.',
+  'Ik gebruik AI als aanvulling op mijn oordeel, niet als vervanging ervan.',
   'Ik deel geen vertrouwelijke of persoonsgebonden informatie met AI-systemen.',
   'Ik documenteer AI-gebruik wanneer dit invloed heeft op besluiten die anderen raken.',
   'Ik begrijp dat ORFHEUSS een ethisch toetsingsinstrument is, geen definitief advies.',
@@ -18,6 +18,7 @@ export const AiGatePage: React.FC<AiGatePageProps> = ({ onComplete }) => {
   const [checked, setChecked] = useState<boolean[]>(new Array(CHECKS.length).fill(false));
   const [laden, setLaden] = useState(false);
   const [fout, setFout] = useState<string | null>(null);
+  const [succes, setSucces] = useState(false);
 
   const allChecked = checked.every(Boolean);
 
@@ -35,12 +36,26 @@ export const AiGatePage: React.FC<AiGatePageProps> = ({ onComplete }) => {
     try {
       const { token } = await completeAiGate();
       storeToken(token);
-      onComplete(token);
+      setSucces(true);
+      setLaden(false);
+      setTimeout(() => onComplete(token), 2400);
     } catch {
       setFout('Bevestiging mislukt. Probeer opnieuw.');
       setLaden(false);
     }
   };
+
+  if (succes) {
+    return (
+      <div className="landing-page gate-101">
+        <div className="landing-content gate-101-content gate-101-pass">
+          <div className="gate-101-pass-icon">✈</div>
+          <h2 className="gate-101-title">Pass granted.</h2>
+          <p className="gate-101-lead">Angie wish you a good flight.</p>
+        </div>
+      </div>
+    );
+  }
 
   return (
     <div className="landing-page gate-101">
@@ -49,10 +64,10 @@ export const AiGatePage: React.FC<AiGatePageProps> = ({ onComplete }) => {
           <OrfheussLogo variant="nav" className="landing-logo" />
         </div>
 
-        <h2 className="gate-101-title">AI &amp; Veiligheid 101</h2>
+        <h2 className="gate-101-title">Angie's Boarding Pass</h2>
         <p className="gate-101-lead">
-          Vink elk punt aan om verder te gaan. Dit zijn de basisprincipes voor verantwoord
-          AI-gebruik binnen ORFHEUSS Academy.
+          Bevestig elk punt om aan boord te gaan. Angie controleert uw boarding pass
+          voordat ORFHEUSS Academy toegang verleent.
         </p>
 
         <div className="gate-101-checks">
@@ -78,7 +93,15 @@ export const AiGatePage: React.FC<AiGatePageProps> = ({ onComplete }) => {
 
         {fout && (
           <p className="landing-error" role="alert">
-            {fout}
+            {fout}{' '}
+            <a
+              href="https://www.orfheuss.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="gate-101-governance-link"
+            >
+              Meer over governance →
+            </a>
           </p>
         )}
 
