@@ -7,7 +7,7 @@ import type { CompareInput } from '../types.js';
 
 const router = Router();
 
-const VALID_DOMAINS = new Set(['marketing', 'social', 'digital', 'finance', 'zorg', 'sociaal_domein']);
+const VALID_DOMAINS = new Set(['marketing', 'social', 'digital', 'finance', 'zorg', 'sociaal_domein', 'horeca']);
 const VALID_LEVELS = new Set(['mbo4', 'hbo', 'universiteit']);
 const VALID_ROLES = new Set(['student', 'docent', 'begeleider']);
 
