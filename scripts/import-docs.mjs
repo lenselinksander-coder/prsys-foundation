@@ -3,6 +3,8 @@ import fs from "fs";
 import path from "path";
 import { fileURLToPath } from "url";
 import { taogateClassify } from "./taogate-classify.mjs";
+import pdfParse from "pdf-parse";
+import mammoth from "mammoth";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -23,8 +25,16 @@ async function main() {
     const sourcePath = path.join(IMPORT_DIR, file);
     const title = path.basename(file, ext);
 
-    // TODO: vervang door echte tekstextractie (bijv. pdf-parse voor PDF, mammoth voor DOCX)
-    const textSample = "";
+    let textSample = "";
+    if (ext === ".pdf") {
+      const buffer = await fs.promises.readFile(sourcePath);
+      const parsed = await pdfParse(buffer);
+      textSample = parsed.text.slice(0, 2000);
+    } else if (ext === ".docx") {
+      const buffer = await fs.promises.readFile(sourcePath);
+      const result = await mammoth.extractRawText({ buffer });
+      textSample = result.value.slice(0, 2000);
+    }
 
     // Taogate bepaalt waar dit thuishoort
     const classification = await taogateClassify({ title, text: textSample });
