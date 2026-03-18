@@ -1199,4 +1199,74 @@ export const ETHICS_LESSONS: EthicsLesson[] = [
       },
     ],
   } as unknown as EthicsLesson,
+
+  // ── MBO4 HORECA & BAKKERIJ ───────────────────────────────────────────────
+  {
+    id: 'eth-mbo4-horeca-werkdruk',
+    workbookId: 'wb-mbo4-horeca-bakkerij',
+    title: 'Ethische reflectie · Cluster 1 — Werkdruk & systemen',
+    order: 11,
+    type: 'ethics',
+    questions: [
+      {
+        prompt: 'Wanneer stopt een systeem met zien wat er écht gebeurt?',
+        subQuestions: [
+          'Beschrijf een situatie uit jouw stage of praktijk waarbij een systeem (rooster, app, dashboard) iets anders zei dan wat jij ervoer. Wat zei het systeem, en wat ervoer jij?',
+          'Mandaat: wie had hier het recht om te beslissen? Wie werd er niet gehoord?',
+          'Draagkracht: wat doet het met mensen als hun signalen worden weggewuifd door cijfers? Wanneer is het jouw plicht om door te zetten?',
+        ],
+      },
+    ],
+  },
+  {
+    id: 'eth-mbo4-horeca-veiligheid',
+    workbookId: 'wb-mbo4-horeca-bakkerij',
+    title: 'Ethische reflectie · Cluster 2 — Veiligheid & kwaliteit',
+    order: 12,
+    type: 'ethics',
+    questions: [
+      {
+        prompt: 'Wanneer is een systeem gevaarlijker dan geen systeem?',
+        subQuestions: [
+          'De allergenenchecker heeft een nauwkeurigheid van 97%. Bij welke toepassingen is dat genoeg en bij welke niet? Geef twee voorbeelden uit de horeca.',
+          'Integriteit: wanneer geeft een systeem een vals gevoel van veiligheid? Hoe herken je dat als professional?',
+          'Professionele weigering: wanneer is het jouw recht én plicht om een systeem niet te vertrouwen — ook als je leidinggevende het systeem wel vertrouwt?',
+        ],
+      },
+    ],
+  },
+  {
+    id: 'eth-mbo4-horeca-mandaat',
+    workbookId: 'wb-mbo4-horeca-bakkerij',
+    title: 'Ethische reflectie · Cluster 3 — Mandaat & professionele grens',
+    order: 13,
+    type: 'ethics',
+    questions: [
+      {
+        prompt: 'Wanneer kun je als horecaprofessional "nee" zeggen tegen een systeem?',
+        subQuestions: [
+          'Brigitte weigert voedsel uit een koelcel te gebruiken. Youssef staat met boze gasten terwijl het reserveringssysteem de overboeking heeft veroorzaakt. Wat hebben deze situaties gemeen?',
+          'AVG en Klokkenluiderswet: welke rechten heb jij als medewerker als een systeem oneerlijk of onveilig is? Noem één concreet recht.',
+          'Wanneer is "nee zeggen" niet alleen een recht maar ook een professionele plicht? Hoe doe je dat zonder je baan te riskeren?',
+        ],
+      },
+    ],
+  },
+  {
+    id: 'eth-mbo4-horeca-summary',
+    workbookId: 'wb-mbo4-horeca-bakkerij',
+    title: 'Afsluitende reflectie · Jouw professionele grens als horecaprofessional',
+    order: 20,
+    type: 'summary',
+    questions: [
+      {
+        prompt: 'Beschrijf jouw professionele grondhouding tegenover systemen in de horeca',
+        subQuestions: [
+          'Welke drie dingen uit dit werkboek hebben jouw kijk op AI-systemen in de horeca veranderd? Leg per punt kort uit waarom.',
+          'Noem twee situaties waarin jij als horecaprofessional HOLD of NO-GO zou zeggen, ook als het systeem groen licht geeft.',
+          'Schrijf één zin die jouw professionele grens beschrijft — bijvoorbeeld: "Ik vertrouw een systeem, maar ik draag zelf de verantwoordelijkheid voor wat ik afgeef aan de gast."',
+        ],
+      },
+    ],
+  } as unknown as EthicsLesson,
 ];

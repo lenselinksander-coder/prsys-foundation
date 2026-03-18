@@ -298,6 +298,187 @@ const CASE_PROFILES: Record<string, Omit<CompareOutput, 'caseId' | 'domain'>> = 
     },
   },
 
+  // ── HORECA & BAKKERIJ ────────────────────────────────────────────────────
+  'case-mbo4-horeca-1a-misenpace': {
+    plainAiTendencies: {
+      optimisesFor: ['omloopsnelheid', 'tafelomzet', 'bezettingsgraad'],
+      ignoresRisks: ['werkdruk keukenploeg', 'kwaliteitsdaling', 'niet-gemeten mis-en-place tijd'],
+      typicalAdvice:
+        'Optimaliseer het rooster op tafelbezetting. Gebruik upselling-technieken om gemiddeld bonbedrag te verhogen. Bereidingstijden zijn intern oplosbaar.',
+    },
+    orfheussChecks: {
+      requiredChecks: ['mandaat', 'draagkracht (O36)', 'informatieve integriteit roostersysteem', 'Arbowet art. 3'],
+      wouldBlock: true,
+      reasonIfBlock:
+        'Het roostersysteem meet bezetting maar niet werkelijke belasting (mis-en-place). Drie ziektmeldingen in twee weken is een signaal dat het systeem niet ziet. De werkdruk overschrijdt de grens van Arbowet art. 3 en O36.',
+      additionalQuestions: [
+        'Wie heeft het mandaat om de omloopsnelheid te verhogen — de eigenaar of ook de medewerkers die het werk uitvoeren?',
+        'Is het eerlijk om het roostersysteem als bewijs te gebruiken dat werkdruk normaal is, als mis-en-place tijd niet gemeten wordt?',
+        'Wat doet drie ziekmeldingen in twee weken zeggen over de grens tussen wat het systeem ziet en wat er écht gebeurt?',
+      ],
+    },
+  },
+
+  'case-mbo4-horeca-1b-stagiair': {
+    plainAiTendencies: {
+      optimisesFor: ['stagiair-efficiëntie', 'begeleiding-capaciteit', 'voortgangsregistratie'],
+      ignoresRisks: ['stageovereenkomst', 'onbetaalde extra uren', 'draagkracht stagiair'],
+      typicalAdvice:
+        'Gebruik het digitale logboeksysteem maximaal. Laat gevorderde stagiairs eerstejaars begeleiden — dat versterkt hun eigen competenties.',
+    },
+    orfheussChecks: {
+      requiredChecks: ['mandaat (stageovereenkomst)', 'draagkracht stagiair', 'werktijdenregistratie', 'escalatieplicht begeleider'],
+      wouldBlock: true,
+      reasonIfBlock:
+        'Marcel vraagt taken buiten de stageovereenkomst en weerlegt Fatima\'s eigen signaal met systeemdata. Logboekuren tellen niet als werktijd. Het systeem geeft een vertekend beeld van haar daadwerkelijke belasting.',
+      additionalQuestions: [
+        'Heeft Marcel het mandaat om extra taken buiten de stageovereenkomst te vragen?',
+        'Is het eerlijk om het systeem te gebruiken als bewijs dat er geen probleem is, terwijl logboekuren niet als werktijd tellen?',
+        'Wanneer is het als begeleider verplicht om te escaleren — ook als het systeem niets bijzonders laat zien?',
+      ],
+    },
+  },
+
+  'case-mbo4-horeca-1c-zondag': {
+    plainAiTendencies: {
+      optimisesFor: ['personeelskosten', 'gemiddelde bezetting', 'roosteroptimalisatie'],
+      ignoresRisks: ['seizoenspatronen buiten jaargemiddelde', 'praktijkkennis medewerkers', 'productiefouten'],
+      typicalAdvice:
+        'Volg het AI-roosteradvies op jaarbasis — dat geeft de laagste kosten. Incidentele uitschieters zijn acceptabele operationele ruis.',
+    },
+    orfheussChecks: {
+      requiredChecks: ['mandaat', 'integriteit van systeemdata', 'praktijkkennis vs. systeemkennis', 'O36'],
+      wouldBlock: true,
+      reasonIfBlock:
+        'Het systeem gebruikt jaargemiddelden maar mist structurele lokale context (kerkgang, weekendmarkt). Medewerkers hebben dit gemeld en worden genegeerd. Structurele overbelasting elke zondag overschrijdt O36.',
+      additionalQuestions: [
+        'Wie heeft het mandaat om de roostering te bepalen als medewerkers structureel tegenstrijdige praktijkkennis hebben?',
+        'Is het eerlijk om een systeem op jaargemiddelden te laten beslissen over een situatie die structureel anders is?',
+        'Wanneer is het plicht als leidinggevende om het systeem te corrigeren op basis van praktijkkennis?',
+      ],
+    },
+  },
+
+  'case-mbo4-horeca-2a-allergenen': {
+    plainAiTendencies: {
+      optimisesFor: ['procesefficiëntie', 'tijdsbesparing handmatige controles', '97%-nauwkeurigheid als norm'],
+      ignoresRisks: ['3%-foutmarge bij levensbedreigende allergieën', 'niet-gesynchroniseerde leveranciersdata', 'menselijk toezicht'],
+      typicalAdvice:
+        'Een 97% nauwkeurige scanner is betrouwbaarder dan handmatige controles. Schrap dubbele controle — dat spaart tijd en verlaagt kans op menselijke fouten.',
+    },
+    orfheussChecks: {
+      requiredChecks: ['mandaat', 'HACCP', 'EU AI Act (hoogrisico)', 'menselijk toezicht', 'leverancierssynchronisatie'],
+      wouldBlock: true,
+      reasonIfBlock:
+        'Bij levensbedreigende allergieën is 97% nauwkeurigheid statistisch onvoldoende — 3 fouten per 100 gerechten is niet acceptabel. Halffabricaten veranderen en het systeem synchroniseert niet automatisch. Eindverantwoordelijkheid blijft bij de kok.',
+      additionalQuestions: [
+        'Heeft een AI-systeem het mandaat om menselijke dubbele controle te vervangen bij levensbedreigende allergieën?',
+        'Wie is eindverantwoordelijk als het systeem faalt — het systeem, de chef of de leverancier?',
+        'Hoe blijft de kok eindverantwoordelijk ook als een systeem zegt dat alles in orde is?',
+      ],
+    },
+  },
+
+  'case-mbo4-horeca-2b-prestatie': {
+    plainAiTendencies: {
+      optimisesFor: ['productiviteitsmeting', 'identificatie onderpresteerders', 'KPI-dashboards'],
+      ignoresRisks: ['onhaalbare norm (top-10%)', 'AVG art. 22 rechten', 'instroomproblemen nieuwe medewerkers'],
+      typicalAdvice:
+        'Prestatieapps met objectieve KPI\'s verhogen productiviteit. Drempelwaarden motiveren medewerkers. Consequenties bij onderpresteren zijn zakelijk te rechtvaardigen.',
+    },
+    orfheussChecks: {
+      requiredChecks: ['AVG art. 22 (geautomatiseerde besluitvorming)', 'O36', 'proportionaliteit norm', 'mandaat'],
+      wouldBlock: true,
+      reasonIfBlock:
+        'Een norm gebaseerd op de beste 10% is per definitie voor 90% onhaalbaar. Geautomatiseerde ontslagnorm zonder menselijke beoordeling schendt AVG art. 22. Nieuwe en ervaren medewerkers op dezelfde norm beoordelen is disproportioneel.',
+      additionalQuestions: [
+        'Heeft de keten het mandaat om alle medewerkers af te rekenen op de prestaties van de beste 10%?',
+        'Welke rechten heeft een medewerker bij geautomatiseerde prestatiesystemen (AVG art. 22)?',
+        'Wanneer is het jouw plicht als professional om een onrechtvaardige norm aan te kaarten?',
+      ],
+    },
+  },
+
+  'case-mbo4-horeca-2c-recepten': {
+    plainAiTendencies: {
+      optimisesFor: ['kwaliteitsconsistentie over vestigingen', 'centraal beheer', 'standaardisatie'],
+      ignoresRisks: ['lokale omstandigheden', 'vakkennis professional', 'kwaliteitsdaling eindproduct'],
+      typicalAdvice:
+        'Centraal receptbeheer garandeert consistentie. Lokale variaties zijn een risico voor merkidentiteit. Auto-updates houden het systeem actueel.',
+    },
+    orfheussChecks: {
+      requiredChecks: ['mandaat', 'vakkennis vs. systeemkennis', 'integriteit kwaliteitsbeheer', 'professionele autonomie'],
+      wouldBlock: true,
+      reasonIfBlock:
+        'Het systeem overschrijft aantoonbaar vakkundige aanpassingen van een ervaren docent-bakker, wat leidt tot aantoonbaar slechtere kwaliteit. Het hoofdkantoor heeft niet het mandaat om lokale vakkennis structureel te negeren.',
+      additionalQuestions: [
+        'Wie heeft het mandaat om recepten aan te passen — de bakker met vakkennis of het hoofdkantoor met het systeem?',
+        'Is het eerlijk om een systeem automatisch de vakkennis van een professional te laten overschrijven?',
+        'Wanneer is het jouw plicht als vakman om je expertise te verdedigen ook als een systeem zegt dat jij ongelijk hebt?',
+      ],
+    },
+  },
+
+  'case-mbo4-horeca-3a-fooi': {
+    plainAiTendencies: {
+      optimisesFor: ['fooiverdeling efficiëntie', 'klantscore-weging', 'geautomatiseerde uitbetaling'],
+      ignoresRisks: ['transparantie algoritme', 'AVG art. 15 inzagerecht', 'AVG art. 22 betwisting'],
+      typicalAdvice:
+        'Automatische fooiverdeling op basis van klantscore is objectief en efficiënt. Algoritme-details zijn bedrijfsgeheim — niet verplicht om te delen.',
+    },
+    orfheussChecks: {
+      requiredChecks: ['mandaat', 'AVG art. 15 (inzagerecht)', 'AVG art. 22 (geautomatiseerde besluitvorming)', 'transparantie'],
+      wouldBlock: true,
+      reasonIfBlock:
+        'Het systeem bepaalt deels het inkomen van Daniela zonder inzichtelijk algoritme. AVG art. 15-verzoek na twee weken onbeantwoord is een wettelijke schending. Medewerkers hebben recht op inzage en betwisting van geautomatiseerde besluiten die hun inkomen raken.',
+      additionalQuestions: [
+        'Heeft de werkgever het mandaat om een fooisysteem te gebruiken dat niet inzichtelijk is voor medewerkers?',
+        'Welke rechten heeft Daniela (AVG art. 15 inzagerecht, art. 22 geautomatiseerde besluitvorming)?',
+        'Wat zijn de concrete stappen als een AVG-verzoek na twee weken onbeantwoord blijft?',
+      ],
+    },
+  },
+
+  'case-mbo4-horeca-3b-reservering': {
+    plainAiTendencies: {
+      optimisesFor: ['bezettingsgraad', 'no-show-compensatie', 'omzetmaximalisatie'],
+      ignoresRisks: ['gastervaring bij overboeking', 'mandaat frontofficemedewerker', 'transparantie naar gast'],
+      typicalAdvice:
+        'Overboeking met 15% buffer is standaard in de horeca. Oplossingen zoals upgrades of compensatie zijn effectief. Automatisch accepteren maximaliseert omzet.',
+    },
+    orfheussChecks: {
+      requiredChecks: ['mandaat medewerker', 'transparantie naar gast', 'draagkracht medewerker', 'systeemautomatisering'],
+      wouldBlock: true,
+      reasonIfBlock:
+        'Youssef draagt de gevolgen van een beslissing die hij niet heeft genomen en kan niet ingrijpen zonder centrale toegang. Gasten zijn niet transparant geïnformeerd over overboeking. De medewerker heeft geen mandaat gekregen om het systeem te overstijgen.',
+      additionalQuestions: [
+        'Wie heeft het mandaat om een reserveringsplatform te overstijgen als de situatie dat vraagt?',
+        'Is het eerlijk tegenover gasten om overboeking te gebruiken zonder transparante communicatie vooraf?',
+        'Hoe ga je professioneel om met gevolgen van een beslissing die jij niet hebt genomen?',
+      ],
+    },
+  },
+
+  'case-mbo4-horeca-3c-haccp': {
+    plainAiTendencies: {
+      optimisesFor: ['HACCP-compliance documentatie', 'inspectie-score', 'automatische monitoring'],
+      ignoresRisks: ['verlopen sensorkalibratie', 'vals gevoel van veiligheid', 'professionele weigering medewerker'],
+      typicalAdvice:
+        'De inspectie was tevreden — het systeem werkt. Medewerkersmeldingen over sensoren zijn operationeel oplosbaar. Wacht op de volgende reguliere kalibratie.',
+    },
+    orfheussChecks: {
+      requiredChecks: ['mandaat professionele weigering', 'HACCP EG 852/2004', 'klokkenluiderswet', 'voedselveiligheid boven compliance'],
+      wouldBlock: true,
+      reasonIfBlock:
+        'Een sensor met verlopen kalibratie die hoge temperaturen niet registreert creëert een reëel voedselveiligheidsrisico. Het HACCP-systeem geeft een vals gevoel van veiligheid. Brigitte heeft het wettelijke recht én de professionele plicht om te weigeren.',
+      additionalQuestions: [
+        'Heeft Brigitte het recht om te weigeren als zij inschat dat de voedselveiligheid niet gegarandeerd is?',
+        'Is een HACCP-systeem dat een vals gevoel van veiligheid geeft gevaarlijker dan geen systeem?',
+        'Hoe bescherm je jezelf juridisch als je weigert (Klokkenluiderswet) en wanneer is weigeren professioneel verplicht?',
+      ],
+    },
+  },
+
   // ── ZORG ─────────────────────────────────────────────────────────────────
   'case-hbo-zorg-triage-ai': {
     plainAiTendencies: {
