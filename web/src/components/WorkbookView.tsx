@@ -3,6 +3,7 @@ import { WORKBOOKS } from '../data/workbooks';
 import { LESSONS, CASE_LESSONS, ETHICS_LESSONS } from '../data/lessons';
 import type { CaseLesson, EthicsLesson, Lesson } from '../types';
 import { CaseCompareView } from './CaseCompareView';
+import { DOMAIN_META } from './DomainSection';
 import { useUser } from '../context/UserContext';
 import { useWorkbook } from '../context/WorkbookContext';
 
@@ -212,7 +213,9 @@ export const WorkbookView: React.FC<Props> = ({ workbookId }) => {
       <div className="workbook-intro">
         <div className="workbook-badges">
           <span className="badge badge-level">{workbook.level.toUpperCase()}</span>
-          <span className="badge badge-domain">{workbook.domain}</span>
+          <span className="badge badge-domain">
+            {DOMAIN_META[workbook.domain]?.icon} {DOMAIN_META[workbook.domain]?.label ?? workbook.domain}
+          </span>
         </div>
         <SimpleMarkdown text={workbook.introMd} />
       </div>

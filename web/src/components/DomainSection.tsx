@@ -36,6 +36,11 @@ export const DOMAIN_META: Record<Domain, { label: string; icon: string; descript
     icon: '🤝',
     description: 'Participatieplicht, schuldhulp, risicoprofilering en bureaucratie.',
   },
+  horeca: {
+    label: 'Horeca & Bakkerij',
+    icon: '🍽️',
+    description: 'AI in keuken, klantcontact, roosters en digitale systemen.',
+  },
 };
 
 export const DomainSection: React.FC<{ domain: Domain }> = ({ domain }) => {

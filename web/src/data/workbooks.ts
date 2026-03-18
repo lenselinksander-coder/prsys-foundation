@@ -242,6 +242,54 @@ Elke les volg je dezelfde vier stappen:
 **Belangrijk:** dit werkboek zoekt niet 'het goede antwoord'. Het helpt je om druk, grenzen en stille schade (Quiet Violence) te leren herkennen.`,
   },
 
+  // ── MBO4 Horeca & Bakkerij ──────────────────────────────────────────────
+  {
+    id: 'wb-mbo4-horeca',
+    title: 'PRSYS Q-Lab Horeca · AI, Systemen en Dienstverlening · MBO Niveau 3–4 · 2026',
+    level: 'mbo4',
+    domain: 'horeca',
+    roles: ['student', 'docent'],
+    introMd: `# PRSYS Q-Lab Horeca
+
+**AI, Systemen en Dienstverlening — Werkboek MBO Niveau 3–4 · Horeca & Bakkerij**
+
+In de horeca en bakkerij werk je elke dag met mensen: gasten, collega's, leveranciers. Steeds vaker werkt er ook een systeem mee — een digitale kassa, een roosterprogramma, een beoordelingsplatform, een allergenenscanner. Soms helpt dat. Soms klopt het niet. En soms voelt het niet goed.
+
+Dit werkboek helpt je nadenken over die momenten. Niet om alles fout te vinden, maar om te herkennen wanneer *jij* aan zet bent.
+
+**PRSYS stelt bij elke situatie drie vragen:**
+
+1. **Mandaat** — Wie mag hier eigenlijk beslissen? Wat is de rol van het systeem en wat is jouw rol als professional?
+2. **Integriteit** — Is wat het systeem doet eerlijk, proportioneel en respectvol voor gast, collega of leverancier?
+3. **Draagkracht** — Wat doet dit met jou als medewerker, het team en de werksfeer?
+
+---
+
+## Drie clusters, negen casussen
+
+**Cluster 1 · Keuken & Productie**
+AI in voedselveiligheid, allergeneninformatie en keukenplanning — wanneer klopt het systeem, en wanneer moet jij ingrijpen?
+
+**Cluster 2 · Klant & Service**
+Reviews, aanbevelingen, klachten via apps — hoe ga je om met systemen die klantcontact sturen?
+
+**Cluster 3 · Team & Planning**
+Roostersoftware, omzetdoelen, kassacontrole — wanneer is een algoritme eerlijk voor het team?
+
+---
+
+## Hoe werk je met de casussen?
+
+Elke casus volgt dezelfde stappen:
+
+1. **Situatie lezen** — lees de situatie en markeer: wat zegt het *systeem* en wat voelt de *mens*?
+2. **Vraag aan gewone AI** — wat zou een gewone AI hier adviseren?
+3. **Vraag via PRSYS** — analyseer met Mandaat, Integriteit en Draagkracht.
+4. **Jouw reflectie** — wat vind jij? Welke grens trek jij als professional?
+
+**Belangrijk:** er is geen goed of fout antwoord. Het gaat om jouw redenering, onderbouwd met argumenten vanuit je opleiding en stage.`,
+  },
+
   // ── MBO4 Finance & Control ──────────────────────────────────────────────
   {
     id: 'wb-mbo4-finance',

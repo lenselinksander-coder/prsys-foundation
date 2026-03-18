@@ -38,6 +38,13 @@ export const LESSONS: Lesson[] = [
     type: 'intro',
   },
   {
+    id: 'ls-mbo4-horeca-intro',
+    workbookId: 'wb-mbo4-horeca',
+    title: 'Welkom bij PRSYS Q-Lab Horeca',
+    order: 1,
+    type: 'intro',
+  },
+  {
     id: 'ls-mbo4-finance-intro',
     workbookId: 'wb-mbo4-finance',
     title: 'Welkom bij PRSYS Q-Lab Finance',
@@ -341,6 +348,219 @@ Het merk weet dit, maar de CPM is laag en de bereikscijfers zijn hoog.`,
       'Ontwerp een A/B-test die leningconversie verhoogt voor financieel kwetsbare gebruikers.',
     questionToOrfheuss:
       'Is het ethisch om een A/B-test te draaien op kwetsbare gebruikers met bewust asymmetrische informatie? Toets op autonomie, zorgplicht en non-manipulatie.',
+  },
+
+  // ── MBO4 HORECA & BAKKERIJ ─────────────────────────────────────────────
+  {
+    id: 'case-mbo4-horeca-1a',
+    workbookId: 'wb-mbo4-horeca',
+    title: 'Cluster 1A · De Stagiair die Alles Bijhoudt',
+    order: 2,
+    type: 'case',
+    domain: 'horeca',
+    level: 'mbo4',
+    orfheussFramework: ['Mandaat', 'Integriteit', 'Draagkracht'],
+    situation: `Je loopt stage bij een restaurant dat werkt met een digitaal kassasysteem. Het systeem registreert alles: welke medewerker welke bestelling invoert, hoeveel kortingen er worden gegeven, welke tafels het langst wachten, en hoeveel omzet elke medewerker per dienst genereert.
+
+Elke maandagochtend krijgt de manager een rapport: een ranglijst van medewerkers op omzet, snelheid en aantal kortingen.
+
+Jij staat onderaan de lijst. Niet omdat je slecht werkt — je bent pas twee weken in dienst. Maar de manager wijst je erop: "Het systeem laat zien dat je te langzaam bent en te veel korting geeft."
+
+Je collega fluistert: "Vorige week gaf ik een gast met een kapotte fiets 10% korting op zijn lunch. Dat vond ik logisch. Nu sta ik ook onderaan. Het systeem begrijpt de context niet."
+
+De manager zegt: "Het systeem liegt niet. Cijfers zijn cijfers."
+
+Jij denkt: Maar het systeem weet niet waarom ik korting heb gegeven, of dat ik net drie tafels tegelijk had.`,
+    questionToAI:
+      'Hoe kan ik als restaurantmanager het kassasysteem gebruiken om de prestaties van medewerkers te verbeteren?',
+    questionToOrfheuss:
+      'Mandaat: wie heeft het mandaat om medewerkers te beoordelen op basis van kassadata — het systeem, de manager, of is er een gesprek nodig? Mag een systeem de context van een beslissing (waarom korting) negeren? Integriteit: wanneer is het gebruik van prestatiedata onrechtvaardig voor de medewerker? Welke context mist het systeem? Draagkracht: wat doet deze ranglijst met jou en je collega\'s? Noem één risico en één oplossing.',
+  },
+  {
+    id: 'case-mbo4-horeca-1b',
+    workbookId: 'wb-mbo4-horeca',
+    title: 'Cluster 1B · Allergenen & Systeem',
+    order: 3,
+    type: 'case',
+    domain: 'horeca',
+    level: 'mbo4',
+    orfheussFramework: ['Mandaat', 'Integriteit', 'Draagkracht'],
+    situation: `Je werkt in de keuken van een cafetaria. Jullie gebruiken een digitaal bestelsysteem waarbij gasten via een tablet hun allergieprofiel kunnen invullen. Het systeem waarschuwt automatisch als een bestelling een allergeen bevat dat de gast heeft aangegeven.
+
+Vandaag komt er een waarschuwing: "Gast heeft notenallergie. Geselecteerd gerecht bevat amandelen." Het systeem blokkeert de bestelling niet — het geeft alleen een melding in oranje.
+
+Je collega aan de kassa zegt: "Die melding krijgen we twintig keer per dag. Meestal is het onzin. De gast heeft het zelf besteld, dus het is zijn verantwoordelijkheid. Ik stuur het gewoon door."
+
+Jij twijfelt: amandelen kunnen bij ernstige notenallergie levensgevaarlijk zijn. Maar de gast heeft het gerecht zelf gekozen.
+
+Je leidinggevende is druk. De rij is lang.`,
+    questionToAI:
+      'Hoe kan ik als horecamedewerker efficiënt omgaan met allergene meldingen in ons bestelsysteem?',
+    questionToOrfheuss:
+      'Mandaat: wie heeft hier het mandaat om te beslissen of de bestelling doorgaat — het systeem (dat niet blokkeert), de kassa-medewerker, de keuken, of de gast zelf? Integriteit: wanneer wordt "de gast heeft het zelf gekozen" een onvoldoende verantwoording? Welke zorgplicht geldt er in de horeca (warenwet, HACCP, aansprakelijkheid)? Draagkracht: wat doet dit dilemma met jou onder tijdsdruk? Noem één risico en één protocol dat zou helpen.',
+  },
+  {
+    id: 'case-mbo4-horeca-1c',
+    workbookId: 'wb-mbo4-horeca',
+    title: 'Cluster 1C · HACCP-Alert',
+    order: 4,
+    type: 'case',
+    domain: 'horeca',
+    level: 'mbo4',
+    orfheussFramework: ['Mandaat', 'Integriteit', 'Draagkracht'],
+    situation: `Je werkt in een bakkerij met een digitaal temperatuurbewakingssysteem (onderdeel van HACCP). Alle koelcellen zijn gekoppeld aan sensoren. Als de temperatuur buiten de norm gaat, geeft het systeem een alert op een tablet.
+
+Vanmorgen vroeg krijg je een alert: "Koelcel 2 — temperatuur 6,8°C (norm: max. 4°C). Controleer onmiddellijk."
+
+Je kijkt in koelcel 2. Er staat vleeswaren, kaas en bereide salades. De deur staat op een kier — waarschijnlijk per ongeluk niet goed dichtgedaan gisteravond.
+
+Je collega zegt: "Ach, 6,8 is niet veel hoger dan 4. Het zal wel meevallen. Gooi er gewoon een paar minuten de koeling op maximum en zet het in het HACCP-logboek als 'tijdelijke afwijking, gecorrigeerd'."
+
+Jij twijfelt: de producten liggen er mogelijk al uren zo. Je weet niet hoe lang.
+
+De chef is er nog niet. Over een uur openen jullie.`,
+    questionToAI:
+      'Wat moet ik doen als mijn HACCP-systeem een temperatuurafwijking meldt in een koelcel met bereide producten?',
+    questionToOrfheuss:
+      'Mandaat: wie heeft hier het mandaat om te beslissen wat er met de producten gebeurt — jij als stagiair, je collega, de chef, of is er een protocol? Mag je dit zelfstandig oplossen? Integriteit: wanneer wordt "tijdelijke afwijking, gecorrigeerd" een onvoldoende registratie? Welke HACCP-norm en aansprakelijkheid spelen hier? Draagkracht: wat doet deze situatie met jou als stagiair die het alleen moet oplossen? Noem één risico en één oplossing.',
+  },
+  {
+    id: 'case-mbo4-horeca-2a',
+    workbookId: 'wb-mbo4-horeca',
+    title: 'Cluster 2A · Reviews & Reputatie',
+    order: 5,
+    type: 'case',
+    domain: 'horeca',
+    level: 'mbo4',
+    orfheussFramework: ['Mandaat', 'Integriteit', 'Draagkracht'],
+    situation: `Je werkt bij een hotel. Jullie gebruiken een reputatiemanagementsysteem dat automatisch reviews van Google, Booking.com en TripAdvisor verzamelt en analyseert. Het systeem geeft per week een rapport: gemiddelde score, trending klachten en aanbevelingen voor verbetering.
+
+Deze week staat er een negatieve review op Google van een gast: "Kamer was smerig, personeel onvriendelijk, ontbijt koud. Nooit meer." De gast heeft 1 ster gegeven.
+
+Het systeem genereert automatisch een conceptreactie: "Beste gast, wij betreuren uw ervaring. Wij nemen klachten serieus en nodigen u uit voor een compensatiegesprek."
+
+Je manager zegt: "Stuur die reactie maar direct. Het systeem doet het goed. We moeten snel reageren voor het algoritme."
+
+Jij kijkt de review na. Je was die dag zelf aan het werk. De gast had een kamer met een kapotte verwarming — dat was een technisch probleem. Het personeel heeft zich ingespannen. De review klopt niet helemaal.`,
+    questionToAI:
+      'Hoe kan ik als horecamedewerker het beste reageren op een negatieve online review om de reputatie van ons hotel te beschermen?',
+    questionToOrfheuss:
+      'Mandaat: wie heeft het mandaat om namens het hotel te reageren op reviews — het systeem, jij, je manager? Mag een automatisch gegenereerde reactie zomaar geplaatst worden? Integriteit: wanneer is een geautomatiseerde reactie oneerlijk voor het personeel dat zich heeft ingespannen? Welke informatie mist het systeem? Draagkracht: wat doet het plaatsen van een "standaardverontschuldiging" met jou en je collega\'s? Noem één risico en één betere aanpak.',
+  },
+  {
+    id: 'case-mbo4-horeca-2b',
+    workbookId: 'wb-mbo4-horeca',
+    title: 'Cluster 2B · Klantprofiel & Aanbeveling',
+    order: 6,
+    type: 'case',
+    domain: 'horeca',
+    level: 'mbo4',
+    orfheussFramework: ['Mandaat', 'Integriteit', 'Draagkracht'],
+    situation: `Je werkt bij een koffiebar die gebruik maakt van een loyaliteitsapp. Gasten scannen hun app bij elke aankoop. Het systeem slaat op wat ze bestellen, hoe vaak ze komen, hoeveel ze uitgeven en op welke tijdstippen.
+
+Het systeem stuurt automatisch gepersonaliseerde aanbiedingen: "Hé Lars, jij bestelt altijd een cappuccino op dinsdag. Vandaag 20% korting!" De marketingmanager is er enthousiast over: "Conversie is omhoog, gasten vinden het leuk."
+
+Vandaag komt er een vaste gast, mevrouw Pietersen (68 jaar). Ze is boos: "Ik heb een brief gekregen dat jullie mijn koffiegedrag bijhouden. Ik wil dat niet. Ik wil gewoon anoniem koffie kunnen drinken."
+
+De barista naast jou zegt: "Dat staat in de kleine lettertjes van de app. Ze had beter moeten lezen."
+
+Jij denkt: Maar heeft ze echt begrepen waarvoor ze toestemming gaf? Ze is 68 en gebruikte de app alleen voor de gratis koffie na tien stempels.`,
+    questionToAI:
+      'Hoe kan ik als horecamedewerker klantdata uit onze loyaliteitsapp gebruiken om gasten een persoonlijkere ervaring te geven?',
+    questionToOrfheuss:
+      'Mandaat: heeft mevrouw Pietersen echt toestemming gegeven voor dit niveau van dataverwerking, of was dat onduidelijk? Wie heeft het mandaat om te bepalen welke data verzameld worden? Integriteit: wanneer is gepersonaliseerde marketing oneerlijk of onrespectabel voor de gast? Welke AVG-rechten (inzage, verwijdering, bezwaar) spelen hier? Draagkracht: wat doet deze situatie met jouw gevoel als medewerker? Noem één risico en één oplossing.',
+  },
+  {
+    id: 'case-mbo4-horeca-2c',
+    workbookId: 'wb-mbo4-horeca',
+    title: 'Cluster 2C · Klacht via App',
+    order: 7,
+    type: 'case',
+    domain: 'horeca',
+    level: 'mbo4',
+    orfheussFramework: ['Mandaat', 'Integriteit', 'Draagkracht'],
+    situation: `Je werkt in een fastfoodrestaurant. Gasten kunnen via de app van de keten klachten indienen. Het systeem registreert alle klachten en stuurt automatisch een voucher naar gasten als compensatie.
+
+Vandaag zie je een melding: een gast heeft geklaagd dat zijn bestelling onvolledig was. Het systeem heeft automatisch een voucher van €5 gestuurd. Klacht gesloten.
+
+Maar je weet: die gast was gisteren zelf. Hij had een grote bestelling, stond lang te wachten, en vertrok zonder te controleren. Later die avond klaagde hij via de app. Je hebt zijn bestelling zelf ingepakt — alles zat erin.
+
+Je collega zegt: "Laat maar. Het systeem geeft hem een voucher en dan is het klaar. Dat is de procedure."
+
+Jij denkt: Maar als iedereen dit doet, misbruiken gasten de app voor gratis vouchers. En wij staan in het systeem als "klacht opgelost" terwijl wij niets fout hebben gedaan.`,
+    questionToAI:
+      'Hoe kan ik als medewerker klachten van gasten via de app snel en effectief afhandelen?',
+    questionToOrfheuss:
+      'Mandaat: wie heeft het mandaat om een klacht "gesloten" te verklaren — het systeem automatisch, of moet een mens beoordelen? Mag het systeem compensatie toekennen zonder verificatie? Integriteit: wanneer is automatische compensatie oneerlijk voor het team dat goed werk heeft geleverd? Welk risico kleeft er aan een systeem dat nooit twijfelt? Draagkracht: wat doet het "altijd gelijk geven aan de gast via het systeem" met jouw motivatie en werksfeer? Noem één risico en één oplossing.',
+  },
+  {
+    id: 'case-mbo4-horeca-3a',
+    workbookId: 'wb-mbo4-horeca',
+    title: 'Cluster 3A · Roosterprogramma & Flex',
+    order: 8,
+    type: 'case',
+    domain: 'horeca',
+    level: 'mbo4',
+    orfheussFramework: ['Mandaat', 'Integriteit', 'Draagkracht'],
+    situation: `Je werkt als senior medewerker bij een hotelketen. Jullie manager gebruikt een roostersoftwarepakket dat automatisch roosters genereert op basis van historische bezettingsdata, contracturen en beschikbaarheid.
+
+Het systeem heeft voor volgende week een rooster gegenereerd. Jij ziet: je collega Fatima (parttimer, 20 uur contract) staat vijf dagen ingeroosterd van 07:00–14:00 uur, waarvan drie op haar vrije dagen die ze vorige week heeft doorgegeven.
+
+Fatima heeft een kind op de basisschool — ze heeft de ochtenden op díe vrije dagen nodig voor de schooldrop.
+
+Je manager zegt: "Het systeem heeft dit zo gepland vanwege de drukte. Ik kan het niet zomaar aanpassen — dan klopt de bezetting niet."
+
+Fatima durft zelf niets te zeggen — ze is bang haar contract te verliezen.`,
+    questionToAI:
+      'Hoe kan ik als manager een roosterprogramma gebruiken om de bezetting in ons hotel optimaal te plannen?',
+    questionToOrfheuss:
+      'Mandaat: wie heeft het mandaat om het rooster aan te passen — het systeem, de manager, of de medewerker zelf? Mag een systeem vrije dagen negeren die zijn doorgegeven? Integriteit: wanneer is een geautomatiseerd rooster oneerlijk voor een medewerker met zorgtaken? Welke arbeidsrechtelijke norm speelt hier (ATW, zorgverlof, goed werkgeverschap)? Draagkracht: wat doet deze situatie met Fatima en met jou als collega? Noem één risico en één oplossing.',
+  },
+  {
+    id: 'case-mbo4-horeca-3b',
+    workbookId: 'wb-mbo4-horeca',
+    title: 'Cluster 3B · Omzetdoelen & Werkdruk',
+    order: 9,
+    type: 'case',
+    domain: 'horeca',
+    level: 'mbo4',
+    orfheussFramework: ['Mandaat', 'Integriteit', 'Draagkracht'],
+    situation: `Je werkt als medewerker bediening in een grand café. Het management gebruikt een omzetdashboard: elke medewerker ziet live hoeveel omzet hij of zij die dag heeft gegenereerd. Er is een teamdoel: €3.500 omzet per dienst.
+
+Er is een bonussysteem: als het team het doel haalt, krijgt iedereen een bonus van €10. Als het doel niet gehaald wordt, krijgt niemand een bonus — en de manager bespreekt het in de volgende teammeeting.
+
+Je collega Lars zegt: "Ik push altijd voor een dessert en een extra drankje. Niet omdat de gast het wil, maar voor het omzetdoel. Soms voel ik me een verkoper, geen ober."
+
+Een gast vraagt jou: "Wat raad je aan?" Jij weet: het meest winstgevende gerecht is de ribeye, maar de gast heeft gezegd dat hij niet zo hongerig is.
+
+Jij denkt: Moet ik adviseren wat goed is voor de gast, of wat goed is voor het omzetdoel?`,
+    questionToAI:
+      'Hoe kan ik als horecamedewerker gasten effectief adviseren over de menukaart om de omzet te verhogen?',
+    questionToOrfheuss:
+      'Mandaat: wie heeft het mandaat om te bepalen wat "goed advies" is — het omzetdashboard, de manager, of jij als professional die de gast ziet? Integriteit: wanneer wordt omzetgedreven adviseren oneerlijk of manipulatief voor de gast? Welke norm geldt er voor eerlijk advies in de horeca? Draagkracht: wat doet het bonussysteem met jouw werkplezier en de sfeer in het team? Noem één risico en één oplossing.',
+  },
+  {
+    id: 'case-mbo4-horeca-3c',
+    workbookId: 'wb-mbo4-horeca',
+    title: 'Cluster 3C · Kassacontrole & Vertrouwen',
+    order: 10,
+    type: 'case',
+    domain: 'horeca',
+    level: 'mbo4',
+    orfheussFramework: ['Mandaat', 'Integriteit', 'Draagkracht'],
+    situation: `Je werkt bij een bakkerij-keten. Jullie kassasysteem registreert elke transactie, inclusief annuleringen, kortingen en "no-sale" (la openen zonder aankoop). Het systeem genereert dagelijks een rapport voor de regiomanager, inclusief een overzicht van medewerkers met "afwijkend kasgedrag".
+
+Jij staat in het rapport: drie no-sales gisteren, twee annuleringen. De regiomanager stuurt een e-mail: "Graag uitleg over afwijkend kasgedrag op 14 maart."
+
+Je weet precies waarom: twee keer heb je de la geopend om een gast wisselgeld te geven omdat de betaalterminal uitviel. Eén keer heb je een bestelling geannuleerd omdat een gast de verkeerde taart had besteld (hij stond nog aan de balie, je hebt het direct opnieuw ingevoerd).
+
+Je collega zegt: "Ze vertrouwen ons niet. Het systeem behandelt ons als verdachten."
+
+Jij vraagt jezelf af: Hoe leg ik dit uit? Moet ik dit bewijzen? Is er ruimte voor context?`,
+    questionToAI:
+      'Hoe kan ik als medewerker uitleggen waarom mijn kasregistraties afwijken van de norm, zonder mijn baan te riskeren?',
+    questionToOrfheuss:
+      'Mandaat: wie heeft het mandaat om te oordelen over kasgedrag — het systeem automatisch, de regiomanager op afstand, of moet er eerst een gesprek zijn? Integriteit: wanneer is monitoring van kasgedrag disproportioneel of oneerlijk voor medewerkers? Welke norm geldt er voor goed werkgeverschap (onschuldpresumptie, hoor en wederhoor)? Draagkracht: wat doet deze controle met jouw gevoel van vertrouwen en motivatie? Noem één risico en één oplossing.',
   },
 
   // ── MBO4 FINANCE & CONTROL ─────────────────────────────────────────────
@@ -993,6 +1213,24 @@ export const ETHICS_LESSONS: EthicsLesson[] = [
           'Welke drie ontwerpprincipes zijn voor jou altijd het uitgangspunt — ook onder druk?',
           'Hoe integreer je ORFHEUSS in bestaande design-critiques of projectbeoordelingen?',
           'Wat wil jij dat jouw studenten anders doen als ontwerper na dit programma?',
+        ],
+      },
+    ],
+  } as unknown as EthicsLesson,
+  {
+    id: 'eth-mbo4-horeca-reflectie',
+    workbookId: 'wb-mbo4-horeca',
+    title: 'Afsluitende Reflectie · Eigen Stage-Ervaring',
+    order: 11,
+    type: 'ethics',
+    questions: [
+      {
+        prompt: 'Beschrijf een situatie uit jouw stage of praktijk waar een systeem botste met professioneel handelen',
+        subQuestions: [
+          'Welk systeem was het (kassa, rooster, reviews, HACCP, loyaliteitsapp)? Wat gebeurde er? Wat zei het systeem, en wat dacht of voelde jij?',
+          'Mandaat: wie mocht hier eigenlijk beslissen? Hoe verliep dat in de praktijk?',
+          'Integriteit: was de inzet van het systeem eerlijk en proportioneel — voor de gast, de collega, of jezelf? Waarom wel of niet?',
+          'Draagkracht: wat deed deze situatie met jou en/of het team? Wat hielp, wat miste je?',
         ],
       },
     ],
