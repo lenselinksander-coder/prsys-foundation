@@ -44,10 +44,20 @@ function exec(cmd, cwd = ROOT) {
   }
 }
 
-// ── 1. .env bestand ──────────────────────────────────────────────────────────
+// ── 1. .env bestand of Replit Secrets ────────────────────────────────────────
+// Op Replit worden secrets als env vars geïnjecteerd — geen .env nodig.
 const envPath = path.join(ROOT, '.env');
-const envOk = existsSync(envPath);
-check('.env bestand', envOk, envOk ? 'aanwezig' : 'ontbreekt — kopieer .env.example', 'warn');
+const hasEnvFile = existsSync(envPath);
+const hasReplitSecrets = !!process.env.REPL_ID || !!process.env.REPLIT_DB_URL;
+const envOk = hasEnvFile || hasReplitSecrets || !!process.env.JWT_SECRET;
+const envDetail = hasEnvFile
+  ? 'aanwezig'
+  : hasReplitSecrets
+    ? 'Replit Secrets (geen .env nodig)'
+    : process.env.JWT_SECRET
+      ? 'env vars aanwezig in omgeving'
+      : 'ontbreekt — kopieer .env.example of gebruik Replit Secrets';
+check('.env / Secrets', envOk, envDetail, 'warn');
 
 // ── 2. node_modules aanwezig ─────────────────────────────────────────────────
 const webModules = existsSync(path.join(ROOT, 'web', 'node_modules'));
