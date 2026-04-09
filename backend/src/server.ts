@@ -5,6 +5,7 @@ import { fileURLToPath } from 'url';
 import taogateRouter from './routes/taogate.js';
 import authRouter from './routes/auth.js';
 import { authMiddleware } from './auth/middleware.js';
+import { runSystemCheck } from './systemCheck.js';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const app = express();
@@ -28,7 +29,9 @@ app.use('/api/auth', authRouter);
 app.use('/api/taogate', authMiddleware, taogateRouter);
 
 app.get('/api/health', (_req, res) => {
-  res.json({ status: 'ok' });
+  const result = runSystemCheck();
+  const httpStatus = result.status === 'error' ? 503 : 200;
+  res.status(httpStatus).json(result);
 });
 
 // Serve React frontend (production build)

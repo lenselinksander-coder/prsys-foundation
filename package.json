@@ -6,7 +6,8 @@
     "install:all": "npm install --prefix web && npm install --prefix backend",
     "build:web": "npm run build --prefix web",
     "start": "NODE_ENV=production npx --prefix backend tsx backend/src/server.ts",
-    "dev": "concurrently \"npm run dev --prefix web\" \"npm run dev --prefix backend\""
+    "dev": "concurrently \"npm run dev --prefix web\" \"npm run dev --prefix backend\"",
+    "systeemcheck": "node scripts/systeemcheck.mjs"
   },
   "devDependencies": {
     "concurrently": "^9.0.1"
